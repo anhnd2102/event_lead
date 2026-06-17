@@ -2,10 +2,44 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0;url=analysis_test1_vs_passrate.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Event Lead - Phân tích dữ liệu</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f0f2f5; color: #1a1a2e; padding: 40px 24px; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+  .container { max-width: 640px; text-align: center; }
+  h1 { font-size: 28px; margin-bottom: 8px; color: #0f3460; }
+  .subtitle { color: #666; margin-bottom: 32px; }
+  .card { background: white; border-radius: 12px; padding: 24px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-align: left; transition: transform 0.15s, box-shadow 0.15s; cursor: pointer; }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+  .card a { text-decoration: none; color: inherit; display: block; }
+  .card h2 { font-size: 18px; color: #0f3460; margin-bottom: 4px; }
+  .card p { font-size: 14px; color: #666; }
+  .card .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 600; margin-top: 8px; }
+  .badge-update { background: #e3f2fd; color: #1565c0; }
+  .badge-new { background: #e8f5e9; color: #2e7d32; }
+</style>
 </head>
 <body>
-  <p><a href="analysis_test1_vs_passrate.html">Chuyển đến dashboard phân tích</a></p>
+<div class="container">
+  <h1>📊 Event Lead — Phân tích dữ liệu</h1>
+  <p class="subtitle">Khóa 34 &amp; Khóa 03</p>
+
+  <div class="card">
+    <a href="analysis_test1_vs_passrate.html">
+      <h2>📈 Phân tích Test 1 &amp; Tỷ lệ Pass</h2>
+      <p>Tương quan giữa điểm Test 1 và tỷ lệ hoàn thành khóa học. Phân loại học viên theo 4 nhóm: &lt;40, 40-50, 51-59, ≥60.</p>
+      <span class="badge badge-update">✅ Đã cập nhật</span>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="analysis_threshold_selection.html">
+      <h2>🎯 Giải thích cách chọn ngưỡng phân loại lớp</h2>
+      <p>Phân tích chi tiết vì sao chọn ngưỡng 40% và 75% khi dùng %HV≥60 để phân loại lớp. Kèm biểu đồ trực quan hóa dữ liệu 89 lớp.</p>
+      <span class="badge badge-new">🆕 Mới</span>
+    </a>
+  </div>
+</div>
 </body>
 </html>
