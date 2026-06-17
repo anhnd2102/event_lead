@@ -1,0 +1,1193 @@
+id,name,status,attendance_rate,homework_rate,test1,test2,test3,test4,test5,test6,class_id,class_name,teacher_name,location_name,Khóa
+17506,Phạm Thị Xuân Lý,Không hoàn thành,0.94,1,57,56.25,67.5,59.25,,,953,IC1973,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+17269,Đặng Yến Linh,Bỏ học,0.91,1,,67.5,,,,,953,IC1973,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+16967,Nguyễn Trung Dũng,Bảo lưu,1,0.95,71.53,82.4,82,76.75,,,953,IC1973,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+17555,Phạm Khánh Hưng,Hoàn thành,0.83,1,65,75.25,81.25,74.5,,,953,IC1973,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+16567,Bùi Thị Phương Thảo,Bảo lưu,0.85,0.77,,56,,,,,953,IC1973,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+17667,Bùi Quỳnh Chi,Không hoàn thành,0.89,1,70,26,53.75,46,,,953,IC1973,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+17755,Nguyễn Ngọc Linh,Hoàn thành,1,1,88.75,91,86.5,82.75,,,953,IC1973,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+16688,Đinh Khánh Hiếu,Hoàn thành,1,1,91,87,89,79,,,953,IC1973,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+16281,Bùi Văn Tới,Không hoàn thành,0.89,1,51.25,20.75,40.5,0,,,953,IC1973,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+17803,Trần Xuân Hợp,Không hoàn thành,0.67,0.44,0,6,0,0,,,953,IC1973,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+17078,Hoàng Thị Ngọc Anh,Hoàn thành,0.93,0.93,,,,88.5,78.78,80,953,IC1973,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+17812,Vũ Đức Minh,Hoàn thành,0.94,1,83,68.75,79,0,,,953,IC1973,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+17835,Nguyễn Thị Thanh Trúc,Không hoàn thành,0.83,1,80,0,0,53.5,,,953,IC1973,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+17031,Vũ Thị Phương Anh,Hoàn thành,0.94,1,60.5,73.75,71,73,,,953,IC1973,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+14932,Mai Công Thế Anh,Hoàn thành,0.94,1,92.85,98.25,93.5,95.25,,,953,IC1973,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+17831,Nguyễn Trung Hoàng,Hoàn thành,0.85,0.7,55.32,61.42,55.16,46.73,47.38,90,953,IC1973,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+17946,Trần Thị Xuyến,Hoàn thành,0.93,0.96,59.92,61.25,60.12,65.18,70,80,953,IC1973,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+17939,Đậu Đức Bách,Hoàn thành,0.89,0.94,65,87.75,88.75,74,,,953,IC1973,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+17976,Nguyễn Minh Quyền,Không hoàn thành,0.92,0.5,,,,,36.25,77,953,IC1973,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+17989,Lê Anh Đức,Không hoàn thành,0.94,0.72,49.75,62.5,65,54.75,,,953,IC1973,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+17589,Nguyễn Thành Hưng,Bảo lưu,0.67,1,79.25,78.5,,,,,962,IC1982,Nguyễn Thu Hằng,Cơ sở Hồ Văn Chương 2,Khóa 03
+17469,Nguyễn Hà Trang,Hoàn thành,0.92,1,65.3,68,77.25,63.5,66.47,88,962,IC1982,Nguyễn Thu Hằng,Cơ sở Hồ Văn Chương 2,Khóa 03
+17333,Trần Văn Hoà,Chuyển lớp,0.83,1,72.5,,,,,,962,IC1982,Nguyễn Thu Hằng,Cơ sở Hồ Văn Chương 2,Khóa 03
+17334,Hà Nguyễn Kiều Oanh,Chuyển lớp,1,1,81,,,,,,962,IC1982,Nguyễn Thu Hằng,Cơ sở Hồ Văn Chương 2,Khóa 03
+17702,Tạ Thị Minh Anh,Chuyển lớp,,,,,,,,,962,IC1982,Nguyễn Thu Hằng,Cơ sở Hồ Văn Chương 2,Khóa 03
+17416,Phạm Phương Thảo,Chuyển lớp,,,,,,,,,962,IC1982,Nguyễn Thu Hằng,Cơ sở Hồ Văn Chương 2,Khóa 03
+17732,Trương Duy Khánh,Hoàn thành,1,1,89,88.5,90,80.25,,,962,IC1982,Nguyễn Thu Hằng,Cơ sở Hồ Văn Chương 2,Khóa 03
+17860,Hoàng Thị Bích Loan,Hoàn thành,1,1,66.5,65,64,65,,,962,IC1982,Nguyễn Thu Hằng,Cơ sở Hồ Văn Chương 2,Khóa 03
+17887,Nguyễn Trần Phương Dung,Hoàn thành,1,1,83.25,84.25,86,76.25,,,962,IC1982,Nguyễn Thu Hằng,Cơ sở Hồ Văn Chương 2,Khóa 03
+17406,Nguyễn Tú Uyên Nhi,Hoàn thành,1,1,78.75,82,86,79.25,,,962,IC1982,Nguyễn Thu Hằng,Cơ sở Hồ Văn Chương 2,Khóa 03
+17933,Hồ Minh Quyên,Bỏ học,0.79,0.79,95.75,,94.25,,,,962,IC1982,Nguyễn Thu Hằng,Cơ sở Hồ Văn Chương 2,Khóa 03
+17950,Nguyễn Thuỳ Linh,Hoàn thành,0.94,1,94.5,74.75,91.75,90.5,,,962,IC1982,Nguyễn Thu Hằng,Cơ sở Hồ Văn Chương 2,Khóa 03
+17951,Phạm Ngọc Linh,Hoàn thành,0.94,1,82.25,89,80,70,,,962,IC1982,Nguyễn Thu Hằng,Cơ sở Hồ Văn Chương 2,Khóa 03
+17967,Nguyễn Thị Hồng Quyên,Hoàn thành,1,1,95.5,93.5,95,90.25,,,962,IC1982,Nguyễn Thu Hằng,Cơ sở Hồ Văn Chương 2,Khóa 03
+17970,Nguyễn Văn Kiên,Hoàn thành,1,1,96.25,92.75,90,90,,,962,IC1982,Nguyễn Thu Hằng,Cơ sở Hồ Văn Chương 2,Khóa 03
+18001,Nguyễn Thị Sinh Hợp,Hoàn thành,1,1,92.25,86.75,80,84.5,,,962,IC1982,Nguyễn Thu Hằng,Cơ sở Hồ Văn Chương 2,Khóa 03
+18012,Võ Nhật Hào,Hoàn thành,0.94,1,86.75,80,77.75,74,,,962,IC1982,Nguyễn Thu Hằng,Cơ sở Hồ Văn Chương 2,Khóa 03
+16710,Vũ Thị Linh,Không hoàn thành,0.74,0.56,86,78.66,90,89.35,,,962,IC1982,Nguyễn Thu Hằng,Cơ sở Hồ Văn Chương 2,Khóa 03
+18096,Nguyễn Thị Phương Mai,Chuyển lớp,1,1,,,,,,,962,IC1982,Nguyễn Thu Hằng,Cơ sở Hồ Văn Chương 2,Khóa 03
+17647,Bùi Thành Đạt,Hoàn thành,0.96,1,70.5,83,81.5,85,90.5,70.5,895,IC1986,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+16821,Vũ Thành Trung,Hoàn thành,0.94,0.94,91.25,76.75,73.75,62,,,966,IC1986,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+17701,Đinh Thị Kim Phượng,Hoàn thành,0.96,1,67.82,62.28,69.61,62.73,56.45,90.85,857,IC1986,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+17707,Nguyễn Minh Khánh,Hoàn thành,0.94,1,80.5,73,64.25,58.5,,,966,IC1986,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+17409,Mao Quang Vinh,Không hoàn thành,0.78,0.5,75.75,41,,43.25,,,966,IC1986,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+17722,Phùng Việt Duy,Hoàn thành,0.83,1,83.75,80,66.75,81,,,966,IC1986,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+17798,Trần Thị Bích Nhu,Hoàn thành,0.89,0.44,43.06,43.15,44.71,52.55,27.33,0,883,IC1986,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+17774,Trịnh Hoàng Nhât Nam,Bảo lưu,,,,,,,,,966,IC1986,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+17781,Nguyễn Bá Hoàng Tùng,Hoàn thành,0.89,1,81.25,65.5,65,66,,,966,IC1986,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+17832,Lê Thảo My,Hoàn thành,1,1,90,83.75,84,82.5,,,966,IC1986,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+17635,Trần Thanh Hải,Không hoàn thành,0.67,1,,81,75.25,84.5,,,966,IC1986,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+17873,Tạ Viết Đạt,Hoàn thành,0.94,1,93.25,84,87.25,87.25,,,966,IC1986,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+17966,Nguyễn Văn Linh,Hoàn thành,1,1,57.87,59.27,54.74,58.33,55,70,886,IC1986,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+17972,Giang Thị Phương Dung,Bảo lưu,1,0.48,46,50,26.5,28.5,,,871,IC1986,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18056,Nguyễn Mạnh Duy,Không hoàn thành,0.81,1,16,42.25,17,26,,,966,IC1986,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18077,Lê Quang Huy,Hoàn thành,1,1,91.25,89,83,80.5,,,966,IC1986,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18078,Dương Đại Hải,Hoàn thành,1,1,91,85,78.5,76.25,,,966,IC1986,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+17684,Đỗ Thị Hoa,Chuyển lớp,1,1,96.75,,,,,,968,IC1988,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+17335,Đào Thanh Ngọc Tuấn,Hoàn thành,0.94,0.94,79.75,65,65.75,59.25,,,968,IC1988,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+17709,Cao Đỗ Gia Khanh,Hoàn thành,0.89,1,85.88,74.74,67.03,76.85,82.57,92.1,857,IC1988,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+17718,Vũ Thị Thu Huyền,Không hoàn thành,0.89,0.94,73.75,51,58.25,46.5,,,968,IC1988,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+17750,Trần Thị Trà My,Hoàn thành,0.93,1,83.5,48.06,62.5,54.5,66.5,88,894,IC1988,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+17683,Lê Thị Tuyết Mai,Không hoàn thành,1,1,72.5,35.5,33.25,53.5,,,968,IC1988,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+17351,Vũ Đình Trọng,Hoàn thành,0.94,1,77.75,68.75,72.25,67,,,968,IC1988,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+16707,Vũ Tuệ Anh,Không hoàn thành,0.89,0.78,75,49.25,63.25,58.5,,,968,IC1988,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+17800,Tô Quang Thái,Không hoàn thành,0.89,1,67.5,47.25,46,30,,,968,IC1988,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+17702,Tạ Thị Minh Anh,Không hoàn thành,0.89,1,29,40,17.5,10.5,,,968,IC1988,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+17636,Nguyễn Thị Thanh Loan,Hoàn thành,1,1,87,91,86.25,85.75,,,968,IC1988,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+17865,Nguyễn Thị Thúy,Hoàn thành,0.94,1,89.5,91,84.5,84.25,,,968,IC1988,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+17866,Chử Trọng Văn,Không hoàn thành,0.93,0.78,45,40.5,31.75,41,25.6,83,871,IC1988,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+17919,Trương Thị Thùy Dương,Hoàn thành,0.94,1,80.25,77,82,77.25,,,968,IC1988,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+17920,Vũ Huy Hoàng,Không hoàn thành,0.89,1,40,35,40.25,19.25,,,968,IC1988,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+17961,Bùi Thu Uyên,Hoàn thành,1,0.96,80.75,44.91,72.75,65,70.5,82,894,IC1988,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+17960,Nguyễn Ngọc Hoàng Đàm,Không hoàn thành,1,1,59.75,62.5,62.5,53.5,,,968,IC1988,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+17445,Nguyễn Thị Yến Trang,Hoàn thành,0.89,1,81.8,77.5,84,80,,,872,IC1993,Lê Bảo Ngọc,Online,Khóa 03
+17753,Hà Tiến Chung,Hoàn thành,0.94,0.89,60,78.5,80.5,74,,,973,IC1993,Lê Bảo Ngọc,Online,Khóa 03
+17754,Bùi Hà Minh Thư,Hoàn thành,0.95,1,89.5,84.5,66,77.5,,,973,IC1993,Lê Bảo Ngọc,Online,Khóa 03
+17126,Bế Bảo Ngọc,Hoàn thành,1,1,65,56.5,84,85,,,973,IC1993,Lê Bảo Ngọc,Online,Khóa 03
+17758,Nguyễn Đặng Mỹ Quỳnh,Hoàn thành,1,1,85.5,65,79,90.5,,,973,IC1993,Lê Bảo Ngọc,Online,Khóa 03
+17777,Nguyễn Thị Thùy Dương,Hoàn thành,0.95,1,89,93.5,83,80,,,973,IC1993,Lê Bảo Ngọc,Online,Khóa 03
+17787,Bùi Phương Nga,Không hoàn thành,1,1,66,44.5,55.3,63,,,973,IC1993,Lê Bảo Ngọc,Online,Khóa 03
+17764,Hồ Thị Diễm Mến,Hoàn thành,1,1,90.5,71,83,80.5,,,973,IC1993,Lê Bảo Ngọc,Online,Khóa 03
+17794,Nguyễn Huy Hoàng,Hoàn thành,0.94,1,90,92,92,96.5,,,899,IC1993,Lê Bảo Ngọc,Online,Khóa 03
+17782,Võ Đoàn Bảo Ngọc,Không hoàn thành,0.95,1,20.5,8.3,39,30.5,,,973,IC1993,Lê Bảo Ngọc,Online,Khóa 03
+17607,Đặng Hà Phương,transferred,0,0.33,,,,,,,871,IC1993,Lê Bảo Ngọc,Online,Khóa 03
+17530,Trần Mai Trang,Hoàn thành,1,1,85.5,79.5,79.5,66.5,,,973,IC1993,Lê Bảo Ngọc,Online,Khóa 03
+17814,Lê Trung Sơn,Bảo lưu,0.92,1,71.5,,69,,,,973,IC1993,Lê Bảo Ngọc,Online,Khóa 03
+17829,Nguyễn Thị Mỹ Nữ,Hoàn thành,1,1,68,58.5,60.5,67.5,,,973,IC1993,Lê Bảo Ngọc,Online,Khóa 03
+17841,Lê Thị Thanh Hoa,Hoàn thành,1,1,81,79,75,67,,,891,IC1993,Lê Bảo Ngọc,Online,Khóa 03
+17845,Lê Nguyễn Ngọc Sương,Không hoàn thành,0.86,1,46.25,49.57,43.5,44.5,67,82,894,IC1993,Lê Bảo Ngọc,Online,Khóa 03
+17441,Hoàng Khánh Chi,Hoàn thành,1,1,89,63,81,100,,,973,IC1993,Lê Bảo Ngọc,Online,Khóa 03
+17575,Nguyễn Khắc Nghiên,Hoàn thành,1,0.89,62.5,60.3,61.4,70.42,55.52,90,883,IC1993,Lê Bảo Ngọc,Online,Khóa 03
+16470,Kiều Diệu Linh,Bỏ học,0.86,1,,,,,,,973,IC1993,Lê Bảo Ngọc,Online,Khóa 03
+17870,Nguyễn Thị Thu Hiền,Hoàn thành,0.93,0.81,75,51,,45,60,70,903,IC1993,Lê Bảo Ngọc,Online,Khóa 03
+17513,Nguyễn Khánh Linh,Hoàn thành,0.96,1,64.35,63.33,63.84,51.9,54.36,88,883,IC1993,Lê Bảo Ngọc,Online,Khóa 03
+17274,Nguyễn Thuý Nga,Không hoàn thành,0.75,0.75,,,,,,,973,IC1993,Lê Bảo Ngọc,Online,Khóa 03
+17550,Từ Tiểu Băng,Không hoàn thành,0.71,1,43,39,0,0,,,976,IC1996,Nguyễn Kim Long,Online,Khóa 03
+17877,Nguyễn Lâm Minh Khôi,Hoàn thành,1,1,66.5,84,78.5,71.5,90,75,905,IC1996,Nguyễn Kim Long,Online,Khóa 03
+17429,Nguyễn Đức Việt,Bỏ học,0.46,0.54,69,,,,,,976,IC1996,Nguyễn Kim Long,Online,Khóa 03
+17925,Bùi Ngọc Lan,Bỏ học,0.5,0.8,86,0,0,,,,976,IC1996,Nguyễn Kim Long,Online,Khóa 03
+17915,Phạm Thị Huyền Trang,Hoàn thành,1,1,87,91,90,82,,,976,IC1996,Nguyễn Kim Long,Online,Khóa 03
+17942,Tuyết Nhi,Hoàn thành,1,1,74,84,76,70,,,976,IC1996,Nguyễn Kim Long,Online,Khóa 03
+17796,Trần Kim Chi,Hoàn thành,1,1,64,67,64,64,,,976,IC1996,Nguyễn Kim Long,Online,Khóa 03
+17949,Phạm Thị Thanh Mến,Hoàn thành,1,1,70,56,70,78,,,976,IC1996,Nguyễn Kim Long,Online,Khóa 03
+18003,Bùi Xuân Thi,Hoàn thành,0.96,1,69.25,71.5,78.75,73.5,73.5,87,916,IC1996,Nguyễn Kim Long,Online,Khóa 03
+18016,Trần Thị Khánh Linh,Bỏ học,0.87,0.87,69,49,,40,66,,903,IC1996,Nguyễn Kim Long,Online,Khóa 03
+18048,Nguyễn Thị Thùy Diệp,Hoàn thành,0.95,0.95,80,77,75,68,,,976,IC1996,Nguyễn Kim Long,Online,Khóa 03
+18059,Vũ Thị Hồng Hải,Bảo lưu,0.73,0.64,,,,,,,976,IC1996,Nguyễn Kim Long,Online,Khóa 03
+18093,Hoàng Như Yến,Không hoàn thành,0.95,0.95,74,42.5,64,59,,,976,IC1996,Nguyễn Kim Long,Online,Khóa 03
+18099,Phạm Khải Lâm,Hoàn thành,1,0.95,61,82,91,65,,,891,IC1996,Nguyễn Kim Long,Online,Khóa 03
+18094,Lê Thị Phương Anh,Hoàn thành,1,1,89,87,84,80,,,976,IC1996,Nguyễn Kim Long,Online,Khóa 03
+18125,Đàm Quang Trung,Hoàn thành,0.96,0.78,67.5,62.5,68,65.5,62.75,70.5,895,IC1996,Nguyễn Kim Long,Online,Khóa 03
+18133,Nguyễn Hoàng Anh,Hoàn thành,1,1,86,88,86,86,,,976,IC1996,Nguyễn Kim Long,Online,Khóa 03
+17497,Lê Hoàng Bách,Hoàn thành,1,1,80,82,91,83,,,976,IC1996,Nguyễn Kim Long,Online,Khóa 03
+18145,Nguyễn Thị Bảo Châu,Hoàn thành,1,1,71,71,85,60,,,891,IC1996,Nguyễn Kim Long,Online,Khóa 03
+17391,Đỗ Gia Huy,Không hoàn thành,1,1,69,57,50,44,,,976,IC1996,Nguyễn Kim Long,Online,Khóa 03
+17543,Nguyễn Ngọc Phương Vy,Hoàn thành,1,0.79,58,,81,74,,,976,IC1996,Nguyễn Kim Long,Online,Khóa 03
+18233,Nguyễn Minh Hiền,Hoàn thành,0.96,1,69.75,81.7,82,72,69,87,916,IC1996,Nguyễn Kim Long,Online,Khóa 03
+17945,Dương Tuyết Hoa,Hoàn thành,1,1,71.5,73,63,69,,,899,IC1997,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+17884,Văn Vĩnh Tiến,Hoàn thành,1,1,64,79.5,66,67.5,,,977,IC1997,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+17958,NGUYỄN HỮU DŨNG,Hoàn thành,0.96,0.96,71.53,71.77,64.01,64.81,67,75,886,IC1997,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+17825,Vũ Phương Thảo,Không hoàn thành,0.89,0.89,45,,44,44,,,891,IC1997,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+17827,Hà Sĩ Hoàng,Không hoàn thành,0.78,0.78,55.5,22,,,,,977,IC1997,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18022,Nguyễn Hoàng Thuận,Không hoàn thành,0.94,1,65,69,58.8,62.5,,,977,IC1997,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18027,Lê Phương Anh,Hoàn thành,0.89,0.75,,87,87,93,83,90,905,IC1997,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18061,Tạ Tiểu Hồng,Hoàn thành,0.89,0.89,89.5,77,80.5,79.5,,,906,IC1997,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18169,Trần Danh Huy,Hoàn thành,0.96,0.93,85.25,87,85,89,85,90,905,IC1997,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18212,Võ Thị Bích Tiền,Hoàn thành,1,1,83.8,84.8,82.5,79,,,977,IC1997,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18155,Trần Ngọc Nguyễn Huỳnh,Hoàn thành,0.94,1,94.8,93,88.8,91,,,977,IC1997,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18323,Nguyễn Hoàng Quân,Không hoàn thành,0.89,1,69.3,28.5,46.5,44.8,,,977,IC1997,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18329,Tạ Minh Thư,Hoàn thành,1,1,92,85.5,76,86.5,,,899,IC1997,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18352,Vương Hải Yến,Hoàn thành,0.88,0.94,80.5,77,74,65,,,977,IC1997,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18363,Vương Hải Yến Trang,Không hoàn thành,0.82,0.71,24.8,20,20,,,,977,IC1997,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+17962,Trần Thị Như Thảo,Bỏ học,0.71,1,64,,,,,,984,IC2004,Lê Quốc Bảo,Online,Khóa 03
+17982,ĐINH THỊ LỘC,Không hoàn thành,1,1,59,59,58,58,,,984,IC2004,Lê Quốc Bảo,Online,Khóa 03
+17984,Trần Thị Tươi,Hoàn thành,0.95,1,73,60,69,73,,,984,IC2004,Lê Quốc Bảo,Online,Khóa 03
+17987,Vũ Thị Thu Hiền,Hoàn thành,1,1,80,79,67,69,,,984,IC2004,Lê Quốc Bảo,Online,Khóa 03
+17992,Trần Ngọc Minh Thư,Không hoàn thành,0.89,1,63,63,,51,,,984,IC2004,Lê Quốc Bảo,Online,Khóa 03
+17995,Nguyễn Thị Hoài Anh,Không hoàn thành,0.89,0.84,,44,65,69,,,984,IC2004,Lê Quốc Bảo,Online,Khóa 03
+18021,Phạm Quỳnh Như,Hoàn thành,0.95,1,75,63,74,78,,,984,IC2004,Lê Quốc Bảo,Online,Khóa 03
+18033,Lý Ngọc Hân,Không hoàn thành,0.89,1,23,64,78,63,,,984,IC2004,Lê Quốc Bảo,Online,Khóa 03
+18047,Vũ Minh Anh,Hoàn thành,1,1,94,87,85,88,,,984,IC2004,Lê Quốc Bảo,Online,Khóa 03
+18051,Ngô Thị Hoa,Không hoàn thành,1,1,53,46,52,45,,,984,IC2004,Lê Quốc Bảo,Online,Khóa 03
+17909,Nguyễn Ngọc Như Trúc,Hoàn thành,1,1,89,86,84,73,,,984,IC2004,Lê Quốc Bảo,Online,Khóa 03
+16977,Phạm Thị Cẩm Ly,Hoàn thành,0.89,0.95,73,70,76,79,,,984,IC2004,Lê Quốc Bảo,Online,Khóa 03
+18120,Phạm Thị Cẩm Ly,Không hoàn thành,0.95,0.95,59,45,49,28,,,891,IC2004,Lê Quốc Bảo,Online,Khóa 03
+18148,Phạm Thị Phương Uyên,Không hoàn thành,0.84,1,55,,65,57,,,984,IC2004,Lê Quốc Bảo,Online,Khóa 03
+18171,Vũ Nhật Minh,Hoàn thành,0.95,1,79,81,68,73,,,984,IC2004,Lê Quốc Bảo,Online,Khóa 03
+18125,Phan Thị Như Ngọc,Không hoàn thành,0.95,1,51,52,46,43,,,984,IC2004,Lê Quốc Bảo,Online,Khóa 03
+18181,Nguyễn Thị Xuân,Hoàn thành,0.93,1,93.75,89.75,81.9,81.5,84.21,90,871,IC2004,Lê Quốc Bảo,Online,Khóa 03
+18182,Trần Thị Anh Thư,Hoàn thành,1,1,80,78,68,73,,,984,IC2004,Lê Quốc Bảo,Online,Khóa 03
+18229,Nguyễn Đình Phong,Hoàn thành,0.95,1,57,53,63,85,,,984,IC2004,Lê Quốc Bảo,Online,Khóa 03
+18241,Nguyễn Thị Ngân Kim,Không hoàn thành,0.84,0.84,38,,64,60,,,984,IC2004,Lê Quốc Bảo,Online,Khóa 03
+17979,Trần Anh Dũng,Hoàn thành,1,1,67,66,69,59,,,992,IC2012,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+17981,Vương Minh Đức,Không hoàn thành,1,1,70,50,54,39,,,992,IC2012,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+18029,Nguyễn Hữu Nam,Không hoàn thành,1,1,45,55,57,46,,,992,IC2012,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+18030,Trần Thị Thủy Tiên,Hoàn thành,1,1,92,79,90,69,,,891,IC2012,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+18031,Nguyễn Ngọc Hương Giang,Hoàn thành,1,1,80,84,78,81,,,992,IC2012,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+18032,Nguyễn Ngọc Ánh,Hoàn thành,1,1,94,92,92,86,,,992,IC2012,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+18069,Nguyễn Đình Tùng,Hoàn thành,0.94,1,84,88,84,39,,,992,IC2012,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+18062,Quách Trí Hải,Hoàn thành,0.96,1,86.25,36.38,51.5,54.25,60.25,88,894,IC2012,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+17492,Đặng Thị Thu Uyên,Hoàn thành,1,1,91,95,86,76,,,992,IC2012,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+18158,Vũ Minh Thành,Hoàn thành,1,1,83,87,87,71,,,992,IC2012,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+18167,Nguyễn Anh Thư,Hoàn thành,1,1,91,83,70,63,,,992,IC2012,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+18190,Bùi Minh Đức,Hoàn thành,1,1,82.5,77,80,70.5,,,906,IC2012,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+18189,Phùng Thu Hà,Hoàn thành,0.93,1,76.62,63.58,68.97,70.37,72,75,886,IC2012,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+18105,Vũ Mai Phương,Không hoàn thành,0.96,0.93,62,67.5,46,,50,60,905,IC2012,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+18213,Nguyễn Thị Thủy,Chuyển lớp,0.86,1,68,,,,,,992,IC2012,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+17578,Nguyễn Thị Bảo Châu,Không hoàn thành,0.94,1,53,50,51,39,,,992,IC2012,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+18187,Nguyễn Hà Ngân,Hoàn thành,0.96,0.93,56,70,71,64.58,60.19,92.5,917,IC2012,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+18023,Lê Cẩm Tú,Hoàn thành,0.93,1,74.25,70,66.75,61.5,63.5,87,916,IC2018,Nguyễn Như Thắng,Cơ sở Đại Cồ Việt,Khóa 03
+18046,Trương Thị Phương Thảo,Hoàn thành,1,1,85,79.75,77.5,70,,,994,IC2018,Nguyễn Như Thắng,Cơ sở Đại Cồ Việt,Khóa 03
+18017,Lê Hải An,Hoàn thành,1,1,79,71,79,57,,,891,IC2018,Nguyễn Như Thắng,Cơ sở Đại Cồ Việt,Khóa 03
+18055,Nguyễn Khánh Linh,pending,,,,,,,,,899,IC2018,Nguyễn Như Thắng,Cơ sở Đại Cồ Việt,Khóa 03
+18041,Phạm Thị Minh Phương,Hoàn thành,1,1,75.25,68.25,66,54.5,,,994,IC2018,Nguyễn Như Thắng,Cơ sở Đại Cồ Việt,Khóa 03
+18040,Nguyễn Thị Kim Phượng,Hoàn thành,0.94,1,75,62,67,59.5,,,994,IC2018,Nguyễn Như Thắng,Cơ sở Đại Cồ Việt,Khóa 03
+16177,Đặng Thị Thuý,Hoàn thành,0.94,1,87.5,49.5,81.75,79,,,994,IC2018,Nguyễn Như Thắng,Cơ sở Đại Cồ Việt,Khóa 03
+18123,Nguyễn Thị Phương Loan,Hoàn thành,0.94,1,85.5,87,77.5,71,,,994,IC2018,Nguyễn Như Thắng,Cơ sở Đại Cồ Việt,Khóa 03
+15284,Trần Mạnh Đạt,Không hoàn thành,0.88,1,57,51,45.25,29,,,994,IC2018,Nguyễn Như Thắng,Cơ sở Đại Cồ Việt,Khóa 03
+18000,Bế Mai Thanh Tú,Hoàn thành,0.96,0.96,56.02,55.39,54.31,59.72,72,70,886,IC2018,Nguyễn Như Thắng,Cơ sở Đại Cồ Việt,Khóa 03
+18163,Hoàng Phương Anh,Không hoàn thành,0.83,0.89,70,37,57.5,64.5,,,906,IC2018,Nguyễn Như Thắng,Cơ sở Đại Cồ Việt,Khóa 03
+17312,Vũ Thị Ngọc Anh,Hoàn thành,0.96,1,82.28,73.02,69.32,67.59,70.43,88,866,IC2018,Nguyễn Như Thắng,Cơ sở Đại Cồ Việt,Khóa 03
+18365,Trần Mai Anh,Hoàn thành,1,1,48.5,50.25,74.5,71.25,42.25,80,916,IC2018,Nguyễn Như Thắng,Cơ sở Đại Cồ Việt,Khóa 03
+18355,Bùi Quang Minh,Bỏ học,0,,19,0,,,,,918,IC2018,Nguyễn Như Thắng,Cơ sở Đại Cồ Việt,Khóa 03
+18042,Đỗ Thanh Hiền,Hoàn thành,0.84,1,92,83,86,0,,,918,IC2020,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+17953,Nguyễn Xuân Phương,Bỏ học,0.43,0.71,,,,31.25,,,852,IC2020,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+18083,Phạm Thị Diễm,Bảo lưu,0.88,1,84.5,74.5,,,,,996,IC2020,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+16787,Dương Chí Dũng,Hoàn thành,0.83,1,99.5,93.5,96,86,,,996,IC2020,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+18183,Lê Tuấn Vũ,Không hoàn thành,0.96,1,67.75,51,47.25,45,47.33,90,871,IC2020,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+18193,Vũ Thị Hải Yến,Bảo lưu,0.6,1,59.75,,,,,,996,IC2020,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+18205,Trần Vân Anh,Hoàn thành,0.83,0.83,86.75,80.5,80.5,30,,,996,IC2020,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+18179,Nguyễn Linh Phương,Hoàn thành,0.95,1,65,30,77,45,,,918,IC2020,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+18225,Lê Đức Anh,Hoàn thành,1,1,66.5,62.5,64,68.25,,,996,IC2020,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+18096,Nguyễn Thị Phương Mai,Không hoàn thành,0.72,0.78,90.5,75,78,,,,996,IC2020,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+18318,Lê Thị Khánh Huyền,Không hoàn thành,0.67,0.85,60,65,58.5,65,50.5,60,895,IC2020,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+16017,Phùng Thành,Không hoàn thành,0.89,1,68.25,60,57.5,47,,,996,IC2020,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+18428,Hà Thị Thu Hiền,Không hoàn thành,0.61,0.94,44.25,39,53,53.75,,,996,IC2020,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+18432,Nguyễn Trường Sơn,Không hoàn thành,1,1,67.5,51,55,44,,,996,IC2020,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+18413,Nguyễn Hà My,Không hoàn thành,0.83,0.72,77.75,66.75,65,,,,996,IC2020,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+16667,Đậu Phan Tuấn Anh,Hoàn thành,0.77,0.88,69,70.75,52.5,,52.25,71,825,IC2020,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+17528,Đào Bùi Cẩm Giang,Hoàn thành,0.93,0.81,53.24,47.11,34.7,28.99,33.43,85,883,IC2020,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+18122,Nguyễn Thu Hà,Hoàn thành,0.89,1,56.5,60,77,82,,,1003,IC2027,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18160,Mạc Thị Hương,Hoàn thành,0.89,1,95,83,89.5,94,,,1003,IC2027,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18243,Đinh Thái Vân,transferred,1,1,50.23,,,,,,886,IC2027,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18244,Nguyễn Phạm Quỳnh Chi,Không hoàn thành,1,1,66,50.5,53.5,53,,,1003,IC2027,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18265,Nguyễn Đức Thuận,Hoàn thành,1,1,88,76,71.5,77,,,880,IC2027,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+17569,Lê Yến Phương,Hoàn thành,0.79,0.89,,,79,73.25,63.5,82,862,IC2027,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18385,Trần Thị Minh Thư,Hoàn thành,0.94,1,91.5,66.5,67.5,67,,,1003,IC2027,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18372,Vũ Thị Hải Yến,Hoàn thành,1,1,90.5,88,87,89,,,1003,IC2027,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18423,Phạm Trà My,Hoàn thành,1,1,84,79,74.5,64.5,,,898,IC2027,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18414,Lê Văn Toàn,Hoàn thành,0.94,1,87.5,80,79.5,75,,,1003,IC2027,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18462,Phạm Gia Hưng,Hoàn thành,1,1,95,92,89,90,,,1003,IC2027,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18459,Lưu Thị Mai Hương,Không hoàn thành,0.39,0.83,76,96.5,0,0,,,1003,IC2027,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+17899,Võ Ngọc Khánh Ngân,Hoàn thành,1,1,84,84,77,76,,,1009,IC2033,Lê Ngọc Ánh,Online,Khóa 03
+17898,Nguyễn Mạnh Tùng Lâm,Hoàn thành,1,1,63.5,51,60,54,,,1009,IC2033,Lê Ngọc Ánh,Online,Khóa 03
+18131,Bùi Khánh Ly,Hoàn thành,1,1,81,76,79,61,,,1009,IC2033,Lê Ngọc Ánh,Online,Khóa 03
+18157,Nguyễn Thị Huệ,Không hoàn thành,1,1,54.5,52,48,43.3,,,1009,IC2033,Lê Ngọc Ánh,Online,Khóa 03
+16870,Đinh Thị Ngọc Hà,Bỏ học,,,,,,,,,1009,IC2033,Lê Ngọc Ánh,Online,Khóa 03
+18156,Phùng Phương Linh,Hoàn thành,0.93,1,76.5,82,88.5,92.5,92,80,905,IC2033,Lê Ngọc Ánh,Online,Khóa 03
+18223,Nguyễn Thị Trà Giang,Bảo lưu,0.83,1,50,,,,,,880,IC2033,Lê Ngọc Ánh,Online,Khóa 03
+18231,Nguyễn Thị Thanh Xuân,pending,,,,,,,,,914,IC2033,Lê Ngọc Ánh,Online,Khóa 03
+18234,Nguyễn Thị Tường Vy,Hoàn thành,1,1,73,79,79,60,,,918,IC2033,Lê Ngọc Ánh,Online,Khóa 03
+17630,Nguyễn Phương Duyên,Không hoàn thành,0.89,1,61,60,63,50,,,1009,IC2033,Lê Ngọc Ánh,Online,Khóa 03
+18235,Nguyễn Thị Lan Anh,Hoàn thành,0.93,1,62.75,68,68.5,70.75,65.25,85,916,IC2033,Lê Ngọc Ánh,Online,Khóa 03
+18236,Nguyễn Thị Ngọc Trâm,Hoàn thành,1,1,70.5,68.5,56,66.5,,,1009,IC2033,Lê Ngọc Ánh,Online,Khóa 03
+18248,Nguyễn Bá Nguyên Vũ,Chuyển lớp,0.8,1,81.5,88,,,,,1009,IC2033,Lê Ngọc Ánh,Online,Khóa 03
+18256,Lưu Xuân Tùng,Hoàn thành,0.79,0.89,72,75,60,53,,,918,IC2033,Lê Ngọc Ánh,Online,Khóa 03
+18251,Nguyễn Kim Thanh,Hoàn thành,1,1,89,89,79,82,,,1009,IC2033,Lê Ngọc Ánh,Online,Khóa 03
+18242,Nguyễn Tiến Đạt,Hoàn thành,1,1,74,80,69.5,60,,,1009,IC2033,Lê Ngọc Ánh,Online,Khóa 03
+18269,Trần Huỳnh Thảo Nguyên,Hoàn thành,1,1,92.5,89,91,92.5,,,1009,IC2033,Lê Ngọc Ánh,Online,Khóa 03
+18281,Phạm Mai Phương,Hoàn thành,1,1,92,85,90,60,,,918,IC2033,Lê Ngọc Ánh,Online,Khóa 03
+18294,Trương Hương Quỳnh,Hoàn thành,1,1,91,86,79.5,74,,,1009,IC2033,Lê Ngọc Ánh,Online,Khóa 03
+17711,Đỗ Kim Ngọc,Hoàn thành,1,1,76,80,70.5,70,,,1009,IC2033,Lê Ngọc Ánh,Online,Khóa 03
+17814,Lê Trung Sơn,Không hoàn thành,1,1,,,,55,,,1009,IC2033,Lê Ngọc Ánh,Online,Khóa 03
+18262,Nguyễn Yến Nhi,transferred,1,1,,,,,,,871,IC2038,Vũ Thảo Chi,Cơ sở Nghĩa Đô,Khóa 03
+18270,Nguyễn Hải Yến,Hoàn thành,0.89,1,85.5,82.5,83,81,,,906,IC2038,Vũ Thảo Chi,Cơ sở Nghĩa Đô,Khóa 03
+17994,Tô Xuân Hải,Không hoàn thành,0.94,1,55,42.25,42.5,48.75,,,1014,IC2038,Vũ Thảo Chi,Cơ sở Nghĩa Đô,Khóa 03
+17818,Lê Hoàng Yến Nhi,Bảo lưu,0.67,1,,,,,,,1014,IC2038,Vũ Thảo Chi,Cơ sở Nghĩa Đô,Khóa 03
+17384,Nguyễn Thị Mai Linh,Không hoàn thành,0.94,0.83,46.5,71.25,69,61.75,,,1014,IC2038,Vũ Thảo Chi,Cơ sở Nghĩa Đô,Khóa 03
+18216,Phạm Thị Thu Uyên,Hoàn thành,0.94,1,86.5,75.75,78.5,78,,,1014,IC2038,Vũ Thảo Chi,Cơ sở Nghĩa Đô,Khóa 03
+18191,Lê Hoài Linh,Hoàn thành,0.96,1,64,84,78,71,50,75,905,IC2038,Vũ Thảo Chi,Cơ sở Nghĩa Đô,Khóa 03
+18192,Phùng Thị Hồng Hà,Hoàn thành,0.93,0.93,70.75,72,77,,73,80,905,IC2038,Vũ Thảo Chi,Cơ sở Nghĩa Đô,Khóa 03
+18388,Lê Thị Hương Giang,Hoàn thành,0.94,1,94.5,83.25,88.5,94.25,,,1014,IC2038,Vũ Thảo Chi,Cơ sở Nghĩa Đô,Khóa 03
+18414,Lê Văn Toàn,Chuyển lớp,,,,,,,,,1014,IC2038,Vũ Thảo Chi,Cơ sở Nghĩa Đô,Khóa 03
+18373,Hoàng Huyền Thanh,Không hoàn thành,0.96,0.85,35,38.5,34,24,14,50,903,IC2038,Vũ Thảo Chi,Cơ sở Nghĩa Đô,Khóa 03
+18491,Trần Anh Dũng,Hoàn thành,1,1,98.75,96.5,99.75,94.25,,,1014,IC2038,Vũ Thảo Chi,Cơ sở Nghĩa Đô,Khóa 03
+18514,Trần Văn Hải Đại,Hoàn thành,0.94,0.67,95,74.75,75,77,,,1014,IC2038,Vũ Thảo Chi,Cơ sở Nghĩa Đô,Khóa 03
+18188,NGÔ MINH ĐẠT,Không hoàn thành,1,1,33.75,19.75,21,21,,,1014,IC2038,Vũ Thảo Chi,Cơ sở Nghĩa Đô,Khóa 03
+15792,Phó Thị Huyền,Hoàn thành,0.94,1,68,67.75,73.5,58.5,,,1014,IC2038,Vũ Thảo Chi,Cơ sở Nghĩa Đô,Khóa 03
+18406,Lê Thị Thanh Hoa,Hoàn thành,1,1,80.75,55.75,70.7,66.25,,,1014,IC2038,Vũ Thảo Chi,Cơ sở Nghĩa Đô,Khóa 03
+16823,Nguyễn Hoàng Gia Phát,Hoàn thành,0.89,1,93,88,,95,,,1019,IC2042,Lê Bảo Ngọc,Online,Khóa 03
+17333,Trần Văn Hoà,Bỏ học,0.55,0.73,,,17.5,,,,1019,IC2042,Lê Bảo Ngọc,Online,Khóa 03
+17334,Hà Nguyễn Kiều Oanh,Không hoàn thành,0.83,0.92,,47,59.5,48,,,1019,IC2042,Lê Bảo Ngọc,Online,Khóa 03
+18291,Đào Thị Phúc An,Hoàn thành,0.93,0.86,84.5,90,88.5,,83.5,90,905,IC2042,Lê Bảo Ngọc,Online,Khóa 03
+17772,Nguyễn Thu Trang,Bỏ học,0.6,1,,,,,,,1019,IC2042,Lê Bảo Ngọc,Online,Khóa 03
+18292,Ngô Ái Dương,Hoàn thành,0.96,0.93,65.75,87,87,88,86,85,905,IC2042,Lê Bảo Ngọc,Online,Khóa 03
+17968,Lê Ngọc Bảo,Hoàn thành,0.89,1,87.5,79,82,50,,,1019,IC2042,Lê Bảo Ngọc,Online,Khóa 03
+17296,Ngô Nguyễn Quốc Đại,Không hoàn thành,0.94,1,56,65.5,65.5,65,,,1019,IC2042,Lê Bảo Ngọc,Online,Khóa 03
+18303,Võ Thị Vy Na,Hoàn thành,0.89,0.94,75,63.5,94,74,,,1019,IC2042,Lê Bảo Ngọc,Online,Khóa 03
+16509,Đào Thị Thảo Vân,Hoàn thành,0.89,0.94,87,93.5,60,50,,,1019,IC2042,Lê Bảo Ngọc,Online,Khóa 03
+17990,Hoàng Thị Bích Thuỷ,Hoàn thành,0.96,1,62,54.5,70,45.75,56.5,80,916,IC2042,Lê Bảo Ngọc,Online,Khóa 03
+18330,Trần Thị Thu Nga,Hoàn thành,0.89,0.93,71.75,,76,54.75,,88,916,IC2042,Lê Bảo Ngọc,Online,Khóa 03
+17426,Nguyễn Khánh Huyền,Hoàn thành,1,0.92,84,67,66,63,,,1019,IC2042,Lê Bảo Ngọc,Online,Khóa 03
+17452,Võ Thị Thanh Lan,Bỏ học,1,1,61,,0.2,,,,1019,IC2042,Lê Bảo Ngọc,Online,Khóa 03
+18335,Nguyễn Hồng Thanh,Hoàn thành,0.94,1,85.5,67.5,67.5,76.5,,,1019,IC2042,Lê Bảo Ngọc,Online,Khóa 03
+18327,Lê Huyền Trang,Bỏ học,0.77,0.85,75,,,,,,1019,IC2042,Lê Bảo Ngọc,Online,Khóa 03
+18374,Trần Mạnh Dũng,pending,,,,,,,,,880,IC2042,Lê Bảo Ngọc,Online,Khóa 03
+18381,Hoàng Thanh Như,Hoàn thành,1,1,93,67,73,84,,,1019,IC2042,Lê Bảo Ngọc,Online,Khóa 03
+17311,Quàng Thị Châm,Hoàn thành,0.89,1,98.5,97,88,85,,,1019,IC2042,Lê Bảo Ngọc,Online,Khóa 03
+18421,Nguyễn Hoàng Anh,Không hoàn thành,1,0.81,48,50,47.5,45,42,50,903,IC2042,Lê Bảo Ngọc,Online,Khóa 03
+18443,Vũ Nhật Quang,Hoàn thành,0.83,0.94,92.5,76.5,75,,,,1019,IC2042,Lê Bảo Ngọc,Online,Khóa 03
+18183,Đào Thị Hà Vy,Bỏ học,,,,,,,,,1019,IC2042,Lê Bảo Ngọc,Online,Khóa 03
+18332,Trần Gia Nghi,Không hoàn thành,0.89,1,58.5,46,65,58,,,1031,IC2051,Lê Quốc Bảo,Online,Khóa 03
+18354,Phạm Phương Thảo,Hoàn thành,0.93,0.96,57.5,70.25,75.75,74.54,64,90,917,IC2051,Lê Quốc Bảo,Online,Khóa 03
+18383,Hoàng Thị Mai Anh,Hoàn thành,0.84,1,85,73,65,68,,,1031,IC2051,Lê Quốc Bảo,Online,Khóa 03
+18360,Nguyễn Hữu Bảo,Hoàn thành,0.89,1,64,66,65,56,,,1031,IC2051,Lê Quốc Bảo,Online,Khóa 03
+17197,Nguyễn Minh Tâm,Hoàn thành,1,1,90,76,69,77,,,1031,IC2051,Lê Quốc Bảo,Online,Khóa 03
+18449,Nguyễn Thị Thảo Nguyên,Hoàn thành,0.95,1,84,73,86,83,,,1031,IC2051,Lê Quốc Bảo,Online,Khóa 03
+18371,Tống Nguyễn Phương Đông,Không hoàn thành,1,1,46,44.5,42,27,,,924,IC2051,Lê Quốc Bảo,Online,Khóa 03
+18435,Nguyễn An Túc Linh,Bỏ học,0.23,0.15,,,,,,,895,IC2051,Lê Quốc Bảo,Online,Khóa 03
+18238,Đặng Ngọc Thuỳ Duyên,Không hoàn thành,1,1,53,47,59,52,,,1031,IC2051,Lê Quốc Bảo,Online,Khóa 03
+18369,Hoàng Trung Kiên,Không hoàn thành,1,1,65,54,52,51,,,1031,IC2051,Lê Quốc Bảo,Online,Khóa 03
+18476,Hoàng Thảo,Bỏ học,,,69,59,,,,,1031,IC2051,Lê Quốc Bảo,Online,Khóa 03
+17551,Đào Thị Xuân Quỳnh,Hoàn thành,0.95,0.95,87,,80,74,,,1031,IC2051,Lê Quốc Bảo,Online,Khóa 03
+17224,Nguyễn Đình Trường,Hoàn thành,0.93,0.92,56.5,67,54.25,63.5,34.25,74,841,IC2051,Lê Quốc Bảo,Online,Khóa 03
+18487,Nguyễn Thuý Huyền,Hoàn thành,0.95,1,73,67,68,60,,,1031,IC2051,Lê Quốc Bảo,Online,Khóa 03
+18213,Nguyễn Thị Thủy,Hoàn thành,1,1,75,56,64,45,,,1031,IC2051,Lê Quốc Bảo,Online,Khóa 03
+18494,Nguyễn Thị Thảo Vy,Hoàn thành,1,1,74,81,87,85,,,1031,IC2051,Lê Quốc Bảo,Online,Khóa 03
+18522,Võ Hằng,Hoàn thành,0.84,1,82,65,90,69,,,1031,IC2051,Lê Quốc Bảo,Online,Khóa 03
+18535,Dương Thi Hà Nhi,Không hoàn thành,0.95,1,51,37,52.5,65.5,,,924,IC2051,Lê Quốc Bảo,Online,Khóa 03
+18497,Nguyễn Phương Thảo,Hoàn thành,1,1,84,73,71,69,,,1031,IC2051,Lê Quốc Bảo,Online,Khóa 03
+18213,Nguyễn Thị Thủy,Hoàn thành,1,1,75,56,64,45,,,1031,IC2051,Lê Quốc Bảo,Online,Khóa 03
+16148,Nguyễn Uyên Nhi,Hoàn thành,0.89,1,78.5,70.5,74.5,71,,,1038,IC2058,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+18542,Nguyễn Hoàng Hải,Hoàn thành,1,1,84.5,81.5,85.5,80.5,,,1038,IC2058,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+18543,Vũ Văn Tiến,Hoàn thành,0.89,1,92.5,87.75,87,80.75,,,1038,IC2058,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+18601,Trần Hải Anh,Chuyển lớp,0,0.5,,,,,,,1038,IC2058,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+18429,Nguyễn Thảo Phương,Hoàn thành,0.96,0.93,85,76,,83,69,80,903,IC2058,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+18655,Cao Thị Dung,Hoàn thành,0.83,1,93.5,89.9,86,89,,,936,IC2058,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+18715,Trần Lan Anh,Hoàn thành,0.78,0.94,60,63.25,72.5,65,,,936,IC2058,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+17506,Phạm Thị Xuân Lý,Hoàn thành,0.94,1,88,83,83.5,74,,,1038,IC2058,Vũ Khắc Minh,Cơ sở Đại Cồ Việt,Khóa 03
+17402,Nguyễn Kim Ngọc,Không hoàn thành,0.83,1,65.25,57,66,51.75,,,1048,IC2067,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+18210,Hoàng Hải Yến,Hoàn thành,0.94,1,87.75,74.5,85.75,75.75,,,1048,IC2067,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+18204,Nguyễn Thị Trang,Hoàn thành,0.94,1,71.5,60,57.5,65,,,899,IC2067,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+18508,Bùi Thị Dịu,Hoàn thành,0.94,1,93.5,87.75,87.5,86.75,,,1048,IC2067,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+18511,Nguyễn Thị Thu Hà,Hoàn thành,1,1,83,76,79.75,76.5,,,1048,IC2067,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+18513,Hà Lương Như,Hoàn thành,0.94,1,96,91.25,92.75,89,,,1048,IC2067,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+18536,Trần Thị Khánh Huyền,Không hoàn thành,0.94,1,52.75,46.5,50,38.75,,,1048,IC2067,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+16873,Nguyễn Doãn Trường Huy,Không hoàn thành,0.88,1,58.25,39.25,38,21.5,,,1048,IC2067,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+18596,Nguyễn Phương Anh,Bảo lưu,0.94,1,73.5,68.25,79.25,75.5,,,939,IC2067,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+18619,Nguyễn Văn Bách,Hoàn thành,0.85,0.89,65.75,55.9,56,60,71.75,94,933,IC2067,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+17800,Tô Quang Thái,Hoàn thành,0.83,1,75.75,74.25,78,67.5,,,1048,IC2067,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+17960,Nguyễn Ngọc Hoàng Đàm,Hoàn thành,1,1,85.5,83,85.25,83,,,1048,IC2067,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+18706,Vũ Thị Thuý Hằng,Hoàn thành,0.83,1,93.25,89.25,88.25,53,,,1048,IC2067,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+18680,Phùng Hạ Vy,Không hoàn thành,0.96,1,32,36.5,56,44,48.25,85,930,IC2067,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+18704,Nguyễn Phạm Bảo Anh,Bỏ học,1,1,88.75,97,98,94.25,,,939,IC2067,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+18767,Nguyễn Tuệ Minh,Hoàn thành,1,1,92.75,92.5,97,92.5,,,1048,IC2067,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+16853,Đỗ Xuân Bắc,Hoàn thành,1,1,85.5,90,84,65.8,,,859,IC2067,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+18766,Nguyễn Thảo Linh,Hoàn thành,0.96,0.96,68.5,70,68.5,51,45,60,903,IC2067,Dương Tiến Đạt,Cơ sở Phan Văn Trường ,Khóa 03
+18409,Nguyễn Tuyết Như,Bảo lưu,0.2,0.25,0,,,,,,929,IC2075,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18590,Nguyễn Thị Hằng,Bảo lưu,1,1,,,,,,,1056,IC2075,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18623,Trần Thị Thanh Hiền,Hoàn thành,0.94,1,92,93.75,88.25,92.25,,,1056,IC2075,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18624,Đinh Khánh Hiếu,Bỏ học,0.57,0.43,57.64,,,,,,929,IC2075,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18662,Vũ Hồng Nhung,Hoàn thành,0.94,1,76.5,80,65.5,62.5,,,940,IC2075,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18661,Lê Thị Thương,Không hoàn thành,0.89,0.94,47.75,34.75,46.75,27.5,,,1056,IC2075,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18660,Bùi Thị Diệu Linh,Hoàn thành,0.89,0.94,70,65.75,70,62.75,,,1056,IC2075,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18772,Vũ Phương Thảo,Hoàn thành,1,1,93,90,93,92,,,1056,IC2075,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18782,Đức Khôi,Hoàn thành,1,1,51.85,59.14,57.97,73.61,60.17,74,929,IC2075,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18730,Nguyễn Mai Thùy,transferred,,,,,,,,,929,IC2075,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18868,Trần Yến Nhi,Bảo lưu,,,,,,,,,946,IC2075,Cù Thái Hoàng Anh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18346,Trương Khánh Linh,Không hoàn thành,0.84,0.89,63,46,60,74,,,918,IC2078,Nguyễn Bảo Hân,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18580,Phạm Thuỳ Linh,Hoàn thành,0.94,1,92.5,90.5,92.5,96.5,,,898,IC2078,Nguyễn Bảo Hân,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18582,Lê Trung Bình,Hoàn thành,0.94,1,77,73,83,78,,,1059,IC2078,Nguyễn Bảo Hân,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+17230,Nguyễn Văn Hậu,Hoàn thành,0.94,1,70,90,88.5,94.5,,,1059,IC2078,Nguyễn Bảo Hân,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18740,Trần Vũ Uyên Ly,Hoàn thành,0.89,0.94,86.5,82,78,93.5,,,1059,IC2078,Nguyễn Bảo Hân,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18719,Vũ Thị Thu Hiền,Hoàn thành,1,1,68,69,78,61.5,,,924,IC2078,Nguyễn Bảo Hân,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18871,Trịnh Bích Trầm,Hoàn thành,0.89,1,80.5,78,69,96,,,1059,IC2078,Nguyễn Bảo Hân,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18882,Hồ Lê Thiên An,Hoàn thành,0.94,1,92.5,79,91.5,95,,,1059,IC2078,Nguyễn Bảo Hân,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18883,Lê Tuấn Tài,Không hoàn thành,0.94,1,38,47,37,40,,,1059,IC2078,Nguyễn Bảo Hân,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18363,Vương Hải Yến Trang,Không hoàn thành,0.71,0.59,,49,,67,,,1059,IC2078,Nguyễn Bảo Hân,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18873,Trần Thị Thu Thủy,Hoàn thành,1,1,78,77,81,94,,,1059,IC2078,Nguyễn Bảo Hân,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18415,Lê Hồng Thuý,Hoàn thành,1,1,70,65,75.5,66,,,1059,IC2078,Nguyễn Bảo Hân,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18938,Nguyễn Ngọc Hương,Không hoàn thành,0.89,0.95,85.5,0,67,69.5,,,945,IC2078,Nguyễn Bảo Hân,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18496,Lê Ngọc Hiếu,Hoàn thành,1,1,88.75,82.75,80.5,83,,,1060,IC2079,Trần Thảo An,Online,Khóa 03
+18504,Hoàng Tiến Đạt,Hoàn thành,0.61,0.94,61.25,54.3,51,0,,,1060,IC2079,Trần Thảo An,Online,Khóa 03
+18530,Trần Thị Thanh Mai,Bỏ học,0.73,1,89,84.4,76,,,,1060,IC2079,Trần Thảo An,Online,Khóa 03
+18520,Đặng Hoàng Sơn,Hoàn thành,0.83,1,85.25,72.5,64,70.8,,,1060,IC2079,Trần Thảo An,Online,Khóa 03
+17907,Nguyễn Thị Thanh Thuỳ,Bỏ học,1,1,78,0,,,,,1060,IC2079,Trần Thảo An,Online,Khóa 03
+18539,Phạm Trần Nguyên Anh,Hoàn thành,1,1,91.75,87.5,83.5,84.3,,,1060,IC2079,Trần Thảo An,Online,Khóa 03
+18556,Vũ Đức Dũng,Hoàn thành,0.89,1,82,82.3,80,78.3,,,1060,IC2079,Trần Thảo An,Online,Khóa 03
+18558,Nguyễn Thái Ngọc,Hoàn thành,1,1,77.25,74.3,80.25,83.5,,,1060,IC2079,Trần Thảo An,Online,Khóa 03
+17202,Nguyễn Thị Cẩm Hằng,Hoàn thành,0.89,1,83.75,81.5,82,78,,,1060,IC2079,Trần Thảo An,Online,Khóa 03
+18563,NGUYỄN TRẦN XUÂN PHƯỢNG,Bỏ học,0.45,0.91,0,0,,,,,1060,IC2079,Trần Thảo An,Online,Khóa 03
+18565,Nguyễn Thị Sinh Giàu,Hoàn thành,1,1,73.75,82.5,61,92,,,1060,IC2079,Trần Thảo An,Online,Khóa 03
+16895,Vũ Phương Thảo,Hoàn thành,0.94,1,90.5,92.5,86,94,,,1060,IC2079,Trần Thảo An,Online,Khóa 03
+18587,Vũ Đỗ Bích Ngọc,Hoàn thành,0.94,1,84,82.8,83.3,93.8,,,1060,IC2079,Trần Thảo An,Online,Khóa 03
+17227,Trần T Thu Hương,Hoàn thành,0.94,1,60,56.4,66.3,67,,,1060,IC2079,Trần Thảo An,Online,Khóa 03
+18597,Nguyễn Thị Yến Nhi,Hoàn thành,1,1,57,51.6,84.5,83,,,1060,IC2079,Trần Thảo An,Online,Khóa 03
+18614,Nguyễn Khánh An,Hoàn thành,0.89,1,74,69.3,61,60,,,1060,IC2079,Trần Thảo An,Online,Khóa 03
+17588,Nguyễn Thị Hoàng Anh,Hoàn thành,0.94,1,64.5,69,70,76.8,,,1060,IC2079,Trần Thảo An,Online,Khóa 03
+18592,Nguyễn Phương Anh,Hoàn thành,0.89,1,47.25,62,61.5,45,58.5,77.5,939,IC2079,Trần Thảo An,Online,Khóa 03
+18628,Nguyễn Thị Phương Nhi,Hoàn thành,1,1,75,72,79,59,,,924,IC2079,Trần Thảo An,Online,Khóa 03
+18689,Nguyễn Thị Huyền,Hoàn thành,1,1,90,88.5,91.25,89.5,,,1060,IC2079,Trần Thảo An,Online,Khóa 03
+18393,Nguyễn Thủy Tiên,Không hoàn thành,0.83,1,78,71.5,,,,,1068,IC2087,Lê Bảo Ngọc,Online,Khóa 03
+18141,Lê Nguyễn Kỳ Duyên,Không hoàn thành,0.89,1,41,38.5,47.5,49.5,,,1068,IC2087,Lê Bảo Ngọc,Online,Khóa 03
+18578,Lê Đỗ Phương Quyên,Bỏ học,0.2,0.2,0,,,,,,929,IC2087,Lê Bảo Ngọc,Online,Khóa 03
+18640,Cao Phương Linh,Bỏ học,0.73,1,62,,,,,,924,IC2087,Lê Bảo Ngọc,Online,Khóa 03
+18634,Nguyễn Phương Thảo,Bảo lưu,0.67,0.67,72.22,0,,,,,929,IC2087,Lê Bảo Ngọc,Online,Khóa 03
+18125,Phan Thị Như Ngọc,Bỏ học,,,,,,,,,1068,IC2087,Lê Bảo Ngọc,Online,Khóa 03
+18331,Trần Việt Anh,Hoàn thành,1,1,71,69,74.5,59.5,,,1068,IC2087,Lê Bảo Ngọc,Online,Khóa 03
+18051,Ngô Thị Hoa,Hoàn thành,0.95,0.95,75,61,63,71.5,,,1068,IC2087,Lê Bảo Ngọc,Online,Khóa 03
+17782,Võ Đoàn Bảo Ngọc,Không hoàn thành,0.78,0.78,59.5,18.5,0,36,,,1068,IC2087,Lê Bảo Ngọc,Online,Khóa 03
+18678,Nông Triệu Vy,Hoàn thành,0.89,0.79,77.5,83.5,89.5,87,,,1068,IC2087,Lê Bảo Ngọc,Online,Khóa 03
+18248,Nguyễn Bá Nguyên Vũ,Hoàn thành,0,0.11,,,,,,,1068,IC2087,Lê Bảo Ngọc,Online,Khóa 03
+18705,Nông Ánh Nguyệt,Không hoàn thành,1,1,33,42,60.5,71.5,,,1068,IC2087,Lê Bảo Ngọc,Online,Khóa 03
+18709,Nghiêm Thị Phương,Chuyển lớp,1,1,,,,,,,1068,IC2087,Lê Bảo Ngọc,Online,Khóa 03
+18714,Bùi Ngọc Lan,Hoàn thành,0.95,1,55,75,72,63.5,,,924,IC2087,Lê Bảo Ngọc,Online,Khóa 03
+18717,Lê Khả Hân,Hoàn thành,1,1,87.5,92,97.5,94.5,,,1068,IC2087,Lê Bảo Ngọc,Online,Khóa 03
+18718,Nguyễn Danh Thi,Hoàn thành,0.95,1,78,94.5,91.5,93.5,,,1068,IC2087,Lê Bảo Ngọc,Online,Khóa 03
+18722,Nguyễn Triều Tuấn,Hoàn thành,1,1,87.5,85.8,81.3,78.8,,,902,IC2087,Lê Bảo Ngọc,Online,Khóa 03
+18752,Trần Trọng Thông,Hoàn thành,1,0.93,50.46,68.84,73.49,76.39,75,79,929,IC2087,Lê Bảo Ngọc,Online,Khóa 03
+18746,Ngô Trần Ngọc Ánh,Không hoàn thành,1,1,64.5,63.5,55,62.5,,,1068,IC2087,Lê Bảo Ngọc,Online,Khóa 03
+18774,Lý Như Quỳnh,Hoàn thành,0.89,0.95,95,85,88,80,,,1068,IC2087,Lê Bảo Ngọc,Online,Khóa 03
+18572,Trần Thị Tuyết Nhi,Hoàn thành,0.94,1,96,94,86,86,,,1079,IC2097,Nguyễn Kim Long,Online,Khóa 03
+18733,Nguyễn Thị Phương Quỳnh,Bỏ học,0.5,1,,,,,,,1079,IC2097,Nguyễn Kim Long,Online,Khóa 03
+18734,Chu Đinh Thế Trung,Hoàn thành,1,0.95,,62,72,61,,,1079,IC2097,Nguyễn Kim Long,Online,Khóa 03
+18738,Phạm Thị Diễm Phúc,Không hoàn thành,0.89,1,70,52.5,,,,,1079,IC2097,Nguyễn Kim Long,Online,Khóa 03
+18702,Nguyễn Thị Thu Hương,Hoàn thành,0.94,1,90,89,86,76,,,1079,IC2097,Nguyễn Kim Long,Online,Khóa 03
+18765,Đỗ Việt Hưng,Bảo lưu,0.91,1,37,53.5,,,,,1079,IC2097,Nguyễn Kim Long,Online,Khóa 03
+18797,Bùi Văn Danh,Bỏ học,1,1,,,,,,,903,IC2097,Nguyễn Kim Long,Online,Khóa 03
+17175,Đỗ Thị Lan Anh,Bỏ học,0.58,0.71,71.5,52.75,56.75,,,,871,IC2097,Nguyễn Kim Long,Online,Khóa 03
+17578,Nguyễn Thị Bảo Châu,Hoàn thành,0.94,1,80,72,88,72,,,1079,IC2097,Nguyễn Kim Long,Online,Khóa 03
+17787,Bùi Phương Nga,Hoàn thành,1,0.89,74,78,77,77,,,1079,IC2097,Nguyễn Kim Long,Online,Khóa 03
+18811,Phạm Đức Dũng,Hoàn thành,1,1,72,71,71,50,,,1079,IC2097,Nguyễn Kim Long,Online,Khóa 03
+18814,Đoàn Ngọc Tài,Hoàn thành,0.94,1,91,91,84,82,,,1079,IC2097,Nguyễn Kim Long,Online,Khóa 03
+17632,Phạm Thị Thanh Vi,Bảo lưu,1,1,79,80,,,,,1079,IC2097,Nguyễn Kim Long,Online,Khóa 03
+18834,Hoàng Trung Hải,Hoàn thành,1,1,86,90,86,89,,,1079,IC2097,Nguyễn Kim Long,Online,Khóa 03
+18851,Trần Thị Thuỷ,Hoàn thành,1,1,90,85,87,65,,,1079,IC2097,Nguyễn Kim Long,Online,Khóa 03
+18865,Nghiêm Thanh Thảo,Hoàn thành,1,1,80,73,79,81,,,1079,IC2097,Nguyễn Kim Long,Online,Khóa 03
+12723,Ngô Trần Huyền Trang,Hoàn thành,1,0.95,95,89,95,87,,,666,IC1692,Đỗ Thị Linh Phương,Online,Khóa 03
+12725,Nguyễn Kim Huệ,Hoàn thành,1,1,95,85,90,87,,,666,IC1692,Đỗ Thị Linh Phương,Online,Khóa 03
+12745,Nguyễn Thuỳ Trâm,Hoàn thành,1,0.84,83,84,91,83,,,666,IC1692,Đỗ Thị Linh Phương,Online,Khóa 03
+12759,Đặng Cẩm Tiên,pending,,,,,,,,,666,IC1692,Đỗ Thị Linh Phương,Online,Khóa 03
+12760,Nguyễn Thị Thu Hương,pending,,,,,,,,,666,IC1692,Đỗ Thị Linh Phương,Online,Khóa 03
+12769,Đỗ Nhật Huy,Bảo lưu,0.92,0.83,84,79,,,,,666,IC1692,Đỗ Thị Linh Phương,Online,Khóa 03
+12774,Nguyễn Như Quỳnh,Hoàn thành,1,1,92,93,94,86,,,666,IC1692,Đỗ Thị Linh Phương,Online,Khóa 03
+12793,Nguyễn Thị Ngọc Diệp,pending,,,,,,,,,666,IC1692,Đỗ Thị Linh Phương,Online,Khóa 03
+12879,Hoàng Khánh Linh,Hoàn thành,1,1,90,89,89,,,,666,IC1692,Đỗ Thị Linh Phương,Online,Khóa 03
+12881,Nguyễn Khánh Linh,Hoàn thành,0.95,0.89,94,94,94,86,,,666,IC1692,Đỗ Thị Linh Phương,Online,Khóa 03
+12882,Nguyễn Tiến Tuân,Hoàn thành,1,1,97,94,98,94,,,666,IC1692,Đỗ Thị Linh Phương,Online,Khóa 03
+12946,Trần Thị Phương Linh,Hoàn thành,1,1,73,64,78,72,,,666,IC1692,Đỗ Thị Linh Phương,Online,Khóa 03
+12996,Nguyễn Thu Hằng,Bảo lưu,1,1,,,,,,,666,IC1692,Đỗ Thị Linh Phương,Online,Khóa 03
+13020,Nguyên Duy Phi Hồng,Hoàn thành,1,1,92,87,85,86,,,666,IC1692,Đỗ Thị Linh Phương,Online,Khóa 03
+13026,Nguyễn Văn Dũng,Hoàn thành,1,0.95,86,83,87,82,,,666,IC1692,Đỗ Thị Linh Phương,Online,Khóa 03
+13032,Lê Thanh Hằng,Hoàn thành,1,1,95,97,92,85,,,666,IC1692,Đỗ Thị Linh Phương,Online,Khóa 03
+13040,Nguyễn Kim Tuấn Long,Hoàn thành,1,0.89,96,92,95,91,,,666,IC1692,Đỗ Thị Linh Phương,Online,Khóa 03
+13085,Lê Phạm Quỳnh Như,Hoàn thành,0.95,0.95,84,86,92,,,,666,IC1692,Đỗ Thị Linh Phương,Online,Khóa 03
+13104,Nguyễn Đức Nhật,Hoàn thành,0.95,0.95,94,93,90,92,,,666,IC1692,Đỗ Thị Linh Phương,Online,Khóa 03
+13113,Nguyễn Ngọc Ánh Tuyết,Không hoàn thành,0.89,0.74,88,,,,,,666,IC1692,Đỗ Thị Linh Phương,Online,Khóa 03
+13269,Trần Văn Trường,Hoàn thành,1,0.95,82,79,84,,,,666,IC1692,Đỗ Thị Linh Phương,Online,Khóa 03
+13476,Đỗ Hồng Sơn,Bỏ học,0.58,0.5,,,,,,,666,IC1692,Đỗ Thị Linh Phương,Online,Khóa 03
+14410,Đinh Thị Ngọc Ánh,Hoàn thành,0.89,0.88,,,84,84,,,666,IC1692,Đỗ Thị Linh Phương,Online,Khóa 03
+12859,Nguyễn Hữu Toàn,Hoàn thành,0.83,0.68,11,10,30,27,,,675,IC1699,Trần Thảo An,Cơ sở Phan Văn Trường,Khóa 03
+13052,Trần Thị Điệp,Hoàn thành,0.94,1,83,72,73,68,,,675,IC1699,Trần Thảo An,Cơ sở Phan Văn Trường,Khóa 03
+13095,Nguyễn Đình Hùng,Hoàn thành,1,1,74.75,54.75,55.25,59,,,675,IC1699,Trần Thảo An,Cơ sở Phan Văn Trường,Khóa 03
+13179,Lê Nguyễn Trà My,Hoàn thành,0.83,1,62.5,78,58.5,78,,,675,IC1699,Trần Thảo An,Cơ sở Phan Văn Trường,Khóa 03
+13188,Phan Ngọc Tú,Bỏ học,0.77,0.77,69.5,,,,,,675,IC1699,Trần Thảo An,Cơ sở Phan Văn Trường,Khóa 03
+13349,Vũ Thị My,Hoàn thành,0.94,1,95.5,93.75,89,88,,,675,IC1699,Trần Thảo An,Cơ sở Phan Văn Trường,Khóa 03
+13350,Nguyễn Khắc Thực,Bảo lưu,0.6,1,72.25,,,,,,675,IC1699,Trần Thảo An,Cơ sở Phan Văn Trường,Khóa 03
+13357,Nguyễn Trung Sơn,Hoàn thành,0.89,1,65,51.5,47.5,58.5,,,675,IC1699,Trần Thảo An,Cơ sở Phan Văn Trường,Khóa 03
+13365,Lỗ Khánh Huyền,Hoàn thành,1,1,86.75,89,72.25,70.5,,,675,IC1699,Trần Thảo An,Cơ sở Phan Văn Trường,Khóa 03
+13382,Nguyễn Hạnh Ngân,Hoàn thành,1,1,80,73,69,65,,,675,IC1699,Trần Thảo An,Cơ sở Phan Văn Trường,Khóa 03
+13387,Nguyễn Thị Phương Diệu,Hoàn thành,1,1,89.5,90.5,80.5,75,,,675,IC1699,Trần Thảo An,Cơ sở Phan Văn Trường,Khóa 03
+13388,Phạm Khánh Dương,Hoàn thành,0.94,1,95,93,84.25,86,,,675,IC1699,Trần Thảo An,Cơ sở Phan Văn Trường,Khóa 03
+13448,Hoàng Đăng Quang,transferred,0.75,1,70,,,,,,675,IC1699,Trần Thảo An,Cơ sở Phan Văn Trường,Khóa 03
+13453,Lê Hải Đăng,Hoàn thành,0.89,1,95,92,78.5,85,,,675,IC1699,Trần Thảo An,Cơ sở Phan Văn Trường,Khóa 03
+13595,Bùi Xuân Thi,Hoàn thành,1,1,94.3,86.5,78,59,,,675,IC1699,Trần Thảo An,Cơ sở Phan Văn Trường,Khóa 03
+13670,Hoàng Thảo Nhi,Hoàn thành,0.83,1,98.25,93.4,81.5,76,,,675,IC1699,Trần Thảo An,Cơ sở Phan Văn Trường,Khóa 03
+13725,Nguyễn Cảnh Hào,Hoàn thành,1,1,89,76,83.25,77,,,675,IC1699,Trần Thảo An,Cơ sở Phan Văn Trường,Khóa 03
+13762,Lê Thị Nga,Hoàn thành,0.94,1,85.25,78,74.25,58,,,675,IC1699,Trần Thảo An,Cơ sở Phan Văn Trường,Khóa 03
+12955,Nguyễn Thị Gia Hân,Hoàn thành,1,0.95,63,53,55,54,,,679,IC1703,Nguyễn Kim Long,Online,Khóa 03
+12961,Nguyễn Thị Mai Linh,Hoàn thành,1,1,89,81,65,69,,,679,IC1703,Nguyễn Kim Long,Online,Khóa 03
+13005,Lê Duy Khánh,Hoàn thành,0.95,1,87,80,71,76,,,679,IC1703,Nguyễn Kim Long,Online,Khóa 03
+13019,Trần Thị Phương Thảo,Hoàn thành,0.95,0.63,80,58,51,65,,,679,IC1703,Nguyễn Kim Long,Online,Khóa 03
+13028,Huỳnh Thị Thùy Trang,Bảo lưu,,,,,,,,,679,IC1703,Nguyễn Kim Long,Online,Khóa 03
+13035,Lê Thị Chung,Bỏ học,0.76,0.76,,87,87,,,,679,IC1703,Nguyễn Kim Long,Online,Khóa 03
+13047,Nguyễn Viết Cường,Bỏ học,0.88,0.81,70,0,56,,,,679,IC1703,Nguyễn Kim Long,Online,Khóa 03
+13135,Lý Thị Mỹ Hoàng,Hoàn thành,0.95,1,89,82,82,76,,,679,IC1703,Nguyễn Kim Long,Online,Khóa 03
+13140,Nguyễn Thị Khánh Linh,Hoàn thành,1,1,82,73,60,67,,,679,IC1703,Nguyễn Kim Long,Online,Khóa 03
+13197,Hoàng Thị Ngọc Anh,Hoàn thành,1,1,93,85,85,81,,,679,IC1703,Nguyễn Kim Long,Online,Khóa 03
+13220,Nguyễn Thị Ngọc Châu,Hoàn thành,0.68,0.74,84,73,82,69,,,679,IC1703,Nguyễn Kim Long,Online,Khóa 03
+13222,Nguyễn Thuỳ Trang,Hoàn thành,1,1,90,73,62,66,,,679,IC1703,Nguyễn Kim Long,Online,Khóa 03
+13256,Trần Như Mỹ,Hoàn thành,1,1,82,82,82,76,,,679,IC1703,Nguyễn Kim Long,Online,Khóa 03
+13263,Nguyễn Ngọc Anh,Hoàn thành,0.95,0.74,73,73,26,67,,,679,IC1703,Nguyễn Kim Long,Online,Khóa 03
+13266,Lê Thanh Tùng,Hoàn thành,1,1,83,82,80,67,,,679,IC1703,Nguyễn Kim Long,Online,Khóa 03
+13290,Chu Thị Bích Ngọc,Hoàn thành,0.79,1,94,64,43,85,,,679,IC1703,Nguyễn Kim Long,Online,Khóa 03
+13305,Nguyễn Khánh Ly,Hoàn thành,1,1,93,82,94,77,,,679,IC1703,Nguyễn Kim Long,Online,Khóa 03
+13327,Nguyễn Mạnh Cường,Hoàn thành,0.84,0.74,78,70,65,46,,,679,IC1703,Nguyễn Kim Long,Online,Khóa 03
+13861,Nguyễn Thị Như Quỳnh,Hoàn thành,0.85,1,,76,81,78,,,679,IC1703,Nguyễn Kim Long,Online,Khóa 03
+13454,Dương Đức Nam,Hoàn thành,1,1,88.3,81.5,87.9,81.8,,,685,IC1709,Nguyễn Hoàng Minh Hằng,Cơ sở Hoàng Cầu 2,Khóa 03
+13506,Nguyễn Thị Thanh Huyền,Hoàn thành,0.89,1,93.5,92,94.5,93,,,685,IC1709,Nguyễn Hoàng Minh Hằng,Cơ sở Hoàng Cầu 2,Khóa 03
+13720,Bùi Vũ Minh Phi,Hoàn thành,0.94,1,90.3,91.5,94,96,,,685,IC1709,Nguyễn Hoàng Minh Hằng,Cơ sở Hoàng Cầu 2,Khóa 03
+13777,Trần Thị Mai Anh,Hoàn thành,0.83,0.94,79.5,75.8,79,81.5,,,685,IC1709,Nguyễn Hoàng Minh Hằng,Cơ sở Hoàng Cầu 2,Khóa 03
+13950,Đoàn Thị Hằng,Hoàn thành,0.94,1,78.8,87.3,86,92.5,,,685,IC1709,Nguyễn Hoàng Minh Hằng,Cơ sở Hoàng Cầu 2,Khóa 03
+13970,Trần Ngọc Diệp,Đang học,0.72,0.78,87.3,87.3,86.3,,,,685,IC1709,Nguyễn Hoàng Minh Hằng,Cơ sở Hoàng Cầu 2,Khóa 03
+14048,Hồ Mạnh Hưng,Bỏ học,1,1,,,,,,,685,IC1709,Nguyễn Hoàng Minh Hằng,Cơ sở Hoàng Cầu 2,Khóa 03
+14102,Nguyễn Thị Thu Phương,Hoàn thành,1,1,81.3,80,83.5,89.3,,,685,IC1709,Nguyễn Hoàng Minh Hằng,Cơ sở Hoàng Cầu 2,Khóa 03
+14127,Cao Việt Bách,Hoàn thành,0.78,0.94,83.5,79.5,81.3,70.3,,,685,IC1709,Nguyễn Hoàng Minh Hằng,Cơ sở Hoàng Cầu 2,Khóa 03
+14129,Nguyễn Vũ Tuấn,Hoàn thành,1,0.94,91.8,93.3,95.8,95.8,,,685,IC1709,Nguyễn Hoàng Minh Hằng,Cơ sở Hoàng Cầu 2,Khóa 03
+14135,Bùi Thị Ánh Hồng,Hoàn thành,0.94,1,91,83.5,85.8,87.8,,,685,IC1709,Nguyễn Hoàng Minh Hằng,Cơ sở Hoàng Cầu 2,Khóa 03
+14152,Bùi Hoàng Nam,Bỏ học,0.8,1,75.8,65.8,73.8,,,,685,IC1709,Nguyễn Hoàng Minh Hằng,Cơ sở Hoàng Cầu 2,Khóa 03
+14153,Lê Thị Thanh,Hoàn thành,0.89,1,88.5,89,83.5,93,,,685,IC1709,Nguyễn Hoàng Minh Hằng,Cơ sở Hoàng Cầu 2,Khóa 03
+14281,Hà Hoài Thu,Hoàn thành,0.89,0.94,86.5,77.5,78.5,78,,,685,IC1709,Nguyễn Hoàng Minh Hằng,Cơ sở Hoàng Cầu 2,Khóa 03
+14366,Phùng Văn Thắng,Bỏ học,0.85,0.69,71.3,74.3,,,,,685,IC1709,Nguyễn Hoàng Minh Hằng,Cơ sở Hoàng Cầu 2,Khóa 03
+13298,HUỲNH THỊ THIÊN KIỀU,Hoàn thành,1,1,84,90.5,91.5,82,,,687,IC1711,Lê Ngọc Ánh,Online,Khóa 03
+13346,Phạm Thị Thu Hòa,Hoàn thành,1,1,83,81,90.5,75,,,687,IC1711,Lê Ngọc Ánh,Online,Khóa 03
+13356,Cao Đắc Hưng,Hoàn thành,0.95,1,67.5,65,65,76,,,687,IC1711,Lê Ngọc Ánh,Online,Khóa 03
+13385,Quách Thị Trà,Bỏ học,1,1,,,,,,,687,IC1711,Lê Ngọc Ánh,Online,Khóa 03
+13411,Lê Quỳnh Như,Bỏ học,1,1,,,,,,,687,IC1711,Lê Ngọc Ánh,Online,Khóa 03
+13414,Nguyễn Đặng Bảo Thy,Hoàn thành,1,1,86,78,84.5,77,,,687,IC1711,Lê Ngọc Ánh,Online,Khóa 03
+13428,PHAN VĂN MẠNH,Bỏ học,0.73,0.8,50.5,,39,,,,687,IC1711,Lê Ngọc Ánh,Online,Khóa 03
+13439,Phan Thị Lâm Oanh,pending,,,,,,,,,687,IC1711,Lê Ngọc Ánh,Online,Khóa 03
+13502,Phạm Bảo Hân,Bỏ học,,,,,,,,,687,IC1711,Lê Ngọc Ánh,Online,Khóa 03
+13507,Đặng Thành Đạt,Hoàn thành,1,1,82,84.5,78.5,81,,,687,IC1711,Lê Ngọc Ánh,Online,Khóa 03
+13541,Nguyễn Thị Mai,Không hoàn thành,0.58,0.89,80,,85.5,,,,687,IC1711,Lê Ngọc Ánh,Online,Khóa 03
+13640,Thân Thị Yến Nhi,Bỏ học,0.75,1,88.5,,,,,,687,IC1711,Lê Ngọc Ánh,Online,Khóa 03
+13651,Nguyễn Bá Tài,Hoàn thành,0.95,1,60,61,60,49,,,687,IC1711,Lê Ngọc Ánh,Online,Khóa 03
+13654,Nguyễn Thu Hiền,Hoàn thành,1,1,71,74,69,86,,,687,IC1711,Lê Ngọc Ánh,Online,Khóa 03
+13684,Hà Thị Thủy,Bỏ học,1,1,34.5,,,,,,687,IC1711,Lê Ngọc Ánh,Online,Khóa 03
+13712,Nguyễn Thị Thanh Hà,Bảo lưu,0.75,1,,,,,,,687,IC1711,Lê Ngọc Ánh,Online,Khóa 03
+13723,Trần Phạm Tú Quyên,Bỏ học,1,1,,,,,,,687,IC1711,Lê Ngọc Ánh,Online,Khóa 03
+13739,Thảo Ly,Hoàn thành,0.95,1,87,80,80,61,,,687,IC1711,Lê Ngọc Ánh,Online,Khóa 03
+13808,Đỗ Đắc Bắc,transferred,1,1,,,,,,,687,IC1711,Lê Ngọc Ánh,Online,Khóa 03
+13811,Lê Đỗ Quỳnh Như,pending,,,,,,,,,687,IC1711,Lê Ngọc Ánh,Online,Khóa 03
+13906,Nguyễn Hà Trang,Hoàn thành,1,1,63,71,67.5,53,,,687,IC1711,Lê Ngọc Ánh,Online,Khóa 03
+14483,Trần Quỳnh Anh,Hoàn thành,0.89,1,97,94.8,95,86,,,687,IC1711,Lê Ngọc Ánh,Online,Khóa 03
+14873,Đỗ Nhật Huy,Hoàn thành,0.89,1,,,73,65.5,,,687,IC1711,Lê Ngọc Ánh,Online,Khóa 03
+13504,Nguyễn Ngọc Mai,Không hoàn thành,0.76,0.88,45.8,35,35.8,50.5,,,697,IC1722,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+13628,Trần Bích Ngọc,Hoàn thành,1,1,72,60,72.3,84,,,697,IC1722,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+13715,Nông Thị Huệ,pending,,,,,,,,,697,IC1722,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+13756,Đỗ Phương Nhung,Hoàn thành,0.94,1,93,80,80,75.5,,,697,IC1722,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+13757,Lê Vũ Quỳnh Mai,Bỏ học,0.73,0.93,51.5,26,43,,,,697,IC1722,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+13798,Nguyễn Xuân Hướng,Không hoàn thành,0.65,0.94,53.75,60,39.8,41.5,,,697,IC1722,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+13799,Ngô đức Mạnh,Hoàn thành,0.89,1,73,66.3,58.5,54,,,697,IC1722,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+13806,Đinh Thị Lan Phương,Hoàn thành,0.83,0.94,83,67.8,71.5,67,,,697,IC1722,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+13965,Trần Mạnh Đạt,Bảo lưu,0.38,1,,,,,,,697,IC1722,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+14010,Phạm Quốc Vượng,Hoàn thành,0.89,1,85,71.8,70.5,62,,,697,IC1722,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+14065,Nguyễn An Túc Linh,Không hoàn thành,0.71,0.82,87.5,87.8,,,,,697,IC1722,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+14116,Trần Minh Anh,Hoàn thành,0.94,1,87.5,91.3,82.5,81,,,697,IC1722,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+14117,Trịnh Thị Trang Anh,Hoàn thành,0.94,1,96.5,95,90.8,86.5,,,697,IC1722,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+14133,Nguyễn Thị Lệ Quyên,Không hoàn thành,1,0.94,58.8,51.5,36,41,,,697,IC1722,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+14134,Nguyễn Thị Quỳnh Nhi,Hoàn thành,1,0.94,69.8,61.5,56.5,52.25,,,697,IC1722,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+14136,Trần Minh Hiếu,Hoàn thành,0.94,0.89,75,70,70,57.75,,,697,IC1722,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+14173,Hoàng Ngọc Linh,Hoàn thành,0.83,0.83,68,53,70,78.5,,,697,IC1722,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+14354,Đinh Thị Kim Phượng,Hoàn thành,1,1,95.5,94,86.5,88.5,,,697,IC1722,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+14368,Huỳnh Trung Phúc Chung,Hoàn thành,0.94,0.94,96.5,88.3,86.3,82.25,,,697,IC1722,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+14370,Nguyễn Văn Hùng,transferred,1,1,,,,,,,697,IC1722,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+13687,Phan Thị Khánh Huyền,Hoàn thành,0.94,1,92,90,94,93,,,712,IC1735,Trần Thị Anh Thư,Cơ sở Nghĩa Đô,Khóa 03
+13773,Nguyễn Chí Đức,Hoàn thành,0.83,1,94,90,87.5,89,,,712,IC1735,Trần Thị Anh Thư,Cơ sở Nghĩa Đô,Khóa 03
+13805,Nguyễn Trung Hiếu,Hoàn thành,1,1,77,80,80,76.5,,,712,IC1735,Trần Thị Anh Thư,Cơ sở Nghĩa Đô,Khóa 03
+14140,Vũ Việt Anh,Hoàn thành,1,1,82,80.3,85,78.5,,,712,IC1735,Trần Thị Anh Thư,Cơ sở Nghĩa Đô,Khóa 03
+14141,Nguyễn Hồng Nhung,Hoàn thành,0.89,1,85,84.8,87.5,84,,,712,IC1735,Trần Thị Anh Thư,Cơ sở Nghĩa Đô,Khóa 03
+14146,Ngô Quang Anh,Bỏ học,0.25,0.5,,,,,,,712,IC1735,Trần Thị Anh Thư,Cơ sở Nghĩa Đô,Khóa 03
+14190,Đoàn Ngọc Mai,Hoàn thành,0.94,1,84,86.5,81.5,80,,,712,IC1735,Trần Thị Anh Thư,Cơ sở Nghĩa Đô,Khóa 03
+14213,Nguyễn Xuân Phương,Hoàn thành,0.94,1,77,74.8,78.5,76.5,,,712,IC1735,Trần Thị Anh Thư,Cơ sở Nghĩa Đô,Khóa 03
+14290,Hoàng Đăng Quang,Hoàn thành,0.89,1,84.5,77.8,82,83.5,,,712,IC1735,Trần Thị Anh Thư,Cơ sở Nghĩa Đô,Khóa 03
+14323,Hà Nguyên Trung,Hoàn thành,1,1,80,90,91,90,,,712,IC1735,Trần Thị Anh Thư,Cơ sở Nghĩa Đô,Khóa 03
+14399,Đỗ Đức Toàn,Hoàn thành,0.94,1,90,89.3,83.5,80,,,712,IC1735,Trần Thị Anh Thư,Cơ sở Nghĩa Đô,Khóa 03
+14434,Nguyễn Như Ngọc,Hoàn thành,1,1,93,86.3,93,90.5,,,712,IC1735,Trần Thị Anh Thư,Cơ sở Nghĩa Đô,Khóa 03
+14464,Hoàng Khánh Huyền,Hoàn thành,0.94,1,90,88.5,89,78,,,712,IC1735,Trần Thị Anh Thư,Cơ sở Nghĩa Đô,Khóa 03
+14473,LÊ ĐĂNG HÀO,Không hoàn thành,0.53,0.82,47,64.8,81,,,,712,IC1735,Trần Thị Anh Thư,Cơ sở Nghĩa Đô,Khóa 03
+14477,Nguyễn Thị Hạ Vy,Bảo lưu,1,1,83,,,,,,712,IC1735,Trần Thị Anh Thư,Cơ sở Nghĩa Đô,Khóa 03
+14508,Phạm Duy Cường,Hoàn thành,0.94,1,85.5,87.3,81,82.5,,,712,IC1735,Trần Thị Anh Thư,Cơ sở Nghĩa Đô,Khóa 03
+13759,Lê Hoàng Bích Vân,pending,,,,,,,,,716,IC1739,Vũ Thảo Chi,Online,Khóa 03
+13782,Phạm Thị Kim Anh,Hoàn thành,0.95,1,84.8,64.6,80.1,60.3,,,716,IC1739,Vũ Thảo Chi,Online,Khóa 03
+13793,Đào Công Nghĩa,Bỏ học,0,1,,,,,,,716,IC1739,Vũ Thảo Chi,Online,Khóa 03
+13810,Bùi Duy Hoàng,Hoàn thành,0.95,1,80.5,83.3,82.4,73.4,,,716,IC1739,Vũ Thảo Chi,Online,Khóa 03
+13856,Lê Thị Thái Bảo,Hoàn thành,1,1,74.5,72.8,78.6,79.4,,,716,IC1739,Vũ Thảo Chi,Online,Khóa 03
+13873,Võ Thị Bích Ngọc,Hoàn thành,1,1,89.3,86.6,87.5,88.1,,,716,IC1739,Vũ Thảo Chi,Online,Khóa 03
+13890,Phan Lê Thái Bảo,pending,,,,,,,,,716,IC1739,Vũ Thảo Chi,Online,Khóa 03
+13975,Nguyễn Minh Thư,Không hoàn thành,0.89,0.95,47.8,58.8,48.5,44.2,,,716,IC1739,Vũ Thảo Chi,Online,Khóa 03
+13976,Hoàng Ngọc Linh,Bỏ học,0.69,0.69,45.3,45.8,54.6,,,,716,IC1739,Vũ Thảo Chi,Online,Khóa 03
+13990,Nguyễn Lê Thanh Anh,Hoàn thành,1,0.95,78.3,71.8,74.3,71.8,,,716,IC1739,Vũ Thảo Chi,Online,Khóa 03
+13992,Lưu Mỹ Uyên,Hoàn thành,1,1,73.3,86.1,87.2,71.4,,,716,IC1739,Vũ Thảo Chi,Online,Khóa 03
+14026,Dương Thị Hài Nhi,Hoàn thành,1,1,95.6,97.4,96,94.3,,,716,IC1739,Vũ Thảo Chi,Online,Khóa 03
+14036,Nguyễn Liên Hiệp,Hoàn thành,0.95,1,89.5,83,88.1,70.5,,,716,IC1739,Vũ Thảo Chi,Online,Khóa 03
+14061,Nguyễn Chí Nguyện,Hoàn thành,1,1,95.3,93.6,93.5,87.4,,,716,IC1739,Vũ Thảo Chi,Online,Khóa 03
+14075,Hoàng Minh Chiến,Bỏ học,0.76,0.94,96.8,91.6,93.8,,,,716,IC1739,Vũ Thảo Chi,Online,Khóa 03
+14082,Phan Trọng Toại,Bỏ học,0.71,0.82,92.3,79,,,,,716,IC1739,Vũ Thảo Chi,Online,Khóa 03
+14083,Nguyễn Thị Đỗ Quyên,Hoàn thành,0.89,1,94,92.6,96,91.7,,,716,IC1739,Vũ Thảo Chi,Online,Khóa 03
+14111,NG SHI YI,Hoàn thành,1,1,96.3,96.5,94.8,91.6,,,716,IC1739,Vũ Thảo Chi,Online,Khóa 03
+14125,Nguyễn Thị Kim Hằng,Hoàn thành,1,1,94,89.5,87.5,85.8,,,716,IC1739,Vũ Thảo Chi,Online,Khóa 03
+14142,Đỗ Vân Trang,Hoàn thành,0.95,0.95,94.8,87.3,84.8,77.5,,,716,IC1739,Vũ Thảo Chi,Online,Khóa 03
+14144,Phan Thị Như Trúc,Hoàn thành,1,1,90.8,92.5,86.8,82.5,,,716,IC1739,Vũ Thảo Chi,Online,Khóa 03
+13829,Bế Quang Vũ,Hoàn thành,1,1,60.25,59.25,37.8,58,,,720,IC1743,Nguyễn Hoàng Minh Hằng,Cơ sở Ngô Thì Nhậm,Khóa 03
+14198,Nguyễn Thị Ánh Hồng,Hoàn thành,0.89,1,80.5,76.5,75,80.5,,,720,IC1743,Nguyễn Hoàng Minh Hằng,Cơ sở Ngô Thì Nhậm,Khóa 03
+14270,Nguyễn Thuỳ Linh,Hoàn thành,0.89,1,73,72.25,80,80.5,,,720,IC1743,Nguyễn Hoàng Minh Hằng,Cơ sở Ngô Thì Nhậm,Khóa 03
+14430,Nguyễn Quỳnh Anh,Hoàn thành,0.83,1,78.25,72,83.8,80.8,,,720,IC1743,Nguyễn Hoàng Minh Hằng,Cơ sở Ngô Thì Nhậm,Khóa 03
+14849,Phạm Trúc Linh,Hoàn thành,1,1,92,87.75,93.5,87.5,,,720,IC1743,Nguyễn Hoàng Minh Hằng,Cơ sở Ngô Thì Nhậm,Khóa 03
+15025,Vũ Khánh Linh,transferred,,,,,,,,,720,IC1743,Nguyễn Hoàng Minh Hằng,Cơ sở Ngô Thì Nhậm,Khóa 03
+15030,Phạm Nguyễn Gia Hoàng,pending,,,,,,,,,720,IC1743,Nguyễn Hoàng Minh Hằng,Cơ sở Ngô Thì Nhậm,Khóa 03
+15093,Lê Thị Phương Thảo,Hoàn thành,0.94,0.89,70,64.25,73,79.8,,,720,IC1743,Nguyễn Hoàng Minh Hằng,Cơ sở Ngô Thì Nhậm,Khóa 03
+14218,Ngô Trọng Hiệp,Hoàn thành,1,1,92,87,92.5,88.5,,,724,IC1747,Hoàng Minh Hiển,Cơ sở Nghĩa Đô,Khóa 03
+14219,Lương Quang Hoàng,Hoàn thành,0.94,1,97.1,90.25,94,88,,,724,IC1747,Hoàng Minh Hiển,Cơ sở Nghĩa Đô,Khóa 03
+14303,Nguyễn Duy Khánh,Hoàn thành,1,1,90.6,89.5,89,88.5,,,724,IC1747,Hoàng Minh Hiển,Cơ sở Nghĩa Đô,Khóa 03
+14324,Lê Trung Kiên,Bảo lưu,1,1,77,75.25,,,,,724,IC1747,Hoàng Minh Hiển,Cơ sở Nghĩa Đô,Khóa 03
+14438,Trần Bích Phượng,Hoàn thành,0.67,0.94,97.5,97.75,99,97.75,,,724,IC1747,Hoàng Minh Hiển,Cơ sở Nghĩa Đô,Khóa 03
+14616,Phùng Thị Thanh Trang,Bảo lưu,0.77,1,80.25,69.5,93.5,,,,724,IC1747,Hoàng Minh Hiển,Cơ sở Nghĩa Đô,Khóa 03
+14635,Nguyễn Ngọc Tường Anh,Hoàn thành,0.78,1,88.7,83,78.5,86.5,,,724,IC1747,Hoàng Minh Hiển,Cơ sở Nghĩa Đô,Khóa 03
+14856,Tô Duy Minh,Bảo lưu,0.86,1,87.8,,,,,,724,IC1747,Hoàng Minh Hiển,Cơ sở Nghĩa Đô,Khóa 03
+14865,Trần Thị Thanh Thuý,Hoàn thành,0.94,1,98.6,99.5,97,96,,,724,IC1747,Hoàng Minh Hiển,Cơ sở Nghĩa Đô,Khóa 03
+14915,Phan Hồng Nhung,Hoàn thành,0.94,1,97.3,98.75,98,95.5,,,724,IC1747,Hoàng Minh Hiển,Cơ sở Nghĩa Đô,Khóa 03
+14949,Vũ Quốc Bảo,Hoàn thành,0.94,1,81.35,73,76,81.5,,,724,IC1747,Hoàng Minh Hiển,Cơ sở Nghĩa Đô,Khóa 03
+14952,Trần Thị Xuyến,Hoàn thành,1,1,92.8,86,92.5,92,,,724,IC1747,Hoàng Minh Hiển,Cơ sở Nghĩa Đô,Khóa 03
+15033,Nguyễn Văn Hưng,Hoàn thành,0.89,0.94,85,86.25,76,81.75,,,724,IC1747,Hoàng Minh Hiển,Cơ sở Nghĩa Đô,Khóa 03
+15071,Đậu Phan Tuấn Anh,Hoàn thành,0.83,1,88,90,99,90.75,,,724,IC1747,Hoàng Minh Hiển,Cơ sở Nghĩa Đô,Khóa 03
+15187,Nguyễn An Khải,Hoàn thành,0.78,1,86.5,92.25,91.5,87.5,,,724,IC1747,Hoàng Minh Hiển,Cơ sở Nghĩa Đô,Khóa 03
+14242,Phạm Cao Bảo Duy,Không hoàn thành,1,0.63,51.5,67.5,72.5,60.3,,,737,IC1760,Nguyễn Thị Mai Anh,Online,Khóa 03
+14283,Dương Thanh Hoa,Hoàn thành,1,1,93.5,92.5,86.5,93,,,737,IC1760,Nguyễn Thị Mai Anh,Online,Khóa 03
+14306,NGÔ THỊ KIM ANH,Hoàn thành,1,0.95,72.3,80,89,69.8,,,737,IC1760,Nguyễn Thị Mai Anh,Online,Khóa 03
+14308,Hà Tiến Đạt,Không hoàn thành,0.95,0.89,59.3,65.8,69,55.8,,,737,IC1760,Nguyễn Thị Mai Anh,Online,Khóa 03
+14313,Vũ Thị Phương Thảo,Hoàn thành,1,1,89,89,91.5,91.5,,,737,IC1760,Nguyễn Thị Mai Anh,Online,Khóa 03
+14314,Vũ Thị Thuỳ Trang,Hoàn thành,1,1,93.5,98.5,95.5,89.5,,,737,IC1760,Nguyễn Thị Mai Anh,Online,Khóa 03
+14349,Đào Thị Khuyên,Hoàn thành,1,1,82.5,76,91,86.5,,,737,IC1760,Nguyễn Thị Mai Anh,Online,Khóa 03
+14377,Trương Thuỳ Dương,Hoàn thành,0.95,0.53,79.3,77,63,61,,,737,IC1760,Nguyễn Thị Mai Anh,Online,Khóa 03
+14380,Nguyễn Thị Hiền Diệu,pending,,,,,,,,,737,IC1760,Nguyễn Thị Mai Anh,Online,Khóa 03
+14382,Nguyễn Thị Thanh Huyền,Bỏ học,0.33,0.33,,,,,,,737,IC1760,Nguyễn Thị Mai Anh,Online,Khóa 03
+14401,Lê Thị Thu Thảo,Hoàn thành,0.79,1,,77.8,,81.3,,,737,IC1760,Nguyễn Thị Mai Anh,Online,Khóa 03
+14444,Nguyễn Hồng Quân,Hoàn thành,1,1,87.5,82.5,83,76.5,,,737,IC1760,Nguyễn Thị Mai Anh,Online,Khóa 03
+14467,Chu Minh Tuấn,Hoàn thành,1,1,88.8,79.5,81.3,76.5,,,737,IC1760,Nguyễn Thị Mai Anh,Online,Khóa 03
+14484,Nguyễn Minh Quân,transferred,,,,,,,,,737,IC1760,Nguyễn Thị Mai Anh,Online,Khóa 03
+14609,Bùi Khắc Dư,Bỏ học,0.5,0.5,,,,,,,737,IC1760,Nguyễn Thị Mai Anh,Online,Khóa 03
+14639,Trần Minh Khiết,Hoàn thành,1,1,94,93.8,96,94,,,737,IC1760,Nguyễn Thị Mai Anh,Online,Khóa 03
+14641,Trần Khánh Linh,pending,,,,,,,,,737,IC1760,Nguyễn Thị Mai Anh,Online,Khóa 03
+14647,Võ Thị Cẩm Tú,Hoàn thành,0.84,0.74,81.5,70.5,70.8,87,,,737,IC1760,Nguyễn Thị Mai Anh,Online,Khóa 03
+14657,Lương Nhung,Hoàn thành,1,1,73.5,72.3,62,66.8,,,737,IC1760,Nguyễn Thị Mai Anh,Online,Khóa 03
+14897,Nguyễn Viết Hồng Hoa,Hoàn thành,1,0.95,75.5,67.3,75,71.8,,,737,IC1760,Nguyễn Thị Mai Anh,Online,Khóa 03
+14440,Nguyễn Khánh Linh,Hoàn thành,0.94,0.89,92.75,88,86.25,85.5,,,738,IC1761,Nguyễn Thu Hằng,Cơ sở Nguyễn Lương Bằng,Khóa 03
+14589,Bùi Thị Yến Nhung,Hoàn thành,0.89,0.94,97,88.5,81.25,81,,,738,IC1761,Nguyễn Thu Hằng,Cơ sở Nguyễn Lương Bằng,Khóa 03
+14590,Nguyễn Trang,Hoàn thành,0.89,1,96,85.25,79.25,83.5,,,738,IC1761,Nguyễn Thu Hằng,Cơ sở Nguyễn Lương Bằng,Khóa 03
+14886,Nguyễn Thị Thu Hiền,Hoàn thành,0.94,1,89,83.75,81.5,80,,,738,IC1761,Nguyễn Thu Hằng,Cơ sở Nguyễn Lương Bằng,Khóa 03
+14887,Tạ Trà My,Hoàn thành,0.94,1,92,87.25,84.5,81.5,,,738,IC1761,Nguyễn Thu Hằng,Cơ sở Nguyễn Lương Bằng,Khóa 03
+14936,Nghiêm Quang Linh,Hoàn thành,1,0.89,76,82,75,77.75,,,738,IC1761,Nguyễn Thu Hằng,Cơ sở Nguyễn Lương Bằng,Khóa 03
+14937,Dương Mỹ Duyên,Hoàn thành,0.94,0.89,84.75,,78.25,65,,,738,IC1761,Nguyễn Thu Hằng,Cơ sở Nguyễn Lương Bằng,Khóa 03
+15006,Nguyễn Trung Lương,Hoàn thành,1,1,96.25,94,95.5,89.25,,,738,IC1761,Nguyễn Thu Hằng,Cơ sở Nguyễn Lương Bằng,Khóa 03
+15094,Hoàng Huyền Thanh,Hoàn thành,1,1,78.5,76.75,69,68.75,,,738,IC1761,Nguyễn Thu Hằng,Cơ sở Nguyễn Lương Bằng,Khóa 03
+15136,Trần Duy Mạnh,Hoàn thành,1,1,87.5,84.75,86.5,65,,,738,IC1761,Nguyễn Thu Hằng,Cơ sở Nguyễn Lương Bằng,Khóa 03
+15166,Lưu Hải Dương,Hoàn thành,1,1,88.75,91,87,81.25,,,738,IC1761,Nguyễn Thu Hằng,Cơ sở Nguyễn Lương Bằng,Khóa 03
+15195,Trần Hậu Giang,Hoàn thành,1,0.89,62.5,60,65.25,73,,,738,IC1761,Nguyễn Thu Hằng,Cơ sở Nguyễn Lương Bằng,Khóa 03
+15214,Mai Thị Tú Linh,Hoàn thành,1,1,90.5,80.5,77.75,87,,,738,IC1761,Nguyễn Thu Hằng,Cơ sở Nguyễn Lương Bằng,Khóa 03
+15554,Nguyễn Hoàng Hiệp,Hoàn thành,1,1,,,82.75,78.25,,,738,IC1761,Nguyễn Thu Hằng,Cơ sở Nguyễn Lương Bằng,Khóa 03
+14541,Phan Trung Tín,Không hoàn thành,0.93,0.86,86,86,,,,,744,IC1767,Đỗ Thị Linh Phương,Nguyễn Văn Thương,Khóa 03
+14717,Phan Thị Mai Hoa,Không hoàn thành,1,0.81,76,,,,,,744,IC1767,Đỗ Thị Linh Phương,Nguyễn Văn Thương,Khóa 03
+14833,Luyện Thanh Thảo,Hoàn thành,1,1,83,90,,80,,,744,IC1767,Đỗ Thị Linh Phương,Nguyễn Văn Thương,Khóa 03
+15083,Lê Quang Thiện,Hoàn thành,1,1,91,93,87,85,,,744,IC1767,Đỗ Thị Linh Phương,Nguyễn Văn Thương,Khóa 03
+15090,Âu Đoàn Quốc Thịnh,Hoàn thành,1,0.89,99,95,96,96,,,744,IC1767,Đỗ Thị Linh Phương,Nguyễn Văn Thương,Khóa 03
+15132,Lê Nguyễn Mỹ Quỳnh,Hoàn thành,0.89,1,84,,70,83,,,744,IC1767,Đỗ Thị Linh Phương,Nguyễn Văn Thương,Khóa 03
+15221,Nguyễn Huy Thành Long,Hoàn thành,1,1,90,,84,84,,,744,IC1767,Đỗ Thị Linh Phương,Nguyễn Văn Thương,Khóa 03
+15281,Nguyễn Văn Đồng,Hoàn thành,1,1,89,84,87,84,,,744,IC1767,Đỗ Thị Linh Phương,Nguyễn Văn Thương,Khóa 03
+15349,Nguyễn Thị Yến Nhi,Hoàn thành,1,0.95,,,76,46,,,744,IC1767,Đỗ Thị Linh Phương,Nguyễn Văn Thương,Khóa 03
+15514,Cẩm Chi,Hoàn thành,0.95,1,93,92,90,87,,,744,IC1767,Đỗ Thị Linh Phương,Nguyễn Văn Thương,Khóa 03
+15551,Tiêu Xuân Nhi,pending,,,,,,,,,744,IC1767,Đỗ Thị Linh Phương,Nguyễn Văn Thương,Khóa 03
+15599,Nguyễn Thị Ngọc Diệp,Hoàn thành,0.94,1,94,88,87,,,,744,IC1767,Đỗ Thị Linh Phương,Nguyễn Văn Thương,Khóa 03
+14565,Vũ Kiên Trung,pending,,,,,,,,,748,IC1771,Lê Quốc Bảo,Online,Khóa 03
+14605,Dương Minh Tâm,Hoàn thành,0.95,1,100,93,96,95,,,748,IC1771,Lê Quốc Bảo,Online,Khóa 03
+14631,Dương Thị Hoa,Hoàn thành,0.84,1,67,58,61,68,,,748,IC1771,Lê Quốc Bảo,Online,Khóa 03
+14687,Nguyễn Văn Đạt,Không hoàn thành,0.78,0.67,60,65,67,,,,748,IC1771,Lê Quốc Bảo,Online,Khóa 03
+14694,Kiều Tiến Lực,Hoàn thành,0.89,1,60,58,69,72,,,748,IC1771,Lê Quốc Bảo,Online,Khóa 03
+14713,Bùi Thúy Hạnh,Hoàn thành,1,1,88,78,91,89,,,748,IC1771,Lê Quốc Bảo,Online,Khóa 03
+14753,Nguyễn Anh Thư,Hoàn thành,0.84,1,89,89,84,78,,,748,IC1771,Lê Quốc Bảo,Online,Khóa 03
+14791,Trần Phương Duy,Bỏ học,0.44,0.67,81,,,,,,748,IC1771,Lê Quốc Bảo,Online,Khóa 03
+14815,Nguyễn Văn Hùng,Bỏ học,1,1,,,,,,,748,IC1771,Lê Quốc Bảo,Online,Khóa 03
+14820,Hoàng Thanh Vinh,Hoàn thành,0.95,1,89,86,87,86,,,748,IC1771,Lê Quốc Bảo,Online,Khóa 03
+14866,NGÔ NGUYỄN HOÀNG NAM,Hoàn thành,0.84,0.89,82,84,89,92,,,748,IC1771,Lê Quốc Bảo,Online,Khóa 03
+14869,Nguyễn Thu Hường,Bảo lưu,1,1,,,,,,,748,IC1771,Lê Quốc Bảo,Online,Khóa 03
+14879,Nguyễn Minh Quân,Hoàn thành,0.95,0.95,82,84,93,94,,,748,IC1771,Lê Quốc Bảo,Online,Khóa 03
+14957,Nguyễn Phương Thảo,Hoàn thành,0.79,0.89,68,71,79,74,,,748,IC1771,Lê Quốc Bảo,Online,Khóa 03
+14959,Nguyễn Tấn Duy,Hoàn thành,0.84,1,84,85,88,78,,,748,IC1771,Lê Quốc Bảo,Online,Khóa 03
+14982,Phan Thị Thuỳ Duyên,Hoàn thành,0.89,1,82,76,81,84,,,748,IC1771,Lê Quốc Bảo,Online,Khóa 03
+15013,Nguyễn Đình Quốc Huy,Hoàn thành,0.95,0.95,88,80,81,76,,,748,IC1771,Lê Quốc Bảo,Online,Khóa 03
+15014,Lê Văn Công Vịnh,Hoàn thành,0.89,1,80,84,93,76,,,748,IC1771,Lê Quốc Bảo,Online,Khóa 03
+15098,Dương Nguyên,Hoàn thành,1,1,53,51,53,54,,,748,IC1771,Lê Quốc Bảo,Online,Khóa 03
+14664,Nguyễn Quyết Thắng,Hoàn thành,1,1,68.5,65.5,67.75,62.5,,,760,IC1781,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+14665,Nguyễn Quang Huy,Hoàn thành,0.94,1,73,43,63,52,,,760,IC1781,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+14803,Vũ Thị Ánh Tuyết,Bảo lưu,0.89,1,60.75,60,,,,,760,IC1781,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+14832,Nguyễn Phan Nguyên Thảo,transferred,1,1,87.5,81,84.5,,,,760,IC1781,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+14841,Dương Thị Diễm Quỳnh,Không hoàn thành,1,1,55,45.5,56.5,44.5,,,760,IC1781,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+14997,Nguyễn Hà Quynh Anh,Hoàn thành,0.78,0.94,93,90,83.5,87.5,,,760,IC1781,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+15130,Nguyễn Thi Thu Quỳnh,Bỏ học,0.93,0.87,44.75,53.5,56.25,,,,760,IC1781,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+15135,Trịnh Tứ Bảo Khanh,Không hoàn thành,0.94,0.82,55,41.5,52.5,32.5,,,760,IC1781,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+15192,Nguyễn Văn Phong,Hoàn thành,1,0.89,75.75,79.25,78,62.5,,,760,IC1781,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+15203,Ngô Quỳnh Lan,Hoàn thành,0.94,1,89.5,86.25,86,83.5,,,760,IC1781,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+15307,Nguyễn Chí Hiếu,Hoàn thành,1,1,91,86.5,85,79,,,760,IC1781,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+15347,Nguyễn Thị Hồng Thắm,Hoàn thành,1,1,91.25,84.25,82,85,,,760,IC1781,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+15386,Ngô Thị Thanh Hải,Không hoàn thành,0.76,0.94,41,42.5,40,,,,760,IC1781,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+15417,Lê Thị Duyên,Hoàn thành,0.83,0.89,48,47,62.25,66.5,,,760,IC1781,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+15455,Nguyễn Hà Linh,Bỏ học,0.58,0.5,44,19.25,,,,,760,IC1781,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+14934,Lữ Thị Hiền Dịu,Hoàn thành,0.94,1,76,69,80,58,,,769,IC1790,Lê Ngọc Ánh,Online,Khóa 03
+15049,Lê Thị Ánh Tài,Hoàn thành,1,1,76.5,83,73,69.5,,,769,IC1790,Lê Ngọc Ánh,Online,Khóa 03
+15065,Nguyễn Thị Hương Lan,Hoàn thành,1,1,62,78,76.5,80,,,769,IC1790,Lê Ngọc Ánh,Online,Khóa 03
+15075,Nguyễn Vũ Hiền Dương,transferred,,,,,,,,,769,IC1790,Lê Ngọc Ánh,Online,Khóa 03
+15118,Nguyễn Trường Giang,Hoàn thành,1,1,77,72,70.5,68,,,769,IC1790,Lê Ngọc Ánh,Online,Khóa 03
+15171,Trần Thị Như Tuyền,Không hoàn thành,0.89,1,82,82,71,78,,,769,IC1790,Lê Ngọc Ánh,Online,Khóa 03
+15196,Nguyễn Bích Thủy,Hoàn thành,1,1,89,94,93,85,,,769,IC1790,Lê Ngọc Ánh,Online,Khóa 03
+15202,Trương Xuân Thế Đan,Không hoàn thành,1,1,44.5,44,58.5,43.5,,,769,IC1790,Lê Ngọc Ánh,Online,Khóa 03
+15318,Chử Trọng Văn,Hoàn thành,1,1,71,72.5,87,62,,,769,IC1790,Lê Ngọc Ánh,Online,Khóa 03
+15354,Đỗ Nhật Hoà,pending,,,,,,,,,769,IC1790,Lê Ngọc Ánh,Online,Khóa 03
+15357,Hoàng Khánh Ngọc,Hoàn thành,1,1,73,74,80,80,,,769,IC1790,Lê Ngọc Ánh,Online,Khóa 03
+15366,Nguyễn Văn Thành,pending,,,,,,,,,769,IC1790,Lê Ngọc Ánh,Online,Khóa 03
+15437,Nguyễn Thị Hoài,Hoàn thành,1,1,80,71,74,62,,,769,IC1790,Lê Ngọc Ánh,Online,Khóa 03
+15483,Nguyễn Diệu Linh,Hoàn thành,0.95,1,86,77,78,66,,,769,IC1790,Lê Ngọc Ánh,Online,Khóa 03
+15515,Phạm Khải Linh,Hoàn thành,0.95,1,91.5,88,85,77.5,,,769,IC1790,Lê Ngọc Ánh,Online,Khóa 03
+15558,Vũ Trúc Anh,Bỏ học,1,1,,,,,,,769,IC1790,Lê Ngọc Ánh,Online,Khóa 03
+15586,Nguyễn Hà Linh,Hoàn thành,1,1,89,93.5,93,86,,,769,IC1790,Lê Ngọc Ánh,Online,Khóa 03
+15619,Vũ Văn Thành Sang,Hoàn thành,1,1,86,73,69,78,,,769,IC1790,Lê Ngọc Ánh,Online,Khóa 03
+15656,Nguyễn Gia Như,Không hoàn thành,0.94,1,,64,58,56,,,769,IC1790,Lê Ngọc Ánh,Online,Khóa 03
+15797,Nguyễn Minh Đức,Không hoàn thành,0.89,1,81,81.5,68,75,,,769,IC1790,Lê Ngọc Ánh,Online,Khóa 03
+16236,Phan Thị Mai Hoa,transferred,,,,,,,,,769,IC1790,Lê Ngọc Ánh,Online,Khóa 03
+16449,Nguyễn Phan Nguyên Thảo,Hoàn thành,1,1,,,,70,,,769,IC1790,Lê Ngọc Ánh,Online,Khóa 03
+15212,Đặng Ngọc Ánh,Hoàn thành,0.94,1,73.1,78.8,84.3,74.5,,,779,IC1798,Vũ Thảo Chi,Cơ sở Phan Văn Trường,Khóa 03
+15252,Phó Thị Huyền,Bảo lưu,1,1,69.5,56,,,,,779,IC1798,Vũ Thảo Chi,Cơ sở Phan Văn Trường,Khóa 03
+15490,Bùi Thanh Tú,Không hoàn thành,0.94,1,31.6,28,17.3,5,,,779,IC1798,Vũ Thảo Chi,Cơ sở Phan Văn Trường,Khóa 03
+15560,Vương Thị Trà My,Hoàn thành,1,1,90.9,89.8,99.1,98.5,,,779,IC1798,Vũ Thảo Chi,Cơ sở Phan Văn Trường,Khóa 03
+15578,Trần Nam Khánh,Hoàn thành,1,0.94,81.5,60.8,76.1,59.25,,,779,IC1798,Vũ Thảo Chi,Cơ sở Phan Văn Trường,Khóa 03
+15693,Dương Đặng Hùng,Không hoàn thành,0.94,0.94,54.1,24.5,,25.25,,,779,IC1798,Vũ Thảo Chi,Cơ sở Phan Văn Trường,Khóa 03
+15696,Doãn Thị Ngọc Ánh,Hoàn thành,1,1,87,89.6,92.25,88.75,,,779,IC1798,Vũ Thảo Chi,Cơ sở Phan Văn Trường,Khóa 03
+15721,Đặng Bảo Nam,transferred,0.86,1,45.8,,,,,,779,IC1798,Vũ Thảo Chi,Cơ sở Phan Văn Trường,Khóa 03
+15742,Hồ Văn Anh,Hoàn thành,0.94,1,84.4,86.8,97.3,92,,,779,IC1798,Vũ Thảo Chi,Cơ sở Phan Văn Trường,Khóa 03
+15815,Nguyễn Thị Ngọc Anh,Hoàn thành,1,1,83.8,75.3,88.5,73.5,,,779,IC1798,Vũ Thảo Chi,Cơ sở Phan Văn Trường,Khóa 03
+15839,Trần Ngọc Tùng,Hoàn thành,1,1,80.8,92.3,95.8,91,,,779,IC1798,Vũ Thảo Chi,Cơ sở Phan Văn Trường,Khóa 03
+15907,Phùng Thị Ngọc Thảo,Hoàn thành,0.88,1,57.3,67.8,83.8,76.25,,,779,IC1798,Vũ Thảo Chi,Cơ sở Phan Văn Trường,Khóa 03
+16322,Lê Trung Kiên,Hoàn thành,1,1,,,77,65.25,,,779,IC1798,Vũ Thảo Chi,Cơ sở Phan Văn Trường,Khóa 03
+16753,Phùng Thị Thanh Trang,Đang học,1,1,,,,,,,779,IC1798,Vũ Thảo Chi,Cơ sở Phan Văn Trường,Khóa 03
+15183,Dương Huyền Phương Anh,Hoàn thành,1,1,83.5,83.8,82.5,83.3,,,782,IC1801,Phạm Tú Uyên,Online,Khóa 03
+15190,Vũ Khánh Linh,Bỏ học,0,0.33,0,,,,,,782,IC1801,Phạm Tú Uyên,Online,Khóa 03
+15207,Trần Thị Dư,Bỏ học,0.43,0.71,62.3,,,,,,782,IC1801,Phạm Tú Uyên,Online,Khóa 03
+15290,Trần Duy Anh,Hoàn thành,0.89,0.72,61,76.5,74,65.8,,,782,IC1801,Phạm Tú Uyên,Online,Khóa 03
+15306,Đinh Hồng Sơn,Hoàn thành,0.94,0.78,97,89.5,94.8,89.8,,,782,IC1801,Phạm Tú Uyên,Online,Khóa 03
+15309,Nguyễn Mai Hoa,Hoàn thành,1,0.78,91.3,65.8,93,77,,,782,IC1801,Phạm Tú Uyên,Online,Khóa 03
+15414,Nguyễn Vũ Hiền Dương,Bỏ học,0.43,0.93,93.3,86,91,,,,782,IC1801,Phạm Tú Uyên,Online,Khóa 03
+15471,Nguyễn Văn Binh,Hoàn thành,1,1,91.5,93.5,96,96.5,,,782,IC1801,Phạm Tú Uyên,Online,Khóa 03
+15538,Trương Ngọc Kiều Anh,Hoàn thành,0.78,1,98,98,96,93.5,,,782,IC1801,Phạm Tú Uyên,Online,Khóa 03
+15662,Nguyễn Thị Hồng Ngọc,Hoàn thành,0.72,0.61,90,90.3,85.5,87.8,,,782,IC1801,Phạm Tú Uyên,Online,Khóa 03
+15679,Nguyễn Sĩ Thanh Bao,Hoàn thành,1,0.94,92,82.3,87.3,80.8,,,782,IC1801,Phạm Tú Uyên,Online,Khóa 03
+15694,Nguyễn Trung Hiếu,Hoàn thành,1,1,91.3,87.3,95,88.5,,,782,IC1801,Phạm Tú Uyên,Online,Khóa 03
+15699,Phan Thị Mỹ Dung,Hoàn thành,1,0.94,91.5,91.3,91.7,91.3,,,782,IC1801,Phạm Tú Uyên,Online,Khóa 03
+15807,Lê Hoàng Vũ,Hoàn thành,1,0.35,63,66.5,89.8,72,,,782,IC1801,Phạm Tú Uyên,Online,Khóa 03
+16267,Đặng Bảo Nam,Hoàn thành,0.9,0.9,,87.5,70.8,68,,,782,IC1801,Phạm Tú Uyên,Online,Khóa 03
+15541,Nguyễn Hà Mai,Bỏ học,0,0,,,,,,,795,IC1813,Nguyễn Hoàng Minh Hằng,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+15632,Hồ Lê Yến Nhi,Hoàn thành,1,1,91,94.3,92.3,91.3,,,795,IC1813,Nguyễn Hoàng Minh Hằng,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+15796,Mai Trung Đức,Hoàn thành,1,1,82.75,79.8,85.3,80.3,,,795,IC1813,Nguyễn Hoàng Minh Hằng,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+15946,Vũ Đức Phúc,Hoàn thành,1,1,79.75,77.5,81.3,75.8,,,795,IC1813,Nguyễn Hoàng Minh Hằng,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+16030,Mai Thị Thuỳ,Hoàn thành,0.83,1,42.5,78.3,88,81,,,795,IC1813,Nguyễn Hoàng Minh Hằng,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+16085,Dương Thị Hiền,Hoàn thành,1,1,79.25,86.5,94,91.3,,,795,IC1813,Nguyễn Hoàng Minh Hằng,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+16178,Đặng Hà Phương,Hoàn thành,1,0.89,72.25,70.5,80.3,74,,,795,IC1813,Nguyễn Hoàng Minh Hằng,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+15630,Bùi Thành Đạt,Hoàn thành,1,1,95,88.25,96,95.5,,,800,IC1819,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+15631,Nguyễn Thị Bích Phương,Hoàn thành,0.95,1,88,86.75,94,96,,,800,IC1819,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+15659,Vũ Trọng Khang,transferred,,,,,,,,,800,IC1819,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+15851,Phùng Thành,Không hoàn thành,0.89,1,49,58.5,38,31,,,800,IC1819,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+15896,Chu Hồng Ánh,Hoàn thành,1,1,89,81,81.5,80,,,800,IC1819,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+15921,Nguyễn Ngọc Mai,Bỏ học,0.64,0.91,67,53,,,,,800,IC1819,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+16011,Lê Vân Ly,Hoàn thành,1,1,94,90.25,88.5,86,,,800,IC1819,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+16124,Trương Hồng Quân,Hoàn thành,0.89,0.68,78,55.5,61,49,,,800,IC1819,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+16135,Nguyễn Uyên Nhi,Hoàn thành,1,1,57.25,44,48.5,50,,,800,IC1819,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+16151,Nguyễn Thị Hương Giang,Hoàn thành,0.95,1,67,50,54,44,,,800,IC1819,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+15734,Ngọc Tuyền,Bỏ học,0.61,0.78,64,57,65,0,,,808,IC1827,Nguyễn Kim Long,Online,Khóa 03
+15826,Hoàng Gia Kiệt,Hoàn thành,1,1,89,85,86,75,,,808,IC1827,Nguyễn Kim Long,Online,Khóa 03
+15831,Lê Hoài Linh,Hoàn thành,1,1,73.9,84,78,87,,,808,IC1827,Nguyễn Kim Long,Online,Khóa 03
+15832,Nguyễn Huy Hoàng,Không hoàn thành,0.95,1,64,50,50,49,,,808,IC1827,Nguyễn Kim Long,Online,Khóa 03
+15834,Bùi Minh Thiên,Hoàn thành,1,0.95,77.1,76,90,70,,,808,IC1827,Nguyễn Kim Long,Online,Khóa 03
+15849,Lê Hiếu Anh,Hoàn thành,0.89,0.95,61,63,72,59,,,808,IC1827,Nguyễn Kim Long,Online,Khóa 03
+15922,Nguyễn Khánh Linh,Hoàn thành,1,1,74,79,71,68,,,808,IC1827,Nguyễn Kim Long,Online,Khóa 03
+15950,Nguyễn Trung Hoàng,Hoàn thành,0.89,1,86,73,71,47,,,808,IC1827,Nguyễn Kim Long,Online,Khóa 03
+15989,Nguyễn Quốc Cường,Hoàn thành,0.95,1,90,79,95,81,,,808,IC1827,Nguyễn Kim Long,Online,Khóa 03
+16007,Phạm Hồng Bảo Khang,Hoàn thành,1,1,77,71,64,62,,,808,IC1827,Nguyễn Kim Long,Online,Khóa 03
+16024,Huỳnh Hiền Trang,Hoàn thành,1,0.95,91,90,92,77,,,808,IC1827,Nguyễn Kim Long,Online,Khóa 03
+16040,Nguyễn Đặng Sơn Trà,Hoàn thành,0.95,1,96,91,91,83,,,808,IC1827,Nguyễn Kim Long,Online,Khóa 03
+16044,Trần Thị Bích Nhu,Hoàn thành,1,1,74,79,67,64,,,808,IC1827,Nguyễn Kim Long,Online,Khóa 03
+16076,Huỳnh Thị Vân Anh,pending,,,,,,,,,808,IC1827,Nguyễn Kim Long,Online,Khóa 03
+16095,Nguyễn Phương Thanh,Hoàn thành,0.89,0.95,62,77,54,57,,,808,IC1827,Nguyễn Kim Long,Online,Khóa 03
+16141,Trần Thuỳ Trang,Hoàn thành,1,1,78,58,45,66,,,808,IC1827,Nguyễn Kim Long,Online,Khóa 03
+16142,Nguyễn Thị Ánh,Hoàn thành,1,1,66,81,83,81,,,808,IC1827,Nguyễn Kim Long,Online,Khóa 03
+16143,Nguyễn Thị Ánh Dương,Hoàn thành,0.95,0.95,85,72,85,69,,,808,IC1827,Nguyễn Kim Long,Online,Khóa 03
+16165,Trần Hồng Diễm Ngọc,pending,,,,,,,,,808,IC1827,Nguyễn Kim Long,Online,Khóa 03
+16182,Nguyễn Văn Quân,Hoàn thành,0.89,1,73,76,57,55.8,,,808,IC1827,Nguyễn Kim Long,Online,Khóa 03
+16189,Đào Bùi Cẩm Giang,Hoàn thành,1,0.95,71,66,61,62,,,808,IC1827,Nguyễn Kim Long,Online,Khóa 03
+16278,Đàm Hải Đăng,Hoàn thành,1,1,93,90,90,85,,,808,IC1827,Nguyễn Kim Long,Online,Khóa 03
+16340,Bùi Thu Uyên,Hoàn thành,1,1,80,78,85,82,,,808,IC1827,Nguyễn Kim Long,Online,Khóa 03
+15939,Bế Mai Thanh Tú,Hoàn thành,0.94,1,87,73.5,75,79.5,,,818,IC1838,Lê Bảo Ngọc,Cơ sở Nghĩa Đô,Khóa 03
+16012,Nguyễn Quang Hưng,Hoàn thành,1,1,91,78.3,85,72.5,,,818,IC1838,Lê Bảo Ngọc,Cơ sở Nghĩa Đô,Khóa 03
+16080,Phạm Thị Ngọc Anh,Hoàn thành,0.78,1,86.5,87.5,69,75,,,818,IC1838,Lê Bảo Ngọc,Cơ sở Nghĩa Đô,Khóa 03
+16086,NGUYỄN HỮU DŨNG,Hoàn thành,1,1,75,76.3,77,77,,,818,IC1838,Lê Bảo Ngọc,Cơ sở Nghĩa Đô,Khóa 03
+16094,Đỗ Thị Hồng Huế,Hoàn thành,1,1,92,88.8,78,76.5,,,818,IC1838,Lê Bảo Ngọc,Cơ sở Nghĩa Đô,Khóa 03
+16115,Lê Cẩm Tú,Hoàn thành,0.83,1,74,65.5,62.5,75,,,818,IC1838,Lê Bảo Ngọc,Cơ sở Nghĩa Đô,Khóa 03
+16117,Nguyễn Thị Hạ Vy,transferred,,,,,,,,,818,IC1838,Lê Bảo Ngọc,Cơ sở Nghĩa Đô,Khóa 03
+16168,Quách Thị Thuỳ Linh,Hoàn thành,0.94,1,91.5,83.5,73.5,71.5,,,818,IC1838,Lê Bảo Ngọc,Cơ sở Nghĩa Đô,Khóa 03
+16213,Nguyễn Thị Lan Anh,Hoàn thành,0.83,1,81.5,73.3,76.5,77,,,818,IC1838,Lê Bảo Ngọc,Cơ sở Nghĩa Đô,Khóa 03
+16389,Đàm Phương Thảo,Hoàn thành,1,1,93.5,84.3,83,92.5,,,818,IC1838,Lê Bảo Ngọc,Cơ sở Nghĩa Đô,Khóa 03
+16531,Đinh Thái Vân,Bảo lưu,1,1,75.5,70.8,,,,,818,IC1838,Lê Bảo Ngọc,Cơ sở Nghĩa Đô,Khóa 03
+16556,Nguyễn Hương Giang,Hoàn thành,1,1,98,94,93,92.5,,,818,IC1838,Lê Bảo Ngọc,Cơ sở Nghĩa Đô,Khóa 03
+16689,Phó Thị Huyền,Không hoàn thành,1,1,69.5,56,62.5,60.5,,,818,IC1838,Lê Bảo Ngọc,Cơ sở Nghĩa Đô,Khóa 03
+16160,Nguyễn Thị Vân Ly,Không hoàn thành,0.79,0.79,,,,,,,826,IC1846,Nguyễn Thu Hằng,Cơ sở Nguyễn Lương Bằng,Khóa 03
+16302,Phạm Ngọc Hà,Hoàn thành,1,1,92.75,90.75,79,91.25,,,826,IC1846,Nguyễn Thu Hằng,Cơ sở Nguyễn Lương Bằng,Khóa 03
+16331,Nguyễn Thị Thùy Dung,transferred,,,,,,,,,826,IC1846,Nguyễn Thu Hằng,Cơ sở Nguyễn Lương Bằng,Khóa 03
+16529,Nguyễn Duy Doanh,Hoàn thành,1,1,92,85.5,83,81,,,826,IC1846,Nguyễn Thu Hằng,Cơ sở Nguyễn Lương Bằng,Khóa 03
+16551,Ngô Khánh Hoa,Hoàn thành,1,1,89,82.25,75.25,87,,,826,IC1846,Nguyễn Thu Hằng,Cơ sở Nguyễn Lương Bằng,Khóa 03
+16603,Nguyễn Thị Dung,Hoàn thành,1,1,95,96.25,94.25,96,,,826,IC1846,Nguyễn Thu Hằng,Cơ sở Nguyễn Lương Bằng,Khóa 03
+16618,Phạm Khánh Linh,Hoàn thành,1,1,85.25,73.5,75.25,85,,,826,IC1846,Nguyễn Thu Hằng,Cơ sở Nguyễn Lương Bằng,Khóa 03
+16676,Nguyễn Đình Minh,Hoàn thành,1,1,76,73.5,77.75,70,,,826,IC1846,Nguyễn Thu Hằng,Cơ sở Nguyễn Lương Bằng,Khóa 03
+16677,Lê Công Huy Phú,Hoàn thành,1,1,89.25,88,86,86,,,826,IC1846,Nguyễn Thu Hằng,Cơ sở Nguyễn Lương Bằng,Khóa 03
+16724,Nguyễn Văn Bách,Hoàn thành,1,1,94,89.5,92,87.5,,,826,IC1846,Nguyễn Thu Hằng,Cơ sở Nguyễn Lương Bằng,Khóa 03
+16838,Bùi Ngọc Hà,Hoàn thành,0.89,1,65,65,65,70,,,826,IC1846,Nguyễn Thu Hằng,Cơ sở Nguyễn Lương Bằng,Khóa 03
+16950,Nguyễn Phương Thảo,Hoàn thành,0.94,1,94,95.5,95.5,90,,,826,IC1846,Nguyễn Thu Hằng,Cơ sở Nguyễn Lương Bằng,Khóa 03
+17114,Kiều Diệu Linh,transferred,1,,,,,,,,826,IC1846,Nguyễn Thu Hằng,Cơ sở Nguyễn Lương Bằng,Khóa 03
+16195,Lê Thanh Hoà,Hoàn thành,0.95,1,90,83,88,62,,,827,IC1847,Nguyễn Kim Long,Online,Khóa 03
+16198,Nguyễn Hải Yến,Hoàn thành,1,0.95,96,97,91,90,,,827,IC1847,Nguyễn Kim Long,Online,Khóa 03
+16200,Đào Thảo Nhi,Hoàn thành,1,1,93,92,84,88,,,827,IC1847,Nguyễn Kim Long,Online,Khóa 03
+16205,Trần Quốc An,Hoàn thành,1,1,95,89,93,84,,,827,IC1847,Nguyễn Kim Long,Online,Khóa 03
+16225,Nguyễn Ngọc Nhi,Hoàn thành,1,1,93,88,89,84,,,827,IC1847,Nguyễn Kim Long,Online,Khóa 03
+16234,Nguyễn Thu Trang,Bỏ học,0,0,,,,,,,827,IC1847,Nguyễn Kim Long,Online,Khóa 03
+16241,Nguyễn Ngọc Khánh Vy,Hoàn thành,1,1,75,75,82,72,,,827,IC1847,Nguyễn Kim Long,Online,Khóa 03
+16277,Đào Thị Phúc An,Hoàn thành,1,1,79,91,87,89,,,827,IC1847,Nguyễn Kim Long,Online,Khóa 03
+16280,Nguyễn Nhất Như Ý,Hoàn thành,0.89,1,78,89,83,80,,,827,IC1847,Nguyễn Kim Long,Online,Khóa 03
+16309,Trần Thị Ngọc Ánh,Hoàn thành,0.95,1,78,71,71,57,,,827,IC1847,Nguyễn Kim Long,Online,Khóa 03
+16343,Mai Đức Cường,Hoàn thành,0.89,1,89,87,94,85.8,,,827,IC1847,Nguyễn Kim Long,Online,Khóa 03
+16349,Quách Trí Hải,Hoàn thành,0.89,1,77,86,81,89,,,827,IC1847,Nguyễn Kim Long,Online,Khóa 03
+16354,Nguyễn Tuyết Như,Hoàn thành,0.95,0.84,84,68,72,65,,,827,IC1847,Nguyễn Kim Long,Online,Khóa 03
+16355,Nguyễn Lâm Minh Khôi,Hoàn thành,1,1,92,93,90,80,,,827,IC1847,Nguyễn Kim Long,Online,Khóa 03
+16367,Thảo Ly,Hoàn thành,0.89,1,98,92,100,82,,,827,IC1847,Nguyễn Kim Long,Online,Khóa 03
+16401,Nguyễn Đức An,Không hoàn thành,1,1,45,49,39,29,,,827,IC1847,Nguyễn Kim Long,Online,Khóa 03
+16465,Phạm Gia Bảo,Không hoàn thành,1,1,78,74,28,53,,,827,IC1847,Nguyễn Kim Long,Online,Khóa 03
+16548,Ngô Ái Dương,Hoàn thành,0.95,1,86,84,71,61,,,827,IC1847,Nguyễn Kim Long,Online,Khóa 03
+16420,Lạc Mỹ Phương,Hoàn thành,1,1,97,91,94,93,,,836,IC1856,Lê Quốc Bảo,Online,Khóa 03
+16421,Vòng Hạnh Di,Hoàn thành,1,1,88,64,80,86,,,836,IC1856,Lê Quốc Bảo,Online,Khóa 03
+16452,Dương Nguyên,Hoàn thành,0.95,0.95,70,55,73,80,,,836,IC1856,Lê Quốc Bảo,Online,Khóa 03
+16507,Nguyễn Trần Gia Phụng,Bỏ học,0.71,1,75,80,90,,,,836,IC1856,Lê Quốc Bảo,Online,Khóa 03
+16508,Bùi Huyền Trang,Hoàn thành,0.89,1,91,90,88,87,,,836,IC1856,Lê Quốc Bảo,Online,Khóa 03
+16511,Bùi Quốc Vượng,Hoàn thành,0.95,1,73,82,87,76,,,836,IC1856,Lê Quốc Bảo,Online,Khóa 03
+16550,Đức Khôi,Hoàn thành,1,1,51,58,62,63,,,836,IC1856,Lê Quốc Bảo,Online,Khóa 03
+16581,Đỗ Thị Thu Hiền,Hoàn thành,1,1,80,80,83,83,,,836,IC1856,Lê Quốc Bảo,Online,Khóa 03
+16582,Bùi Thị Uyên Chi,Không hoàn thành,0.47,0.58,94,87,,,,,836,IC1856,Lê Quốc Bảo,Online,Khóa 03
+16597,Trần Trung Nghĩa,pending,,,,,,,,,836,IC1856,Lê Quốc Bảo,Online,Khóa 03
+16615,Trần Phương Anh,pending,,,,,,,,,836,IC1856,Lê Quốc Bảo,Online,Khóa 03
+16620,Chu Kiều Trang,Bỏ học,1,1,,,,,,,836,IC1856,Lê Quốc Bảo,Online,Khóa 03
+16647,Vũ Trần Yến Nhi,Hoàn thành,0.95,1,69,66,74,68,,,836,IC1856,Lê Quốc Bảo,Online,Khóa 03
+16670,Trần Hướng Thiên,Không hoàn thành,0.89,1,55,41,45,43,,,836,IC1856,Lê Quốc Bảo,Online,Khóa 03
+16715,Hoàng Nhật Khánh,transferred,1,1,,,,,,,836,IC1856,Lê Quốc Bảo,Online,Khóa 03
+16726,Nguyễn Ngọc Ánh,transferred,1,1,,,,,,,836,IC1856,Lê Quốc Bảo,Online,Khóa 03
+16743,Trịnh Ánh Ngọc,Hoàn thành,1,1,75,72,66,56,,,836,IC1856,Lê Quốc Bảo,Online,Khóa 03
+16806,Phan Hồng Nguyên,Hoàn thành,0.95,1,85,92,89,79,,,836,IC1856,Lê Quốc Bảo,Online,Khóa 03
+16903,Vũ Xuân Hoàng Anh,Hoàn thành,1,1,70,68,77,66,,,836,IC1856,Lê Quốc Bảo,Online,Khóa 03
+16937,Huỳnh Võ Ngọc Trâm,transferred,,,,,,,,,836,IC1856,Lê Quốc Bảo,Online,Khóa 03
+17955,Đinh Thái Vân,Không hoàn thành,0.57,0.71,,,78,,,,836,IC1856,Lê Quốc Bảo,Online,Khóa 03
+16706,Phạm Thị Nhung,Hoàn thành,0.78,0.89,94.5,90,93.25,,,,847,IC1867,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+16786,Phạm Duy Thịnh,Không hoàn thành,0.89,1,30.2,26.5,39.5,30,,,847,IC1867,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+16969,Trần Quang Đăng,Hoàn thành,0.94,1,83.25,69,71.25,75,,,847,IC1867,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+17011,Nguyễn Thị Như Quỳnh,transferred,0,0,,,,,,,847,IC1867,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+17035,Nguyễn Thị Thùy Dung,Hoàn thành,1,1,73.5,60,52.25,35,,,847,IC1867,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+17075,Bùi Thị Quỳnh,Hoàn thành,0.94,1,84.5,72.25,67,70,,,847,IC1867,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+17117,Chu Thị Vân Anh,Không hoàn thành,0.89,1,36.25,33,33.5,26,,,847,IC1867,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+17156,Kiều Diệu Linh,Không hoàn thành,0.94,1,37,34.25,49.5,30,,,847,IC1867,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+17297,Nguyễn Thị Thu Hiền,Hoàn thành,1,1,83,71.5,66.5,67,,,847,IC1867,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+17307,Nguyễn Thị Huyền,Không hoàn thành,1,1,46.5,37,37.5,30,,,847,IC1867,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+17354,Trương Vũ Mai Chi,Hoàn thành,0.89,1,80.75,61.5,68.75,70,,,847,IC1867,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+17413,Dương Hồng Thắm,Hoàn thành,1,1,80.5,68.5,81.75,59,,,847,IC1867,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+17463,Nguyễn Thị Xuân Trúc,Hoàn thành,0.94,1,92.5,88.5,84.5,80.5,,,847,IC1867,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+17479,Nguyễn Thị Hồng Ánh,Không hoàn thành,0.89,1,65.5,48,66.75,42,,,847,IC1867,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+17540,Nguyễn Đăng Hiển,Hoàn thành,0.89,1,92.2,79,74,75,,,847,IC1867,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+17582,Nguyễn Ngọc Thiện,pending,,,,,,,,,847,IC1867,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+17610,Vũ Tuệ Anh,Không hoàn thành,0.94,1,32.5,34,33,30,,,847,IC1867,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+16644,Phạm Mai Hồng Phúc,Hoàn thành,0.95,0.84,94,95,86,80,,,849,IC1869,Đỗ Thị Linh Phương,Nguyễn Văn Thương,Khóa 03
+16777,Trương Thị Thu Hồng,Hoàn thành,1,1,94,94,94,88,,,849,IC1869,Đỗ Thị Linh Phương,Nguyễn Văn Thương,Khóa 03
+16822,Nguyễn Dương Phương Nhã,Hoàn thành,1,1,88,86,81,82,,,849,IC1869,Đỗ Thị Linh Phương,Nguyễn Văn Thương,Khóa 03
+16943,Trần Hoàng Ngọc Nhi,pending,,,,,,,,,849,IC1869,Đỗ Thị Linh Phương,Nguyễn Văn Thương,Khóa 03
+17150,Trần Thị Quỳnh Như,Không hoàn thành,0.83,0.78,18,37,25,,,,849,IC1869,Đỗ Thị Linh Phương,Nguyễn Văn Thương,Khóa 03
+17251,Nguyễn Phạm Trâm Nghi,Hoàn thành,0.79,0.95,87,95,94,88,,,849,IC1869,Đỗ Thị Linh Phương,Nguyễn Văn Thương,Khóa 03
+17294,Trần Gia Bảo,Hoàn thành,0.79,0.79,90,86,79,,,,849,IC1869,Đỗ Thị Linh Phương,Nguyễn Văn Thương,Khóa 03
+17315,Đào Tùng Lâm,Hoàn thành,1,1,80,88,76,80,,,849,IC1869,Đỗ Thị Linh Phương,Nguyễn Văn Thương,Khóa 03
+17321,Huỳnh Hải Đăng,Bảo lưu,1,1,,,,,,,849,IC1869,Đỗ Thị Linh Phương,Nguyễn Văn Thương,Khóa 03
+16660,Bùi Văn Tới,Không hoàn thành,0.94,1,31.5,26,28,20,,,853,IC1873,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+16669,Triệu Hoàng Đức,Hoàn thành,0.94,1,84,89.5,65,65,,,853,IC1873,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+16701,Nguyễn Thị Mai Chi,Hoàn thành,0.89,1,96,90.5,82.5,85,,,853,IC1873,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+16910,Vũ Trọng Khang,Hoàn thành,0.94,0.56,73,61,61.5,63.5,,,853,IC1873,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+17038,Hoàng Văn Cường,Hoàn thành,1,1,71.5,73.5,52,56.5,,,853,IC1873,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+17148,Hoàng Thị Minh Chiên,Hoàn thành,1,1,93.5,83.5,84.5,86,,,853,IC1873,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+17164,Nguyễn Huy Hoàng,Hoàn thành,1,1,97,96.5,89,94.5,,,853,IC1873,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+17226,Trần Hương Giang,Bỏ học,0.7,0.9,35,,,,,,853,IC1873,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+17261,Tô Thị Duyên,transferred,0.8,1,78.5,,,,,,853,IC1873,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+17375,Vũ Huyền Trang,Hoàn thành,1,1,83,72,74.5,74,,,853,IC1873,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+17688,Nguyễn Thị Nhạn,Bỏ học,0.75,1,70.5,71.5,,,,,853,IC1873,Nguyễn Như Thắng,Phố Vọng,Khóa 03
+16778,Trần Thị Như Huỳnh,Không hoàn thành,0.42,1,71.8,,,,,,859,IC1879,Phạm Tú Uyên,Online,Khóa 03
+16779,Tô Minh Trang,Hoàn thành,1,1,83.3,87.8,82.5,89,,,859,IC1879,Phạm Tú Uyên,Online,Khóa 03
+16818,Nguyễn Phương Anh,pending,,,,,,,,,859,IC1879,Phạm Tú Uyên,Online,Khóa 03
+16825,Nguyễn Trương Khanh,Hoàn thành,1,1,87.8,86.5,89,81.3,,,859,IC1879,Phạm Tú Uyên,Online,Khóa 03
+16836,Nguyễn Thị Hạ Vy,transferred,,,,,,,,,859,IC1879,Phạm Tú Uyên,Online,Khóa 03
+16855,NGUYỄN THỊ KIM ANH,Bỏ học,1,1,76.5,,,,,,859,IC1879,Phạm Tú Uyên,Online,Khóa 03
+16869,Nguyễn Thị Thanh Lâm,Hoàn thành,1,1,84.8,82,86.3,73.8,,,859,IC1879,Phạm Tú Uyên,Online,Khóa 03
+16907,Trần Minh Thư,Hoàn thành,1,1,80.8,81.5,84,66.3,,,859,IC1879,Phạm Tú Uyên,Online,Khóa 03
+16914,Bùi Thị Mai Hoa,Không hoàn thành,0.58,0.75,79,78.8,,,,,859,IC1879,Phạm Tú Uyên,Online,Khóa 03
+16918,Trần Phát Huy,Không hoàn thành,0.92,1,86.8,82.5,78.8,,,,859,IC1879,Phạm Tú Uyên,Online,Khóa 03
+16920,Nguyễn Ngọc Ánh,Hoàn thành,0.89,1,86,90.5,88.5,73.3,,,859,IC1879,Phạm Tú Uyên,Online,Khóa 03
+16940,Ngô Bảo Châm,Hoàn thành,0.94,0.72,84.5,93.8,90.3,0,,,859,IC1879,Phạm Tú Uyên,Online,Khóa 03
+16962,Huỳnh Võ Ngọc Trâm,Bảo lưu,0.86,1,90.5,,,,,,859,IC1879,Phạm Tú Uyên,Online,Khóa 03
+17006,Phạm Thị Dung,Hoàn thành,1,1,90.3,89,89.3,85,,,859,IC1879,Phạm Tú Uyên,Online,Khóa 03
+17054,Đặng Anh Thư,Hoàn thành,1,1,74.3,73,70.8,68.5,,,859,IC1879,Phạm Tú Uyên,Online,Khóa 03
+17066,Đinh Trần Hiếu,Hoàn thành,0.94,1,79.3,85,85.5,80.5,,,859,IC1879,Phạm Tú Uyên,Online,Khóa 03
+17129,Nguyễn Quang Khâm,Không hoàn thành,0.67,0.72,84.3,85,86,,,,859,IC1879,Phạm Tú Uyên,Online,Khóa 03
+17204,Nguyễn Trọng Việt Anh,Bảo lưu,0.86,0.92,85.8,77.8,72.8,,,,859,IC1879,Phạm Tú Uyên,Online,Khóa 03
+17152,Nguyễn Thị Quỳnh Trang,Bảo lưu,0.83,1,80.5,,,,,,872,IC1892,Lê Quốc Bảo,Online,Khóa 03
+17214,Nguyễn Mai Chi,pending,,,,,,,,,872,IC1892,Lê Quốc Bảo,Online,Khóa 03
+17216,Trần Thị Quỳnh Nga,Hoàn thành,0.95,1,87,81.8,57,65,,,872,IC1892,Lê Quốc Bảo,Online,Khóa 03
+17222,Nguyễn Trang Hoài Thu,Hoàn thành,0.84,1,89,85.8,76,78,,,872,IC1892,Lê Quốc Bảo,Online,Khóa 03
+17228,Lê Thị Thái Bảo,Hoàn thành,0.89,1,79.5,78,78,76,,,872,IC1892,Lê Quốc Bảo,Online,Khóa 03
+17319,Nguyễn Văn Tài Phúc,transferred,,,,,,,,,872,IC1892,Lê Quốc Bảo,Online,Khóa 03
+17343,Đoàn Phương Nhung,Hoàn thành,1,1,90,86,65,81,,,872,IC1892,Lê Quốc Bảo,Online,Khóa 03
+17371,Nguyễn Quang Vinh,Không hoàn thành,0.63,0.63,80.5,80.5,,,,,872,IC1892,Lê Quốc Bảo,Online,Khóa 03
+17373,Nguyễn Xuân Hậu,Bỏ học,0.54,0.69,82.3,,,,,,872,IC1892,Lê Quốc Bảo,Online,Khóa 03
+17412,Nguyễn Thị Mai Phương,Hoàn thành,1,0.95,85,83.5,75,72,,,872,IC1892,Lê Quốc Bảo,Online,Khóa 03
+17419,Đào Khánh Linh,transferred,,,,,,,,,872,IC1892,Lê Quốc Bảo,Online,Khóa 03
+17424,Vũ Phương Linh,Bỏ học,1,1,89.8,,,,,,872,IC1892,Lê Quốc Bảo,Online,Khóa 03
+17434,Đặng Lê Khánh Linh,Hoàn thành,0.95,1,74.25,85.5,75,80,,,872,IC1892,Lê Quốc Bảo,Online,Khóa 03
+17475,Hoàng Linh Chi,Hoàn thành,0.84,1,87.3,82.8,73,76,,,872,IC1892,Lê Quốc Bảo,Online,Khóa 03
+17476,Vũ Hồng Oanh,Bỏ học,1,1,,,,,,,872,IC1892,Lê Quốc Bảo,Online,Khóa 03
+17478,Bùi Ngọc Bích,Hoàn thành,1,1,76.5,81.5,54,49,,,872,IC1892,Lê Quốc Bảo,Online,Khóa 03
+18537,Tô Thị Duyên,Bỏ học,1,1,,,,,,,872,IC1892,Lê Quốc Bảo,Online,Khóa 03
+19253,Nguyễn Trọng Việt Anh,Hoàn thành,0.83,1,85.8,77.8,72.8,44,,,872,IC1892,Lê Quốc Bảo,Online,Khóa 03
+17522,Dương Chí Dũng,Không hoàn thành,1,1,39,31.75,35.5,83.75,,,880,IC1898,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+17668,Nguyễn Xuân Đạt,Không hoàn thành,0.61,0.56,70.5,61.5,,,,,880,IC1898,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+18024,Dương Thị Ngọc Ánh,Hoàn thành,1,1,72,69.5,67.5,73,,,880,IC1898,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+18337,Hoàng Trung Kiên,Hoàn thành,1,1,79,68.5,66.75,65.5,,,880,IC1898,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+18560,Đoàn Hải Đăng,Không hoàn thành,0.82,0.59,51.5,28.75,31,24.5,,,880,IC1898,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+18607,Nguyễn Linh Nhi,Hoàn thành,0.94,0.88,83,77.5,71,80,,,880,IC1898,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+18844,Đỗ Gia Huy,Không hoàn thành,0.94,0.62,8.5,7.75,20.75,14.25,,,880,IC1898,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+17529,Lê Xuân Dương,Hoàn thành,1,1,98,97,98,95,,,891,IC1911,Nguyễn Kim Long,Online,Khóa 03
+17554,Hà Thị Thuỳ Linh,Hoàn thành,0.95,1,67,72,74,48,,,891,IC1911,Nguyễn Kim Long,Online,Khóa 03
+17603,Nguyễn Hoàng Gia Phát,Không hoàn thành,0.95,1,51,46,51,57,,,891,IC1911,Nguyễn Kim Long,Online,Khóa 03
+17604,Đào Trọng Nhân,Hoàn thành,1,1,68,66,69,67,,,891,IC1911,Nguyễn Kim Long,Online,Khóa 03
+17700,Vũ Đạt,Hoàn thành,1,1,83,69,84,73,,,891,IC1911,Nguyễn Kim Long,Online,Khóa 03
+17849,Lê Minh Quang,Hoàn thành,0.89,0.89,84,77,75,52,,,891,IC1911,Nguyễn Kim Long,Online,Khóa 03
+17895,Nguyễn Văn Tài Phúc,Không hoàn thành,0.68,0.79,83,75,79,0,,,891,IC1911,Nguyễn Kim Long,Online,Khóa 03
+18005,Nguyễn Trung Kiên,Hoàn thành,1,1,88,88,88,81,,,891,IC1911,Nguyễn Kim Long,Online,Khóa 03
+18115,Vũ Anh Thư,Hoàn thành,0.95,1,80,86,75,65,,,891,IC1911,Nguyễn Kim Long,Online,Khóa 03
+18228,Vũ Thu Hòa,Hoàn thành,1,1,91,93,97,71,,,891,IC1911,Nguyễn Kim Long,Online,Khóa 03
+18279,Huỳnh Ái Luân,Không hoàn thành,1,0.95,48,47,65,42,,,891,IC1911,Nguyễn Kim Long,Online,Khóa 03
+17762,Phạm Thị Thuỳ Linh,Bảo lưu,,,,,,,,,898,IC1917,Lê Bảo Ngọc,Cơ sở Nghĩa Đô,Khóa 03
+17795,Trần Phương Uyên,Không hoàn thành,1,1,65,54,43.5,59,,,898,IC1917,Lê Bảo Ngọc,Cơ sở Nghĩa Đô,Khóa 03
+17808,Bùi Thái Thuỳ Linh,Không hoàn thành,1,1,60.5,60.5,71.5,65.5,,,898,IC1917,Lê Bảo Ngọc,Cơ sở Nghĩa Đô,Khóa 03
+17843,Lã Quốc Dũng,Bảo lưu,1,1,64,53.1,,,,,898,IC1917,Lê Bảo Ngọc,Cơ sở Nghĩa Đô,Khóa 03
+17858,Nguyễn Minh Quân,Hoàn thành,0.94,1,87,78.5,77,88.5,,,898,IC1917,Lê Bảo Ngọc,Cơ sở Nghĩa Đô,Khóa 03
+17897,Phạm Hoàng Trung,Hoàn thành,1,1,80.5,76.5,82,76,,,898,IC1917,Lê Bảo Ngọc,Cơ sở Nghĩa Đô,Khóa 03
+17924,Nguyễn Doãn Trường Huy,transferred,,,,,,,,,898,IC1917,Lê Bảo Ngọc,Cơ sở Nghĩa Đô,Khóa 03
+17974,Vũ Quốc Bảo,Hoàn thành,0.94,1,81.5,68,71,66,,,898,IC1917,Lê Bảo Ngọc,Cơ sở Nghĩa Đô,Khóa 03
+18008,Trần Ngọc Khuê,Hoàn thành,1,1,98,97.5,94.5,100,,,898,IC1917,Lê Bảo Ngọc,Cơ sở Nghĩa Đô,Khóa 03
+18280,Phan Lâm Gia Vang,Hoàn thành,0.78,1,94.5,91.5,91,85.5,,,898,IC1917,Lê Bảo Ngọc,Cơ sở Nghĩa Đô,Khóa 03
+18308,Trương Văn Công,Hoàn thành,0.94,1,86,87.5,80,91,,,898,IC1917,Lê Bảo Ngọc,Cơ sở Nghĩa Đô,Khóa 03
+18315,Nguyễn Thị Như Quỳnh,Bỏ học,,,,,,,,,898,IC1917,Lê Bảo Ngọc,Cơ sở Nghĩa Đô,Khóa 03
+18486,Lại Thị Thu Hà,transferred,,,,,,,,,898,IC1917,Lê Bảo Ngọc,Cơ sở Nghĩa Đô,Khóa 03
+18658,Vũ Thanh Loan,Không hoàn thành,0.65,1,57.5,62.3,39,55.5,,,898,IC1917,Lê Bảo Ngọc,Cơ sở Nghĩa Đô,Khóa 03
+17797,Nguyễn Thị Phương Oanh,Không hoàn thành,0.82,0.94,64.5,61.5,50,53.5,,,899,IC1918,Nguyễn Như Thắng,Minh Khai 2,Khóa 03
+18014,Trần Hồng Ngọc,Hoàn thành,0.83,1,80,75,65,76.5,,,899,IC1918,Nguyễn Như Thắng,Minh Khai 2,Khóa 03
+18076,Nguyễn Thị Minh Giang,Hoàn thành,1,1,96.5,96.5,97,96,,,899,IC1918,Nguyễn Như Thắng,Minh Khai 2,Khóa 03
+18203,Nguyễn Thanh Trúc,pending,,,,,,,,,899,IC1918,Nguyễn Như Thắng,Minh Khai 2,Khóa 03
+18261,Đặng Thị Thuý,Không hoàn thành,0.94,1,56,58,60,53,,,899,IC1918,Nguyễn Như Thắng,Minh Khai 2,Khóa 03
+18272,Phạm Thị Ánh Hồng,Không hoàn thành,0.94,0.88,62,51.5,55.5,55.5,,,899,IC1918,Nguyễn Như Thắng,Minh Khai 2,Khóa 03
+18482,Trần Lệ Xuân,Hoàn thành,0.94,1,94,84,82.5,78.5,,,899,IC1918,Nguyễn Như Thắng,Minh Khai 2,Khóa 03
+18519,Cao Khánh Huyền,Không hoàn thành,0.71,0.59,42.5,20,40,58.5,,,899,IC1918,Nguyễn Như Thắng,Minh Khai 2,Khóa 03
+19287,Trần Mạnh Đạt,Bỏ học,0,0,,,,,,,899,IC1918,Nguyễn Như Thắng,Minh Khai 2,Khóa 03
+17822,Trần Thị Kim Thoa,Hoàn thành,1,1,86.5,86.8,86,76.5,,,902,IC1921,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18013,Lại Chí Vỹ,Hoàn thành,0.94,1,78,74,74,70.5,,,902,IC1921,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18060,Võ Nhật Thiện,Hoàn thành,1,1,86.8,89.5,85.5,75.3,,,902,IC1921,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18095,Trương Ngọc Nhi,Hoàn thành,0.89,1,91.5,89.3,89,88.8,,,902,IC1921,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18379,Võ Thành Nhân,Hoàn thành,0.89,1,78.8,77,77.5,73.3,,,902,IC1921,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18380,Nguyễn Hoàng Gia Hân,Bảo lưu,0.86,1,39.5,,,,,,902,IC1921,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18391,Nguyễn Thị Quế Anh,Không hoàn thành,0.88,0.75,41,,,,,,902,IC1921,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18463,Nguyễn Thị Thảo My,Hoàn thành,0.89,1,97,87,92,81.5,,,902,IC1921,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18695,Trần Thị Tú Nga,Hoàn thành,0.83,1,96,94.5,95,93.5,,,902,IC1921,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18696,Ngô Nguyễn Quốc Đại,Không hoàn thành,0.78,1,46,40.8,52.5,22.3,,,902,IC1921,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18729,Lâm Văn Sơn,Hoàn thành,1,1,39.3,51.3,48,72,,,902,IC1921,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18818,Lưu Ngọc Duyên,Hoàn thành,0.89,1,94.5,89.8,88,89.5,,,902,IC1921,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+18958,Đặng Quốc Nam,pending,,,,,,,,,902,IC1921,Phạm Tú Uyên,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+17847,Vũ Thành Trung,Bảo lưu,,,,,,,,,906,IC1925,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18082,Trần Thị Thu Minh,pending,,,,,,,,,906,IC1925,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18316,Trần Hồng Sơn,Hoàn thành,1,1,80,61.5,79.5,74.5,,,906,IC1925,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18456,Nguyễn Thị Thu Hằng,Bảo lưu,0.43,0.83,,,,,,,906,IC1925,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18534,Đặng Thu Hà,Hoàn thành,0.94,1,95.5,92.5,91.5,90.5,,,906,IC1925,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18544,Trần T Thu Hương,Không hoàn thành,0.89,0.94,66,39.5,64.5,65,,,906,IC1925,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18653,Hoàng Thị Hương Giang,Không hoàn thành,0.89,0.89,52,38.5,40.5,22.5,,,906,IC1925,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18654,Vương Quỳnh Châu,Hoàn thành,0.89,0.94,67,61,71.5,51.5,,,906,IC1925,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18666,Đỗ Nam Dương,Hoàn thành,1,1,89.5,88.5,88,84,,,906,IC1925,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18800,Trần Kim Dung,Hoàn thành,0.94,1,86.5,82,90.5,87.5,,,906,IC1925,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18884,Phạm Ngọc Châu,Hoàn thành,0.89,1,65,68,65.5,62,,,906,IC1925,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18917,Trần Thị Hạnh,transferred,1,1,95.5,,,,,,906,IC1925,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18920,Trần Quang Hải Nam,Không hoàn thành,0.94,1,53.5,47,36.5,39,,,906,IC1925,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+19047,Trịnh Thị Thanh Thảo,Không hoàn thành,0.81,0.62,31.5,25.5,28.5,22,,,906,IC1925,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+19089,Vũ Kiều Anh Thư,transferred,,,,,,,,,906,IC1925,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+19132,Nguyễn Trần Thu Hương,transferred,0.75,0.5,75,,,,,,906,IC1925,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+18039,Huỳnh Minh Đạt,pending,,,,,,,,,918,IC1936,Nguyễn Kim Long,Online,Khóa 03
+18074,Trịnh Gia Hân,Hoàn thành,1,1,70,53,63,60,,,918,IC1936,Nguyễn Kim Long,Online,Khóa 03
+18100,Đào Khánh Linh,Không hoàn thành,0.84,1,63,46,55,55,,,918,IC1936,Nguyễn Kim Long,Online,Khóa 03
+18107,Đỗ Thị Thanh Hồng,Hoàn thành,1,1,77,94,87,92,,,918,IC1936,Nguyễn Kim Long,Online,Khóa 03
+18137,Trương Liên,Bỏ học,0,,0,22,,,,,918,IC1936,Nguyễn Kim Long,Online,Khóa 03
+18162,Phan Viết Trường Quyền,Hoàn thành,0.74,0.79,87,75,73,63,,,918,IC1936,Nguyễn Kim Long,Online,Khóa 03
+18178,Vũ Quang Ngọc Bảo,Bỏ học,0,,0,0,,,,,918,IC1936,Nguyễn Kim Long,Online,Khóa 03
+18184,Nguyễn Hải Yến,pending,,,,,,,,,918,IC1936,Nguyễn Kim Long,Online,Khóa 03
+18266,Đinh Hương,Hoàn thành,0.84,0.89,87,89,82,0,,,918,IC1936,Nguyễn Kim Long,Online,Khóa 03
+18299,Phùng Quốc Vượng,Không hoàn thành,0.84,0.58,69,64,60,0,,,918,IC1936,Nguyễn Kim Long,Online,Khóa 03
+18306,Lê Hoàng Tường Vy,Hoàn thành,1,0.89,73,67,63,51,,,918,IC1936,Nguyễn Kim Long,Online,Khóa 03
+18334,Lê Nhữ Huấn,Bỏ học,0,,0,0,,,,,918,IC1936,Nguyễn Kim Long,Online,Khóa 03
+18353,Lê Phương Thảo,Hoàn thành,0.95,1,74,81,,70,,,918,IC1936,Nguyễn Kim Long,Online,Khóa 03
+18444,Huỳnh Thanh Ân,Bỏ học,1,1,,,,,,,918,IC1936,Nguyễn Kim Long,Online,Khóa 03
+18675,Nguyễn Thuý Nga,Hoàn thành,1,1,95,92,95,83,,,918,IC1936,Nguyễn Kim Long,Online,Khóa 03
+18480,Nguyễn Minh Tâm,Không hoàn thành,1,1,51.5,48,58.5,44,,,924,IC1942,Lê Ngọc Ánh,Online,Khóa 03
+18573,Nguyễn Đức Trường,Không hoàn thành,0.84,1,44.5,25,43.5,14,,,924,IC1942,Lê Ngọc Ánh,Online,Khóa 03
+18589,Nguyễn Văn Hậu,transferred,0.95,1,51.5,57,59,42,,,924,IC1942,Lê Ngọc Ánh,Online,Khóa 03
+18602,Nguyễn Thị Nhã Kỳ,Không hoàn thành,0.84,1,84,79,67,,,,924,IC1942,Lê Ngọc Ánh,Online,Khóa 03
+18615,Lại Thị Thu Hà,Không hoàn thành,1,1,59,59,43,47,,,924,IC1942,Lê Ngọc Ánh,Online,Khóa 03
+18621,Nguyễn Minh Trang,Không hoàn thành,1,1,58,60,65.5,57,,,924,IC1942,Lê Ngọc Ánh,Online,Khóa 03
+18646,Huỳnh Anh Thy,transferred,1,1,,,,,,,924,IC1942,Lê Ngọc Ánh,Online,Khóa 03
+18665,Mai Văn Long,pending,,,,,,,,,924,IC1942,Lê Ngọc Ánh,Online,Khóa 03
+18681,Trần Phương Vy,Hoàn thành,1,1,82,82,80,80,,,924,IC1942,Lê Ngọc Ánh,Online,Khóa 03
+18721,Quàng Thị Châm,Không hoàn thành,0.95,1,64.5,72,58,52,,,924,IC1942,Lê Ngọc Ánh,Online,Khóa 03
+18753,Đặng Nhật Bình,Không hoàn thành,0.84,1,75.5,,57.5,42,,,924,IC1942,Lê Ngọc Ánh,Online,Khóa 03
+18788,Đoàn Quốc Việt,Không hoàn thành,0.95,1,43,56,41,40,,,924,IC1942,Lê Ngọc Ánh,Online,Khóa 03
+19525,Nguyễn Trần Thu Hương,Không hoàn thành,0.85,1,,42,60.5,,,,924,IC1942,Lê Ngọc Ánh,Online,Khóa 03
+19528,Trần Thị Hạnh,Không hoàn thành,0.77,1,,87.5,86,72,,,924,IC1942,Lê Ngọc Ánh,Online,Khóa 03
+19841,Đào Thị Thảo Vân,Không hoàn thành,1,1,,,,51,,,924,IC1942,Lê Ngọc Ánh,Online,Khóa 03
+18575,Đinh Hương Giang,Không hoàn thành,0.72,0.94,54.5,22.3,42,50,,,936,IC1956,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+18659,Hoàng Phương Huyền,Không hoàn thành,0.83,0.89,37.1,33.25,30,28,,,936,IC1956,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+18750,Nguyễn Tuấn Minh,Hoàn thành,1,1,91,85.75,84,86,,,936,IC1956,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+18761,Nguyễn Quốc Thái,Hoàn thành,0.89,0.89,87,84.5,76.5,68,,,936,IC1956,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+18771,Nguyễn Doãn Trường Huy,Không hoàn thành,0.94,0.94,32,21,25,15,,,936,IC1956,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+18791,Đoàn Mai Trang,Hoàn thành,1,1,84,71.25,70,50,,,936,IC1956,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+18824,Mông Kiều Trinh,Hoàn thành,0.89,1,79.5,77.25,69,67,,,936,IC1956,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+18863,Nguyễn Kim Ngọc,Không hoàn thành,0.89,0.94,51,33,30,23,,,936,IC1956,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+19008,Đặng Văn Duy,Không hoàn thành,0.89,1,42,41,40,75,,,936,IC1956,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+19068,Nguyễn Quang Linh,Hoàn thành,0.94,1,93.5,91.75,76.5,80.5,,,936,IC1956,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+19085,Nguyễn Gia Ninh,Không hoàn thành,0.78,0.89,67,50.5,54,0,,,936,IC1956,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+19117,Phạm Ngọc Công,Hoàn thành,0.89,0.94,92,93.25,88.5,91,,,936,IC1956,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+19176,Kiều Phương Oanh,Hoàn thành,0.94,1,92.5,75.5,80,73,,,936,IC1956,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+19482,Phạm Phương Thảo,Hoàn thành,0.94,1,94.5,92.5,78,86.5,,,936,IC1956,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+19522,Phạm Quế Trân,Hoàn thành,0.89,0.94,78.5,69.5,65.5,50,,,936,IC1956,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+20206,Lã Quốc Dũng,Hoàn thành,1,1,,,51.25,40,,,936,IC1956,Trần Thảo An,Cơ sở Phan Văn Trường ,Khóa 03
+18762,Bùi Thị Tuyết Mai,Hoàn thành,0.94,1,87,76,80.5,73.5,,,940,IC1960,Trần Thị Anh Thư,Cơ sở Hoàng Cầu 2,Khóa 03
+18837,Nguyễn Thị Ngọc,Không hoàn thành,0.72,0.94,84,82,77.5,,,,940,IC1960,Trần Thị Anh Thư,Cơ sở Hoàng Cầu 2,Khóa 03
+18906,Nguyễn Khánh Huyền,Bảo lưu,1,1,84,,,,,,940,IC1960,Trần Thị Anh Thư,Cơ sở Hoàng Cầu 2,Khóa 03
+18928,Đỗ Thuỳ Dương,Hoàn thành,1,1,87,80,83.5,80.5,,,940,IC1960,Trần Thị Anh Thư,Cơ sở Hoàng Cầu 2,Khóa 03
+18946,Đào Trọng Nhật Phát,Hoàn thành,1,1,86.5,78,82.5,85,,,940,IC1960,Trần Thị Anh Thư,Cơ sở Hoàng Cầu 2,Khóa 03
+18962,Bùi Tiến Đạt,Hoàn thành,0.89,1,93.5,87,88.5,88.5,,,940,IC1960,Trần Thị Anh Thư,Cơ sở Hoàng Cầu 2,Khóa 03
+18970,Thạch Trần Phương Nam,Hoàn thành,0.89,1,84.5,80,78,71,,,940,IC1960,Trần Thị Anh Thư,Cơ sở Hoàng Cầu 2,Khóa 03
+18994,Trần Thị Mai Anh,Hoàn thành,0.89,1,87.5,80,83,76,,,940,IC1960,Trần Thị Anh Thư,Cơ sở Hoàng Cầu 2,Khóa 03
+19000,Lê Thuỳ Linh,Hoàn thành,0.89,1,81,78.5,83,80,,,940,IC1960,Trần Thị Anh Thư,Cơ sở Hoàng Cầu 2,Khóa 03
+19004,Bùi Thu Phương,Hoàn thành,1,1,98.5,91,91.5,92.5,,,940,IC1960,Trần Thị Anh Thư,Cơ sở Hoàng Cầu 2,Khóa 03
+19044,Đỗ Quang Huy,Bảo lưu,0.86,1,80,,,,,,940,IC1960,Trần Thị Anh Thư,Cơ sở Hoàng Cầu 2,Khóa 03
+19051,Phạm Ngọc Ánh,Hoàn thành,1,1,88,86,90.5,88,,,940,IC1960,Trần Thị Anh Thư,Cơ sở Hoàng Cầu 2,Khóa 03
+19251,Nguyễn Thị Trang,Hoàn thành,0.72,1,86,71,75,56,,,940,IC1960,Trần Thị Anh Thư,Cơ sở Hoàng Cầu 2,Khóa 03
+19265,Bùi Mạnh Cường,Hoàn thành,1,1,47,51,68.5,50,,,940,IC1960,Trần Thị Anh Thư,Cơ sở Hoàng Cầu 2,Khóa 03
+19308,Nguyễn Trung Hiếu,Hoàn thành,1,1,73.5,72,76,67.5,,,940,IC1960,Trần Thị Anh Thư,Cơ sở Hoàng Cầu 2,Khóa 03
+19468,Nguyễn Vũ Hải,Hoàn thành,0.78,0.94,65.5,60,65.5,62,,,940,IC1960,Trần Thị Anh Thư,Cơ sở Hoàng Cầu 2,Khóa 03
+18725,Nguyễn Thị Lan Anh,Hoàn thành,1,1,87,90,80,95,,,945,IC1965,Lê Bảo Ngọc,Online,Khóa 03
+18731,Nguyễn Thị Thảo Linh,Hoàn thành,0.95,0.95,77,85,68,89.5,,,945,IC1965,Lê Bảo Ngọc,Online,Khóa 03
+18747,Phạm Thị Thanh Ngần,Bảo lưu,0.88,0.94,82,,,,,,945,IC1965,Lê Bảo Ngọc,Online,Khóa 03
+18778,Phạm Thanh Chúc,Hoàn thành,0.89,1,93,92,86,94,,,945,IC1965,Lê Bảo Ngọc,Online,Khóa 03
+18799,Lê Gia Huy,Hoàn thành,0.95,0.95,93,92,83,85,,,945,IC1965,Lê Bảo Ngọc,Online,Khóa 03
+18816,Trần Thị Hà Vi,Hoàn thành,1,1,77,80,73,63.5,,,945,IC1965,Lê Bảo Ngọc,Online,Khóa 03
+18817,Nguyễn Thị Huyền Nhung,Hoàn thành,1,0.95,92.5,92,88,88.5,,,945,IC1965,Lê Bảo Ngọc,Online,Khóa 03
+18846,Lương Thị Bảo Anh,Không hoàn thành,0.95,1,50,58,70,73.5,,,945,IC1965,Lê Bảo Ngọc,Online,Khóa 03
+18900,Hà Kiều Lê,Bảo lưu,0.6,1,65.5,,,,,,945,IC1965,Lê Bảo Ngọc,Online,Khóa 03
+18903,Vũ Như Quỳnh,Bỏ học,0.25,0.75,,,,,,,945,IC1965,Lê Bảo Ngọc,Online,Khóa 03
+18918,Nguyễn Văn Cường,Hoàn thành,1,1,86,81,85.5,86.5,,,945,IC1965,Lê Bảo Ngọc,Online,Khóa 03
+18919,Trần Khánh Hòa,Bảo lưu,0.71,1,,,,,,,945,IC1965,Lê Bảo Ngọc,Online,Khóa 03
+18960,Đỗ Thị Hà Anh,Không hoàn thành,0.89,1,73.5,78,72,0,,,945,IC1965,Lê Bảo Ngọc,Online,Khóa 03
+18961,Hoàng Nguyễn Gia Minh,Hoàn thành,1,1,80,92,88.5,90.5,,,945,IC1965,Lê Bảo Ngọc,Online,Khóa 03
+18963,Đinh Phú Quý,pending,,,,,,,,,945,IC1965,Lê Bảo Ngọc,Online,Khóa 03
+18984,Nguyễn Hoàng Lâm,Hoàn thành,1,1,76.5,76,77,56,,,945,IC1965,Lê Bảo Ngọc,Online,Khóa 03
+18997,Bùi Anh Thư,Hoàn thành,0.95,1,72.5,68.5,78,62,,,945,IC1965,Lê Bảo Ngọc,Online,Khóa 03
+19016,Nguyễn Hoàng Minh Nhật,transferred,0.92,1,89,80,95,,,,945,IC1965,Lê Bảo Ngọc,Online,Khóa 03
+19033,Phạm Ngọc Hải Nam,Không hoàn thành,1,0.95,65.5,59.5,59.5,63,,,945,IC1965,Lê Bảo Ngọc,Online,Khóa 03
+19056,Đào Văn Đại,Hoàn thành,0.95,1,75,70.5,65.5,59.5,,,945,IC1965,Lê Bảo Ngọc,Online,Khóa 03
+19012,Lê Anh Duy,Hoàn thành,1,1,95,93,92,92,,,946,IC1966,Đỗ Thị Linh Phương,Cơ sở Nguyễn Văn Thương 2,Khóa 03
+19013,Nguyễn Vinh Quang,Hoàn thành,0.94,0.89,83,84,81,82,,,946,IC1966,Đỗ Thị Linh Phương,Cơ sở Nguyễn Văn Thương 2,Khóa 03
+19017,Đặng Ngọc Sang,Hoàn thành,1,0.83,90,88,87,86,,,946,IC1966,Đỗ Thị Linh Phương,Cơ sở Nguyễn Văn Thương 2,Khóa 03
+19041,Nguyễn Đức Hiển,Không hoàn thành,1,1,70,79,77,,,,946,IC1966,Đỗ Thị Linh Phương,Cơ sở Nguyễn Văn Thương 2,Khóa 03
+19081,Trần Thanh Thanh,Hoàn thành,1,1,100,98,95,85,,,946,IC1966,Đỗ Thị Linh Phương,Cơ sở Nguyễn Văn Thương 2,Khóa 03
+19092,PHAN THẢO VY,Hoàn thành,1,0.95,99,98,95,,,,946,IC1966,Đỗ Thị Linh Phương,Cơ sở Nguyễn Văn Thương 2,Khóa 03
+19166,Nguyễn Ái Nhân,Hoàn thành,1,1,96,82,83,,,,946,IC1966,Đỗ Thị Linh Phương,Cơ sở Nguyễn Văn Thương 2,Khóa 03
+19215,Huỳnh Võ Ngọc Trâm,Hoàn thành,0.82,0.73,,59,91,89,,,946,IC1966,Đỗ Thị Linh Phương,Cơ sở Nguyễn Văn Thương 2,Khóa 03
+19236,Trần Thị Thu Hằng,Hoàn thành,1,1,94,92,87,80,,,946,IC1966,Đỗ Thị Linh Phương,Cơ sở Nguyễn Văn Thương 2,Khóa 03
+19293,Thiều Quang Đức Anh,Hoàn thành,1,0.95,91,82,82,85,,,946,IC1966,Đỗ Thị Linh Phương,Cơ sở Nguyễn Văn Thương 2,Khóa 03
+19430,Lê Thanh Phúc,Hoàn thành,0.95,1,92,90,91,85,,,946,IC1966,Đỗ Thị Linh Phương,Cơ sở Nguyễn Văn Thương 2,Khóa 03
+19438,Phùng Lê Kha Ly,Hoàn thành,0.95,1,99,98,96,91,,,946,IC1966,Đỗ Thị Linh Phương,Cơ sở Nguyễn Văn Thương 2,Khóa 03
+19460,Nguyễn Hoàng Gia Hân,Hoàn thành,0.91,0.73,,53,80,75,,,946,IC1966,Đỗ Thị Linh Phương,Cơ sở Nguyễn Văn Thương 2,Khóa 03
+19463,Nguyễn Ngọc Thành,Hoàn thành,0.94,0.89,,85,86,86,,,946,IC1966,Đỗ Thị Linh Phương,Cơ sở Nguyễn Văn Thương 2,Khóa 03
+19471,Vũ Dương Hoàng Nhi,Hoàn thành,0.89,0.94,,78,71,69,,,946,IC1966,Đỗ Thị Linh Phương,Cơ sở Nguyễn Văn Thương 2,Khóa 03
+19621,Nguyễn Hữu Minh Thông,Không hoàn thành,0.82,0.94,74,69,75,70,,,946,IC1966,Đỗ Thị Linh Phương,Cơ sở Nguyễn Văn Thương 2,Khóa 03
+18974,Nông Thị Hoàng Anh,Hoàn thành,0.89,0.95,65.3,61.3,76.5,70.3,,,955,IC1975,Phạm Tú Uyên,Online,Khóa 03
+18999,Nguyễn Thu Thúy,Không hoàn thành,0.95,1,59.8,42,44,46.5,,,955,IC1975,Phạm Tú Uyên,Online,Khóa 03
+19007,Bùi Lệ Quyên,Hoàn thành,0.89,1,89.8,78.3,83.3,85.8,,,955,IC1975,Phạm Tú Uyên,Online,Khóa 03
+19011,Huỳnh Trần Ngọc Anh,Hoàn thành,0.84,1,85.8,81.3,77.5,79.5,,,955,IC1975,Phạm Tú Uyên,Online,Khóa 03
+19015,Đỗ Văn Lâm,Không hoàn thành,0.95,0.42,29,37,28.8,70.8,,,955,IC1975,Phạm Tú Uyên,Online,Khóa 03
+19029,Chu Thị Cẩm Vân,Hoàn thành,0.95,1,57.3,51.5,86.3,71.5,,,955,IC1975,Phạm Tú Uyên,Online,Khóa 03
+19030,Bùi Nguyễn Ngọc Hà,Bỏ học,0.8,1,90.5,71,,,,,955,IC1975,Phạm Tú Uyên,Online,Khóa 03
+19043,Nguyễn Hoàng Khang,Hoàn thành,0.89,1,89,87.8,82.5,75.3,,,955,IC1975,Phạm Tú Uyên,Online,Khóa 03
+19059,Phạm Quỳnh Như,Bảo lưu,0.8,1,61.3,,,,,,955,IC1975,Phạm Tú Uyên,Online,Khóa 03
+19060,Nguyễn Thị Phương Thảo,Hoàn thành,0.95,1,90.5,88.8,92,95,,,955,IC1975,Phạm Tú Uyên,Online,Khóa 03
+19064,Đào Thị Xuân Quỳnh,Không hoàn thành,0.95,1,33,,50.3,71,,,955,IC1975,Phạm Tú Uyên,Online,Khóa 03
+19076,Nguyễn Nhật Linh,Hoàn thành,1,1,79.3,69.3,70.3,55.8,,,955,IC1975,Phạm Tú Uyên,Online,Khóa 03
+19078,Phùng Minh Tuyền,Không hoàn thành,1,1,53,54.3,60.3,62.5,,,955,IC1975,Phạm Tú Uyên,Online,Khóa 03
+19083,Nguyễn Đoan Trang,Hoàn thành,0.95,1,85.8,64.3,71.3,74.3,,,955,IC1975,Phạm Tú Uyên,Online,Khóa 03
+19084,Nguyễn Ngọc Anh,Hoàn thành,1,1,75.3,78,80.5,79.5,,,955,IC1975,Phạm Tú Uyên,Online,Khóa 03
+19087,Đoàn Thị Mai Phương,Hoàn thành,0.63,0.89,85.5,80.8,86.8,78.3,,,955,IC1975,Phạm Tú Uyên,Online,Khóa 03
+19102,Nguyễn Thanh Tâm,Hoàn thành,0.95,1,90.5,77.8,82,90.5,,,955,IC1975,Phạm Tú Uyên,Online,Khóa 03
+19113,Nguyễn Thị Hà Phương,Hoàn thành,0.95,1,82,75.8,68.8,72,,,955,IC1975,Phạm Tú Uyên,Online,Khóa 03
+19138,Hoàng Thị Kim Nhung,Hoàn thành,1,1,93.5,91.3,85.5,92.5,,,955,IC1975,Phạm Tú Uyên,Online,Khóa 03
+19139,Trần Quốc Đại Nghĩa,Hoàn thành,1,1,94,91.3,89,93.8,,,955,IC1975,Phạm Tú Uyên,Online,Khóa 03
+19442,Trần Bùi Kha Ly,Hoàn thành,1,1,86.3,67.2,74.8,75.5,,,955,IC1975,Phạm Tú Uyên,Online,Khóa 03
+19114,Nguyễn Thu Uyên,Hoàn thành,0.89,1,81.8,81.8,87,83.8,,,961,IC1981,Vũ Thảo Chi,Online,Khóa 03
+19164,Lê Vũ Ánh Dương,Hoàn thành,1,1,60.3,69.8,79.9,78.5,,,961,IC1981,Vũ Thảo Chi,Online,Khóa 03
+19188,Phạm Ánh Ngọc,Không hoàn thành,0.84,0.84,91.4,84.5,,,,,961,IC1981,Vũ Thảo Chi,Online,Khóa 03
+19205,Đào Xuân Tùng,Hoàn thành,1,1,82.5,80,75.8,72,,,961,IC1981,Vũ Thảo Chi,Online,Khóa 03
+19210,Vũ Thị Ngọc Diễm,Hoàn thành,1,1,91.9,89.5,88,81.6,,,961,IC1981,Vũ Thảo Chi,Online,Khóa 03
+19225,Lê Thị Ngọc Vân,Hoàn thành,0.95,1,87.8,82,84.3,77.6,,,961,IC1981,Vũ Thảo Chi,Online,Khóa 03
+19228,Lê Thị Xuân Yến,Hoàn thành,1,1,72,78.5,83.8,82,,,961,IC1981,Vũ Thảo Chi,Online,Khóa 03
+19258,Đặng Thị Thu Ngân,Không hoàn thành,0.95,0.74,69.8,62,65.5,42,,,961,IC1981,Vũ Thảo Chi,Online,Khóa 03
+19288,Nguyễn Khánh Huyền,Không hoàn thành,0.79,1,90.8,87.3,,,,,961,IC1981,Vũ Thảo Chi,Online,Khóa 03
+19295,Mai Thế Bảo,Hoàn thành,0.95,1,96.8,95.8,94,85.9,,,961,IC1981,Vũ Thảo Chi,Online,Khóa 03
+19307,Trần Ngọc Ánh,Hoàn thành,1,1,76.7,48.6,81,53.6,,,961,IC1981,Vũ Thảo Chi,Online,Khóa 03
+19327,Nguyễn Mạnh Khôi,Hoàn thành,1,0.95,83.3,70.8,77,62,,,961,IC1981,Vũ Thảo Chi,Online,Khóa 03
+19337,Trần Văn Gulitt Em,Không hoàn thành,0.84,1,44,45.3,,62,,,961,IC1981,Vũ Thảo Chi,Online,Khóa 03
+19352,Phạm Văn Quang Anh,Không hoàn thành,0.68,0.84,30.3,,33,,,,961,IC1981,Vũ Thảo Chi,Online,Khóa 03
+19356,Nguyễn Minh Trí,Bảo lưu,1,0,,,,,,,961,IC1981,Vũ Thảo Chi,Online,Khóa 03
+19376,Trần Lê Minh Trang,Hoàn thành,1,1,87.1,78.5,75.8,73.3,,,961,IC1981,Vũ Thảo Chi,Online,Khóa 03
+19400,Huỳnh Anh Thy,Không hoàn thành,0.88,0.94,66.1,57.8,61.8,44.3,,,961,IC1981,Vũ Thảo Chi,Online,Khóa 03
+19422,Hồng Thuỳ Trang,Hoàn thành,0.89,1,79.5,77,86.1,82,,,961,IC1981,Vũ Thảo Chi,Online,Khóa 03
+19448,Đào Lưu Yên Nhi,Hoàn thành,0.95,1,90.4,71.3,87.2,76.6,,,961,IC1981,Vũ Thảo Chi,Online,Khóa 03
+19582,Nguyễn Hà My,Hoàn thành,1,1,85,67.5,81.5,68.9,,,961,IC1981,Vũ Thảo Chi,Online,Khóa 03
+21102,Kiều Thị Khánh Linh,pending,,,,,,,,,1058,IC2077,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+21137,Đỗ Phương Nhi,transferred,0.8,0.5,32.75,,,,,,1058,IC2077,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+21466,Dương Quang Anh,Hoàn thành,0.94,0.89,83.25,55.5,73.5,58.25,,,1058,IC2077,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+21810,Nguyễn Đức Trung,Không hoàn thành,0.89,1,79,67.75,52.5,60,,,1058,IC2077,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+21936,Tạ Thị Ngọc Bích,Hoàn thành,0.83,0.95,92,81,83.75,,,,1058,IC2077,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+21954,Nguyễn Thị Kim Ngân,Không hoàn thành,0.73,0.75,56.5,65,58.5,,,,1058,IC2077,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+21991,Nguyễn Phương Anh,Bỏ học,1,1,,,,,,,1058,IC2077,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+22227,Hoàng Minh Thắng,Không hoàn thành,0.69,0.88,69.25,31.75,,,,,1058,IC2077,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+22285,Dương Danh Phong,Hoàn thành,0.94,0.89,92,86,82.5,76.5,,,1058,IC2077,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+22316,Nguyễn Thị Hằng,Hoàn thành,0.89,0.74,83,73.5,88.75,53.5,,,1058,IC2077,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+22317,Phan Tiến Minh,Hoàn thành,1,0.84,74,70.5,82,55.75,,,1058,IC2077,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+22412,Phạm Xuân Bắc,Hoàn thành,1,1,83,78,61.75,62,,,1058,IC2077,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+22413,Vũ Thị Ngọc Duyên,Không hoàn thành,0.89,1,63,65,58,,,,1058,IC2077,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+22423,Ngô Giáp Thành Vinh,Hoàn thành,1,1,88,77.5,73.5,63.25,,,1058,IC2077,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+22507,Nguyễn Trà My,Hoàn thành,0.82,1,81.5,60.25,60.25,65,,,1058,IC2077,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+22518,Vũ Thị Kim Tuyến,Hoàn thành,1,1,89.25,77.25,72,70.75,,,1058,IC2077,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+22664,Nguyễn Thành Hưng,Bỏ học,,,,,,,,,1058,IC2077,Bùi Danh Hiển,Cơ sở Hoàng Cầu 1,Khóa 03
+21861,Bùi Thị Mai Hiên,Hoàn thành,0.94,1,97,95,,86,,,1088,IC2016,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+21922,Trần Phan Dũng,Hoàn thành,1,1,86,81,78,,,,1088,IC2016,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+21933,LA THỊ HÂN DI,Bảo lưu,1,1,96,90,,,,,1088,IC2016,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+22051,Phạm Thị Cẩm Tiên,Không hoàn thành,1,1,68,51,45,42,,,1088,IC2016,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+22052,Trần Gia Như,Hoàn thành,0.94,1,91,97,92,86,,,1088,IC2016,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+22094,Cao Thị Hà Trang,Không hoàn thành,0.89,0.94,60,,50,30,,,1088,IC2016,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+22156,Trần Thanh Hương,Hoàn thành,1,1,92,87,90,82,,,1088,IC2016,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+22223,Phạm Đăng Khoa,Hoàn thành,1,1,96,92,90,81,,,1088,IC2016,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+22291,Bế Xuân Huyên,Hoàn thành,0.94,0.94,80,68,50,42,,,1088,IC2016,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+22313,Phan Thế Hiển,Hoàn thành,1,1,98,98,96,90,,,1088,IC2016,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+22320,Lê Thị Dung,pending,,,,,,,,,1088,IC2016,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+22326,Trần Văn Cường,Hoàn thành,1,1,76,89,86,87,,,1088,IC2016,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+22400,Nguyễn Ngọc Ninh,Hoàn thành,1,0.94,81,53,77,64,,,1088,IC2016,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+22404,Đinh Hồng Quyên,Hoàn thành,1,1,96,92,92,82,,,1088,IC2016,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+22414,Nguyễn Thị Linh Chi,Hoàn thành,0.94,1,97,99,95,65,,,1088,IC2016,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+22517,Bùi Thị Ngọc Linh,Hoàn thành,0.89,1,97,98,94,65,,,1088,IC2016,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+22692,Nguyễn Thành Quang,Không hoàn thành,0.89,0.72,,35,40,0,,,1088,IC2016,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+22701,Hoàng Khánh Huyền,Hoàn thành,1,1,94,94,88,79,,,1088,IC2016,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+22842,Trần Hải Nhi,Hoàn thành,0.89,0.89,95,65,86,,,,1088,IC2016,Nguyễn Kim Long,Cơ sở Tô Hiệu,Khóa 03
+21932,Anh Minh,Hoàn thành,0.89,0.95,73,78.5,52,62.5,,,1090,IC2105,Lê Bảo Ngọc,Online,Khóa 03
+21994,Trần Hải Anh,Bỏ học,0.88,1,,,,,,,1090,IC2105,Lê Bảo Ngọc,Online,Khóa 03
+22022,Nguyễn Anh Thư,Không hoàn thành,0.42,0.53,,,,,,,1090,IC2105,Lê Bảo Ngọc,Online,Khóa 03
+22182,Bùi Hoàng An,Hoàn thành,0.95,1,92.5,86.5,75.5,80,,,1090,IC2105,Lê Bảo Ngọc,Online,Khóa 03
+22252,Nguyễn Thị Bảo Trâm,Hoàn thành,1,0.95,63.8,85,59.5,63,,,1090,IC2105,Lê Bảo Ngọc,Online,Khóa 03
+22262,Lê Đại Việt,Hoàn thành,1,1,88,97,88.5,88.5,,,1090,IC2105,Lê Bảo Ngọc,Online,Khóa 03
+22381,Nguyễn Việt Anh,Hoàn thành,0.95,1,80,82.5,,,,,1090,IC2105,Lê Bảo Ngọc,Online,Khóa 03
+22487,Lã Ngọc Tiến Dũng,Hoàn thành,0.84,0.89,83.5,78.5,84.5,62.5,,,1090,IC2105,Lê Bảo Ngọc,Online,Khóa 03
+22514,Phạm Thị Thuý Vy,Hoàn thành,0.95,1,73.3,75,63.5,60.5,,,1090,IC2105,Lê Bảo Ngọc,Online,Khóa 03
+22519,Đặng Ngọc Thuỳ Dương,Hoàn thành,1,1,83,71,80,74,,,1090,IC2105,Lê Bảo Ngọc,Online,Khóa 03
+22613,Cao Thị Ngọc Ánh,Hoàn thành,1,1,73.5,90,73,82,,,1090,IC2105,Lê Bảo Ngọc,Online,Khóa 03
+22616,Trần Thị Huyền Trang,Hoàn thành,1,1,59.8,71.5,67.5,57.5,,,1090,IC2105,Lê Bảo Ngọc,Online,Khóa 03
+22622,Lê Khánh Linh,Hoàn thành,0.89,1,84.5,90,,64.5,,,1090,IC2105,Lê Bảo Ngọc,Online,Khóa 03
+22624,Ngô Thị Khánh Linh,Hoàn thành,1,1,84,95.5,87.5,79,,,1090,IC2105,Lê Bảo Ngọc,Online,Khóa 03
+22654,Nguyễn Thị Yến Nhi,Hoàn thành,1,1,79,75.5,71.5,76.5,,,1090,IC2105,Lê Bảo Ngọc,Online,Khóa 03
+22675,Nguyễn Hoàng Quý,Hoàn thành,1,1,89.5,93.5,80,81.5,,,1090,IC2105,Lê Bảo Ngọc,Online,Khóa 03
+22679,Nguyễn Thị Mỹ Dung,Hoàn thành,0.89,1,60,86,85,56,,,1090,IC2105,Lê Bảo Ngọc,Online,Khóa 03
+22681,Đinh Thị Phương Thanh,Hoàn thành,1,1,89,80,83.5,72.5,,,1090,IC2105,Lê Bảo Ngọc,Online,Khóa 03
+22914,Đỗ Gia Huy,Không hoàn thành,0.95,0.95,70,44,77,66,,,1090,IC2105,Lê Bảo Ngọc,Online,Khóa 03
+23392,Phạm Thị Thanh Vi,Hoàn thành,1,1,,,68,77.5,,,1090,IC2105,Lê Bảo Ngọc,Online,Khóa 03
+22211,Võ Bùi Hoàng Phú,Hoàn thành,1,1,69.8,76,56,61.5,,,1095,IC2110,Phan Thị Yến Nghi,Online,Khóa 03
+22222,Ngô Thị Hoàng Anh,Hoàn thành,0.89,1,71.5,67.5,77.3,66.8,,,1095,IC2110,Phan Thị Yến Nghi,Online,Khóa 03
+22247,Nguyễn Thị Thuý Bình,Hoàn thành,0.89,1,57.5,76.3,76,71.5,,,1095,IC2110,Phan Thị Yến Nghi,Online,Khóa 03
+22250,Nguyễn Mỹ Tiên,Hoàn thành,0.95,1,92.3,88.3,77.3,86.5,,,1095,IC2110,Phan Thị Yến Nghi,Online,Khóa 03
+22348,Nguyễn Kiều Trang,Bỏ học,,,0,0,0,0,,,1095,IC2110,Phan Thị Yến Nghi,Online,Khóa 03
+22453,Nguyễn Thị Thanh Nhàn,Hoàn thành,1,1,92,82.3,75.5,81.8,,,1095,IC2110,Phan Thị Yến Nghi,Online,Khóa 03
+22485,Nguyễn Đình Vượng,Hoàn thành,0.95,1,90.3,89,82,71.3,,,1095,IC2110,Phan Thị Yến Nghi,Online,Khóa 03
+22495,Bùi Thị Xuân Nga,Hoàn thành,1,1,75.3,74.5,72,74.5,,,1095,IC2110,Phan Thị Yến Nghi,Online,Khóa 03
+22510,Đoàn Thị Lan Anh,Không hoàn thành,0.95,0.89,78.8,65,44.8,56.3,,,1095,IC2110,Phan Thị Yến Nghi,Online,Khóa 03
+22656,Hoàng Ngọc Linh,Không hoàn thành,0.47,0.74,79.8,65,0,0,,,1095,IC2110,Phan Thị Yến Nghi,Online,Khóa 03
+22673,Vũ Khánh Huyền,Bảo lưu,0.89,1,46.5,0,0,0,,,1095,IC2110,Phan Thị Yến Nghi,Online,Khóa 03
+22678,Hoàng Yến Nhi,Bảo lưu,0.9,1,60,60,0,0,,,1095,IC2110,Phan Thị Yến Nghi,Online,Khóa 03
+22772,Nguyễn Hoàng Quân,Hoàn thành,0.84,1,72.3,42.5,68.3,75,,,1095,IC2110,Phan Thị Yến Nghi,Online,Khóa 03
+22815,Ngô Nguyễn Quốc Đại,Hoàn thành,0.89,1,67.5,66,71.8,69,,,1095,IC2110,Phan Thị Yến Nghi,Online,Khóa 03
+22838,Trần Phương Thảo,Hoàn thành,1,1,88.8,91.3,81.5,78.3,,,1095,IC2110,Phan Thị Yến Nghi,Online,Khóa 03
+22856,Quan Vịnh Nghi,Bảo lưu,0.75,1,82.5,0,0,0,,,1095,IC2110,Phan Thị Yến Nghi,Online,Khóa 03
+22864,Ngô Xuân Phú,Không hoàn thành,1,1,70,54.5,59.5,52.8,,,1095,IC2110,Phan Thị Yến Nghi,Online,Khóa 03
+22884,Dương Yến Vy,Bảo lưu,0.67,1,0,0,0,0,,,1095,IC2110,Phan Thị Yến Nghi,Online,Khóa 03
+22891,Nguyễn Đỗ Như Ý,Hoàn thành,1,1,86.5,84.5,78.3,64.3,,,1095,IC2110,Phan Thị Yến Nghi,Online,Khóa 03
+23014,Nguyễn Ngọc Thuỷ,Không hoàn thành,0.33,0.33,88.5,90.5,79.3,0,,,1095,IC2110,Phan Thị Yến Nghi,Online,Khóa 03
+22183,Đỗ Đình Anh,Không hoàn thành,0.94,1,45.75,37.25,64,73.5,,,1098,IC2112,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+22314,Vũ Nguyễn Thảo Nguyên,Hoàn thành,1,1,98,89,95,93.5,,,1098,IC2112,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+22351,Bảo Phát,pending,,,,,,,,,1098,IC2112,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+22449,Nguyễn Thị Thanh Xuân,Không hoàn thành,0.89,0.94,56.5,40.75,58.75,40.75,,,1098,IC2112,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+22465,Nguyễn Thị Thu Hằng,Không hoàn thành,1,1,35.5,40.75,77.5,37.5,,,1098,IC2112,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+22476,Nguyễn Thị Quỳnh Trâm,Không hoàn thành,0.89,1,39.5,38.25,38,,,,1098,IC2112,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+22538,Đặng Bình Quý,Hoàn thành,0.94,0.94,75,71.5,77.25,74.5,,,1098,IC2112,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+22640,Đinh Thị Ngọc Lan,Hoàn thành,1,1,97.5,93.5,94,89.25,,,1098,IC2112,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+22641,Đào Minh Hằng,Không hoàn thành,0.94,0.72,84.5,84,82,86.75,,,1098,IC2112,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+22653,Nguyễn Ngọc Bích,Hoàn thành,1,1,94,85.25,87.5,86.5,,,1098,IC2112,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+22714,Lê Phan Huyền Trang,Không hoàn thành,0.89,1,57.25,53.75,43.25,,,,1098,IC2112,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+22822,Nguyễn Thị Hồng Nhung,Hoàn thành,1,1,70.5,76.75,60,82.5,,,1098,IC2112,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+23068,Bùi Thị Huyền Trang,Không hoàn thành,0.89,1,78.5,76,70.75,,,,1098,IC2112,Nguyễn Thị Ngọc Ánh,Cơ sở Trần Đăng Ninh - Hà Đông,Khóa 03
+22602,Mai Thành Nhân,Bỏ học,0.75,0.75,75,56,,,,,1112,IC2127,Nguyễn Bảo Hân,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+22702,Đinh Thị Thu Trà,Hoàn thành,0.94,1,85,77,78.5,71,,,1112,IC2127,Nguyễn Bảo Hân,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+22703,Nguyễn Như Quỳnh,Hoàn thành,1,1,72,68,67,73.5,,,1112,IC2127,Nguyễn Bảo Hân,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+22704,Chu Thu Thuỷ,Hoàn thành,1,1,86,88,86.5,72,,,1112,IC2127,Nguyễn Bảo Hân,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+22818,Đặng Thị Quỳnh Nhi,Hoàn thành,0.94,0.94,87,77,65,70,,,1112,IC2127,Nguyễn Bảo Hân,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+22837,Phạm Thị Sa Vi,Không hoàn thành,0.89,0.94,62.5,45,59,57,,,1112,IC2127,Nguyễn Bảo Hân,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+22916,Huỳnh Thị Yến Nhi,Hoàn thành,0.89,1,82,81,79,75.5,,,1112,IC2127,Nguyễn Bảo Hân,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+23055,Hà Sĩ Hoàng,Bỏ học,,,,30,,,,,1112,IC2127,Nguyễn Bảo Hân,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+23056,Phạm Văn Lộc,Bỏ học,,,62,28,,,,,1112,IC2127,Nguyễn Bảo Hân,Cơ sở Nguyễn Văn Thương 1,Khóa 03
+23287,Tiền Trang Yến Nhi,Hoàn thành,0.78,1,94.5,92.5,87,89,,,1112,IC2127,Nguyễn Bảo Hân,Cơ sở Nguyễn Văn Thương 1,Khóa 03
