@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Phân tích Test 1 & Tỷ lệ Pass Khóa 34</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f0f2f5; color: #1a1a2e; padding: 24px; }
@@ -43,13 +44,14 @@
   .badge-green { background: #e8f5e9; color: #2e7d32; }
   .badge-red { background: #ffebee; color: #c62828; }
   .badge-yellow { background: #fff3e0; color: #e65100; }
+  .badge-orange { background: #fff3e0; color: #e65100; }
 </style>
 </head>
 <body>
 <div class="container">
 
 <h1>📊 Phân tích tương quan: Điểm Test 1 và Tỷ lệ Pass Khóa</h1>
-<p class="subtitle">Khóa 34 — Dữ liệu hỗ trợ xây dựng cơ chế tính thưởng Leaderboard dựa trên phân loại lớp</p>
+<p class="subtitle">Khóa 34 — Phân loại theo 4 nhóm điểm Test 1: <strong>&lt;40</strong> | <strong>40–50</strong> | <strong>51–59</strong> | <strong>≥60</strong></p>
 
 <div class="summary-cards" id="summaryCards">
   <div class="card"><div class="value">1,474</div><div class="label">Học viên có điểm Test 1</div></div>
@@ -58,15 +60,15 @@
   <div class="card"><div class="value" id="passInfo">—</div><div class="label">Học viên đã pass</div></div>
 </div>
 
-<!-- CHART 1: Pass rate by fine-grained buckets -->
+<!-- CHART 1: Fine-grained pass rates with boundary lines -->
 <h2>1. Tỷ lệ Pass theo từng thang điểm Test 1</h2>
-<div class="chart-box">
+<div class="chart-box" style="position:relative;">
   <canvas id="chart1" height="100"></canvas>
-  <p style="margin-top:12px;color:#666;font-size:14px;">📌 <strong>Nhận xét:</strong> Tỷ lệ pass tăng dần theo điểm Test 1. Có <strong>bước nhảy rõ rệt</strong> ở mốc 60 điểm: từ ~51% (55-60) lên ~73% (60-65). Trên 70 điểm, tỷ lệ pass gần như ổn định ở 77-80%.</p>
+  <p style="margin-top:12px;color:#666;font-size:14px;">📌 <strong>Nhận xét:</strong> Tỷ lệ pass tăng dần theo điểm Test 1. Mốc <strong>40 điểm</strong> trở xuống chỉ có ~3-14% pass — cực kỳ nguy cơ. Nhóm <strong>40-50 điểm</strong> cải thiện lên ~36-47%. Nhóm <strong>51-59 điểm</strong> đạt ~46-51%. Bước nhảy lớn nhất là ở mốc <strong>60 điểm</strong>: từ ~51% lên ~73%.</p>
 </div>
 
-<!-- CHART 2: Proposed bucket comparison -->
-<h2>2. Phân loại theo đề xuất của bạn</h2>
+<!-- CHART 2: New user buckets (4 groups) -->
+<h2>2. Tỷ lệ Pass theo 4 nhóm điểm Test 1</h2>
 <div class="two-col">
   <div class="chart-box">
     <canvas id="chart2a" height="100"></canvas>
@@ -77,11 +79,12 @@
 </div>
 
 <div class="insight-box">
-  <strong>💡 Insight chính:</strong> Mục tiêu pass kỳ vọng bạn đề ra (60% / 70% / 80%) <strong>cao hơn đáng kể</strong> so với tỷ lệ pass thực tế trung bình của từng nhóm. Cụ thể:
+  <strong>💡 Insight chính:</strong> Sự khác biệt giữa 4 nhóm rất rõ rệt:
   <ul style="margin-top:8px;padding-left:20px;">
-    <li><strong>TB (&lt;50):</strong> Thực tế 27.6% — Mục tiêu 60% ➜ quá cao (gấp đôi thực tế)</li>
-    <li><strong>TB-Khá (50-59):</strong> Thực tế 49.1% — Mục tiêu 70% ➜ cao hơn ~20%</li>
-    <li><strong>Khá-Giỏi (≥60):</strong> Thực tế 76.3% — Mục tiêu 80% ➜ khả thi nhưng thách thức</li>
+    <li><strong>&lt;40 điểm (88 học viên):</strong> Tỷ lệ pass chỉ <strong>10.2%</strong> — gần như không có cơ hội hoàn thành</li>
+    <li><strong>40–50 điểm (104 học viên):</strong> Tỷ lệ pass <strong>42.3%</strong> — còn thấp nhưng đã có cải thiện đáng kể</li>
+    <li><strong>51–59 điểm (212 học viên):</strong> Tỷ lệ pass <strong>49.1%</strong> — ngang ngửa tung đồng xu</li>
+    <li><strong>≥60 điểm (1,070 học viên):</strong> Tỷ lệ pass <strong>76.3%</strong> — chiếm đa số, cơ hội pass cao rõ rệt</li>
   </ul>
 </div>
 
@@ -97,7 +100,7 @@
 <div class="chart-box">
   <canvas id="chart4" height="100"></canvas>
   <div class="insight-box" style="margin-top:12px;">
-    <strong>📐 Tương quan cấp lớp:</strong> r = 0.32 — Mối tương quan thuận ở mức trung bình. Điểm Test 1 giải thích được ~10% sự khác biệt về tỷ lệ pass giữa các lớp. Yếu tố khác (giảng viên, cơ sở, chất lượng lớp) đóng vai trò quan trọng không kém.
+    <strong>📐 Tương quan cấp lớp:</strong> r = 0.17 (nhóm ≥60) và r = 0.54 (nhóm 51-59) — Trong nhóm điểm cao, khi học viên đã có Test 1 ≥ 60, yếu tố khác (giảng viên, cơ sở, chất lượng lớp) quyết định tỷ lệ pass hơn là điểm Test 1.
   </div>
 </div>
 
@@ -116,75 +119,72 @@
       <th class="num">Số HV</th>
       <th class="num">Pass</th>
       <th class="num">Tỷ lệ Pass</th>
-      <th class="num">Mục tiêu đề xuất</th>
-      <th class="num">Thực tế (lớp T25%)</th>
-      <th class="num">Khuyến nghị</th>
+      <th class="num">Số lớp</th>
+      <th class="num">Pass TB của lớp</th>
+      <th class="num">Khoảng giữa các lớp</th>
     </tr>
   </thead>
   <tbody id="tableBody"></tbody>
 </table>
 
 <!-- RECOMMENDATION -->
-<h2>7. Khuyến nghị chỉ tiêu Pass kỳ vọng</h2>
+<h2>7. Phân tích theo 4 nhóm điểm Test 1</h2>
 <div class="recommendation">
-  <h3>🎯 Đề xuất điều chỉnh</h3>
-  <p style="margin-bottom:16px;opacity:0.9;">Dựa trên dữ liệu thực tế, tôi khuyến nghị điều chỉnh các mốc mục tiêu pass kỳ vọng như sau để vừa mang tính thách thức vừa khả thi:</p>
+  <h3>🎯 Tổng quan 4 nhóm điểm Test 1</h3>
+  <p style="margin-bottom:16px;opacity:0.9;">Phân loại học viên thành 4 nhóm theo điểm Test 1 với các mốc <strong>&lt;40</strong>, <strong>40–50</strong>, <strong>51–59</strong>, <strong>≥60</strong> cho thấy sự phân tách rõ rệt về tỷ lệ pass:</p>
 
   <table style="background:transparent;color:white;box-shadow:none;">
     <thead>
       <tr>
-        <th>Phân loại</th>
-        <th>Điểm TB Test 1</th>
-        <th>Mục tiêu cũ</th>
-        <th>Mục tiêu mới (25% percentile)</th>
-        <th>Mục tiêu mới (Median)</th>
-        <th>Thực tế TB</th>
+        <th>Nhóm</th>
+        <th>Điểm Test 1</th>
+        <th>Số HV</th>
+        <th>Tỷ lệ Pass</th>
+        <th>Pass kỳ vọng (TB lớp)</th>
+        <th>Ghi chú</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><strong>Khá-Giỏi</strong></td>
-        <td class="num">≥ 60</td>
-        <td class="num" style="color:#ff8a80;">80%</td>
-        <td class="num" style="color:#81c784;"><strong>57%</strong></td>
-        <td class="num" style="color:#81c784;"><strong>68%</strong></td>
-        <td class="num">66.8%</td>
+        <td><strong>Nhóm D — Nguy cơ rất cao</strong></td>
+        <td class="num">&lt; 40</td>
+        <td class="num">88</td>
+        <td class="num" style="color:#ff8a80;"><strong>10.2%</strong></td>
+        <td class="num">—</td>
+        <td>Không có lớp nào có điểm TB &lt; 40.</td>
       </tr>
       <tr>
-        <td><strong>Trung Bình Khá</strong></td>
-        <td class="num">50-59</td>
-        <td class="num" style="color:#ff8a80;">70%</td>
-        <td class="num" style="color:#81c784;"><strong>47%</strong></td>
-        <td class="num" style="color:#81c784;"><strong>62%</strong></td>
-        <td class="num">54.7%</td>
-      </tr>
-      <tr>
-        <td><strong>Trung Bình</strong></td>
-        <td class="num">&lt; 50</td>
-        <td class="num" style="color:#ff8a80;">60%</td>
-        <td class="num" style="color:#81c784;"><strong>33%</strong></td>
-        <td class="num" style="color:#81c784;"><strong>33%</strong></td>
+        <td><strong>Nhóm C — Nguy cơ cao</strong></td>
+        <td class="num">40–50</td>
+        <td class="num">104</td>
+        <td class="num" style="color:#ffcc80;"><strong>42.3%</strong></td>
         <td class="num">33.3%</td>
+        <td>1 lớp có điểm TB trong khoảng này.</td>
+      </tr>
+      <tr>
+        <td><strong>Nhóm B — Trung bình</strong></td>
+        <td class="num">51–59</td>
+        <td class="num">212</td>
+        <td class="num" style="color:#ffe082;"><strong>49.1%</strong></td>
+        <td class="num">55.6%</td>
+        <td>13 lớp có điểm TB trong khoảng này.</td>
+      </tr>
+      <tr>
+        <td><strong>Nhóm A — Khả quan</strong></td>
+        <td class="num">≥ 60</td>
+        <td class="num">1,070</td>
+        <td class="num" style="color:#81c784;"><strong>76.3%</strong></td>
+        <td class="num">66.8%</td>
+        <td>75 lớp có điểm TB ≥ 60.</td>
       </tr>
     </tbody>
   </table>
 
-  <div style="margin-top:20px;padding:16px;background:rgba(255,255,255,0.1);border-radius:8px;">
-    <strong>⚖️ Cách tiếp cận khuyến nghị:</strong>
-    <ul style="margin-top:8px;padding-left:20px;opacity:0.9;">
-      <li><strong>Dễ (25th percentile):</strong> Mục tiêu mà 75% lớp trong nhóm đạt được — phù hợp nếu muốn đa số GV có cơ hội nhận thưởng.</li>
-      <li><strong>Trung bình (Median):</strong> Mục tiêu mà 50% lớp đạt được — cân bằng giữa khuyến khích và thách thức.</li>
-      <li><strong>Cao (75th percentile):</strong> Mục tiêu chỉ 25% lớp đạt được — chỉ dành cho GV xuất sắc.</li>
-    </ul>
-  </div>
-
   <div style="margin-top:20px;padding:16px;background:rgba(233,69,96,0.15);border-radius:8px;">
-    <strong>⚠️ Lưu ý quan trọng:</strong>
+    <strong>⚠️ Lưu ý:</strong>
     <ul style="margin-top:8px;padding-left:20px;opacity:0.9;">
-      <li>Các mục tiêu cũ (60% / 70% / 80%) sẽ khiến <strong>77-83% lớp không đạt được</strong> mục tiêu — điều này phản tác dụng động viên.</li>
-      <li>Nếu dùng mục tiêu cũ, hãy áp dụng cơ chế <strong>thưởng theo % vượt kỳ vọng</strong> thay vì đạt/không đạt tuyệt đối.</li>
-      <li>Dữ liệu chỉ từ <strong>1 lớp TB (&lt;50)</strong> — quá ít để kết luận chắc chắn cho nhóm này.</li>
-      <li>Cần thêm dữ liệu Khóa 03 để validate các ngưỡng này.</li>
+      <li>Dữ liệu chỉ từ <strong>Khóa 34</strong> — cần thêm dữ liệu Khóa 03 để kiểm tra tính ổn định của các ngưỡng.</li>
+      <li>Các mốc phân loại dựa trên sự thay đổi tỷ lệ pass, chưa tính đến các yếu tố khác (giảng viên, cơ sở, loại hình lớp học).</li>
     </ul>
   </div>
 </div>
@@ -196,26 +196,30 @@
 </div>
 
 <script>
+// Register datalabels plugin
+Chart.register(ChartDataLabels);
+
 // ===== DATA from Python analysis =====
 const fineBuckets = [
-  { label: '<30', n:33, pass:1, rate:3.0 },
-  { label: '30-40', n:55, pass:8, rate:14.5 },
-  { label: '40-50', n:104, pass:44, rate:42.3 },
-  { label: '50-55', n:91, pass:42, rate:46.2 },
-  { label: '55-60', n:121, pass:62, rate:51.2 },
-  { label: '60-65', n:162, pass:119, rate:73.5 },
-  { label: '65-70', n:191, pass:134, rate:70.2 },
-  { label: '70-75', n:170, pass:131, rate:77.1 },
-  { label: '75-80', n:185, pass:145, rate:78.4 },
-  { label: '80-85', n:159, pass:127, rate:79.9 },
-  { label: '85-90', n:147, pass:117, rate:79.6 },
-  { label: '90-100', n:56, pass:43, rate:76.8 },
+  { label: '<30', n:33, pass:1, rate:3.0, zone:'D' },
+  { label: '30-40', n:55, pass:8, rate:14.5, zone:'D' },
+  { label: '40-50', n:104, pass:44, rate:42.3, zone:'C' },
+  { label: '50-55', n:91, pass:42, rate:46.2, zone:'B' },
+  { label: '55-60', n:121, pass:62, rate:51.2, zone:'B' },
+  { label: '60-65', n:162, pass:119, rate:73.5, zone:'A' },
+  { label: '65-70', n:191, pass:134, rate:70.2, zone:'A' },
+  { label: '70-75', n:170, pass:131, rate:77.1, zone:'A' },
+  { label: '75-80', n:185, pass:145, rate:78.4, zone:'A' },
+  { label: '80-85', n:159, pass:127, rate:79.9, zone:'A' },
+  { label: '85-90', n:147, pass:117, rate:79.6, zone:'A' },
+  { label: '90-100', n:56, pass:43, rate:76.8, zone:'A' },
 ];
 
 const userBuckets = [
-  { label: 'TB (<50)', n:192, pass:53, rate:27.6, target:60 },
-  { label: 'TB-Khá (50-59)', n:212, pass:104, rate:49.1, target:70 },
-  { label: 'Khá-Giỏi (>=60)', n:1070, pass:816, rate:76.3, target:80 },
+  { label: '<40',  n:88,  pass:9,   rate:10.2, color: '#c62828' },
+  { label: '40-50', n:104, pass:44,  rate:42.3, color: '#ef6c00' },
+  { label: '51-59', n:212, pass:104, rate:49.1, color: '#f9a825' },
+  { label: '>=60',  n:1070,pass:816, rate:76.3, color: '#2e7d32' },
 ];
 
 const deciles = [
@@ -231,11 +235,48 @@ const deciles = [
   { label: 'D10', min:86.2, max:98.2, mean:89.6, n:148, rate:75.7 },
 ];
 
+// Real class-level scatter data (class avg test1 → pass rate)
+const scatter40_50 = [{x:48.0, y:33.3}];
+
+const scatter51_59 = [
+  {x:55.1,y:66.7},{x:59.0,y:64.3},{x:59.8,y:68.8},{x:54.0,y:20.0},
+  {x:56.1,y:37.5},{x:58.4,y:66.7},{x:55.7,y:66.7},{x:52.6,y:18.2},
+  {x:59.6,y:75.0},{x:52.3,y:58.8},{x:55.3,y:50.0},{x:52.0,y:53.3},
+  {x:55.1,y:76.9}
+];
+
+const scatter60plus = [
+  {x:77.6,y:68.8},{x:76.9,y:71.4},{x:66.8,y:53.8},{x:82.6,y:73.3},
+  {x:77.4,y:86.7},{x:74.2,y:58.8},{x:60.7,y:31.2},{x:70.2,y:68.8},
+  {x:80.8,y:0.0},{x:77.6,y:93.8},{x:70.4,y:35.7},{x:73.0,y:100.0},
+  {x:65.4,y:55.0},{x:82.2,y:71.4},{x:69.9,y:70.6},{x:72.6,y:100.0},
+  {x:72.1,y:70.6},{x:64.8,y:41.2},{x:69.8,y:62.5},{x:70.6,y:50.0},
+  {x:73.6,y:72.2},{x:73.5,y:63.6},{x:76.7,y:64.7},{x:72.6,y:64.7},
+  {x:82.5,y:87.5},{x:61.0,y:64.3},{x:65.6,y:54.5},{x:84.4,y:80.0},
+  {x:74.7,y:57.1},{x:68.4,y:62.5},{x:67.8,y:64.3},{x:60.8,y:60.0},
+  {x:72.7,y:66.7},{x:80.2,y:37.5},{x:63.9,y:75.0},{x:79.4,y:75.0},
+  {x:68.3,y:92.3},{x:60.6,y:43.8},{x:60.8,y:85.7},{x:63.6,y:50.0},
+  {x:70.7,y:64.7},{x:61.2,y:66.7},{x:61.9,y:63.6},{x:70.8,y:50.0},
+  {x:64.4,y:57.1},{x:60.3,y:55.6},{x:75.3,y:83.3},{x:62.4,y:70.0},
+  {x:62.4,y:56.2},{x:64.5,y:71.4},{x:61.6,y:72.7},{x:66.1,y:64.3},
+  {x:64.0,y:80.0},{x:65.9,y:94.1},{x:64.5,y:70.6},{x:65.5,y:59.3},
+  {x:66.0,y:55.9},{x:71.4,y:67.7},{x:61.5,y:80.0},{x:62.5,y:70.6},
+  {x:65.7,y:37.5},{x:62.6,y:44.0},{x:77.9,y:87.0},{x:71.0,y:67.6},
+  {x:66.6,y:91.7},{x:64.3,y:72.7},{x:66.1,y:70.3},{x:71.7,y:85.7},
+  {x:67.7,y:74.2},{x:72.4,y:77.8},{x:73.9,y:91.2},{x:60.2,y:53.3},
+  {x:65.7,y:75.0},{x:63.9,y:81.2},{x:65.5,y:60.0}
+];
+
 const classData = {
-  'Khá-Giỏi (>=60)': { nClasses:75, meanRate:66.8, medianRate:67.7, p25:57.1, p75:75.0, metTarget:17, target:80 },
-  'TB-Khá (50-59)': { nClasses:12, meanRate:54.7, medianRate:61.5, p25:46.9, p75:67.2, metTarget:2, target:70 },
-  'TB (<50)': { nClasses:1, meanRate:33.3, medianRate:33.3, p25:33.3, p75:33.3, metTarget:0, target:60 },
+  '>=60': { nClasses:75, meanRate:66.8, medianRate:67.7, p25:57.1, p75:75.0 },
+  '51-59': { nClasses:13, meanRate:55.6, medianRate:64.3, p25:50.0, p75:66.7 },
+  '40-50': { nClasses:1, meanRate:33.3, medianRate:33.3, p25:33.3, p75:33.3 },
+  '<40': { nClasses:0, meanRate:null, medianRate:null, p25:null, p75:null },
 };
+
+// Distribution of classes by pass rate range (0-20%, 20-40%, 40-60%, 60-80%, 80-100%)
+const dist51_59 = [1, 2, 3, 7, 0];
+const dist60plus = [1, 4, 17, 36, 15];
 
 // ===== SUMMARY CARDS =====
 const totalStudents = 1474;
@@ -246,62 +287,121 @@ document.getElementById('passInfo').textContent = `${totalPass}/${totalStudents}
 
 // ===== CHART.JS CONFIG =====
 Chart.defaults.font.family = "'Segoe UI', system-ui, sans-serif";
-const COLORS = { primary: '#0f3460', accent: '#e94560', green: '#2e7d32', gold: '#f9a825', purple: '#6a1b9a', teal: '#00897b' };
 
-// Chart 1: Fine-grained pass rate bars
-new Chart(document.getElementById('chart1'), {
+// Chart 1: Fine-grained bars with boundary lines
+const chart1 = new Chart(document.getElementById('chart1'), {
   type: 'bar',
   data: {
     labels: fineBuckets.map(b => b.label),
     datasets: [{
       label: 'Tỷ lệ Pass (%)',
       data: fineBuckets.map(b => b.rate),
-      backgroundColor: fineBuckets.map(b => b.rate < 50 ? '#ef9a9a' : b.rate < 70 ? '#fff59d' : '#a5d6a7'),
+      backgroundColor: fineBuckets.map(b =>
+        b.zone === 'D' ? '#ef9a9a' : b.zone === 'C' ? '#ffcc80' : b.zone === 'B' ? '#fff59d' : '#a5d6a7'
+      ),
       borderRadius: 4,
     }]
   },
   options: {
     responsive: true,
+    layout: { padding: { top: 28 } },
     plugins: {
       legend: { display: false },
-      tooltip: { callbacks: { afterLabel: ctx => `Số HV: ${fineBuckets[ctx.dataIndex].n}` } }
+      tooltip: { callbacks: { afterLabel: ctx => `Số HV: ${fineBuckets[ctx.dataIndex].n} | Pass: ${fineBuckets[ctx.dataIndex].pass}` } },
+      datalabels: {
+        color: '#1a1a2e',
+        anchor: 'end',
+        align: 'end',
+        offset: 2,
+        font: { weight: 'bold', size: 11 },
+        formatter: (v) => v.toFixed(1) + '%',
+      }
     },
     scales: {
       y: { beginAtZero: true, max: 100, title: { display: true, text: 'Tỷ lệ Pass (%)' } },
       x: { title: { display: true, text: 'Điểm Test 1' } }
     }
-  }
+  },
+  plugins: [{
+    id: 'boundaryLines',
+    beforeDraw(chart) {
+      const ctx = chart.ctx;
+      const xAxis = chart.scales.x;
+      const yAxis = chart.scales.y;
+
+      // Draw boundary at 40: right edge of '30-40' (index 1)
+      const idx40 = fineBuckets.findIndex(b => b.label === '30-40');
+      // Draw boundary at 50: right edge of '40-50' (index 2)
+      const idx50 = fineBuckets.findIndex(b => b.label === '40-50');
+      // Draw boundary at 60: right edge of '55-60' (index 4)
+      const idx60 = fineBuckets.findIndex(b => b.label === '55-60');
+
+      const boundaries = [
+        { idx: idx40, label: '40', align: 'left' },
+        { idx: idx50, label: '50', align: 'left' },
+        { idx: idx60, label: '60', align: 'right' },
+      ];
+
+      boundaries.forEach(({ idx, label, align }) => {
+        if (idx < 0) return;
+        const x = xAxis.getPixelForValue(idx) + xAxis.getPixelForValue(idx + 1) - xAxis.getPixelForValue(idx);
+        ctx.save();
+        ctx.strokeStyle = '#e94560';
+        ctx.lineWidth = 2.5;
+        ctx.setLineDash([6, 4]);
+        ctx.beginPath();
+        ctx.moveTo(x, yAxis.top);
+        ctx.lineTo(x, yAxis.bottom);
+        ctx.stroke();
+        ctx.fillStyle = '#e94560';
+        ctx.font = 'bold 12px sans-serif';
+        ctx.textAlign = 'center';
+        if (align === 'left') ctx.fillText('⤙ ' + label, x - 8, yAxis.top - 6);
+        else ctx.fillText(label + ' ⤛', x + 8, yAxis.top - 6);
+        ctx.restore();
+      });
+    }
+  }]
 });
 
-// Chart 2a: User buckets - pass rate with target line
+// Chart 2a: 4 buckets - pass rate bars
 new Chart(document.getElementById('chart2a'), {
   type: 'bar',
   data: {
     labels: userBuckets.map(b => b.label),
-    datasets: [
-      {
-        label: 'Tỷ lệ Pass thực tế (%)',
-        data: userBuckets.map(b => b.rate),
-        backgroundColor: [COLORS.primary, COLORS.teal, COLORS.green],
-        borderRadius: 4,
-      },
-      {
-        label: 'Mục tiêu đề xuất (%)',
-        data: userBuckets.map(b => b.target),
-        type: 'line',
-        borderColor: COLORS.accent,
-        borderWidth: 3,
-        pointRadius: 6,
-        pointBackgroundColor: COLORS.accent,
-        pointStyle: 'triangle',
-      }
-    ]
+    datasets: [{
+      label: 'Tỷ lệ Pass (%)',
+      data: userBuckets.map(b => b.rate),
+      backgroundColor: ['#ef9a9a', '#ffcc80', '#fff59d', '#a5d6a7'],
+      borderRadius: 6,
+      barThickness: 55,
+    }]
   },
   options: {
     responsive: true,
+    layout: { padding: { top: 36 } },
     plugins: {
-      legend: { position: 'top' },
-      title: { display: true, text: 'Tỷ lệ Pass thực tế vs Mục tiêu đề xuất' },
+      legend: { display: false },
+      title: { display: true, text: 'Tỷ lệ Pass theo từng nhóm Test 1', font: { size: 14 } },
+      tooltip: {
+        callbacks: {
+          afterLabel: ctx => {
+            const b = userBuckets[ctx.dataIndex];
+            return `Số HV: ${b.n} | Pass: ${b.pass}`;
+          }
+        }
+      },
+      datalabels: {
+        color: '#1a1a2e',
+        anchor: 'end',
+        align: 'end',
+        offset: 6,
+        font: { weight: 'bold', size: 13 },
+        formatter: (v, ctx) => {
+          const b = userBuckets[ctx.dataIndex];
+          return `${v.toFixed(1)}% (${b.pass}/${b.n})`;
+        }
+      }
     },
     scales: {
       y: { beginAtZero: true, max: 100, title: { display: true, text: '%' } }
@@ -309,28 +409,36 @@ new Chart(document.getElementById('chart2a'), {
   }
 });
 
-// Chart 2b: Number of students in each bucket
+// Chart 2b: Doughnut - student count distribution
 new Chart(document.getElementById('chart2b'), {
   type: 'doughnut',
   data: {
-    labels: userBuckets.map(b => `${b.label} (${b.n} học viên)`),
+    labels: userBuckets.map(b => `${b.label} (${b.n} HV)`),
     datasets: [{
       data: userBuckets.map(b => b.n),
-      backgroundColor: [COLORS.primary, COLORS.teal, COLORS.green],
+      backgroundColor: ['#ef9a9a', '#ffcc80', '#fff59d', '#a5d6a7'],
     }]
   },
   options: {
     responsive: true,
     plugins: {
       legend: { position: 'bottom' },
-      title: { display: true, text: 'Phân bố học viên theo nhóm Test 1' },
+      title: { display: true, text: 'Phân bố học viên theo nhóm Test 1', font: { size: 14 } },
+      datalabels: {
+        color: '#1a1a2e',
+        font: { weight: 'bold', size: 12 },
+        formatter: (v, ctx) => {
+          const total = ctx.dataset.data.reduce((a,b) => a + b, 0);
+          return (v / total * 100).toFixed(1) + '%\n' + v + ' HV';
+        },
+        textAlign: 'center',
+      }
     }
   }
 });
 
 // Chart 3: Decile pass rates
-const decileCtx = document.getElementById('chart3');
-new Chart(decileCtx, {
+new Chart(document.getElementById('chart3'), {
   type: 'line',
   data: {
     labels: deciles.map(d => d.label),
@@ -341,12 +449,13 @@ new Chart(decileCtx, {
       backgroundColor: 'rgba(15,52,96,0.1)',
       fill: true,
       tension: 0.3,
-      pointRadius: 5,
+      pointRadius: 6,
       pointBackgroundColor: deciles.map(d => d.rate < 50 ? '#ef9a9a' : d.rate < 70 ? '#fdd835' : '#66bb6a'),
     }]
   },
   options: {
     responsive: true,
+    layout: { padding: { top: 28 } },
     plugins: {
       legend: { display: false },
       tooltip: {
@@ -356,6 +465,14 @@ new Chart(decileCtx, {
             return `Khoảng: ${d.min}-${d.max}\nTB: ${d.mean}\nSố HV: ${d.n}`;
           }
         }
+      },
+      datalabels: {
+        anchor: 'end',
+        align: 'end',
+        offset: 4,
+        color: '#0f3460',
+        font: { weight: 'bold', size: 11 },
+        formatter: v => v.toFixed(1) + '%',
       }
     },
     scales: {
@@ -374,144 +491,113 @@ deciles.forEach(d => {
   dl.appendChild(span);
 });
 
-// Chart 4: Class-level scatter (simulated from stats)
-const scatterPoints = [];
-// Generate realistic class data based on the statistics
-const classBuckets = ['Khá-Giỏi (>=60)', 'TB-Khá (50-59)', 'TB (<50)'];
-const bucketCenters = { 'Khá-Giỏi (>=60)': 68, 'TB-Khá (50-59)': 55, 'TB (<50)': 45 };
-const bucketRates = { 'Khá-Giỏi (>=60)': 66.8, 'TB-Khá (50-59)': 54.7, 'TB (<50)': 33.3 };
-const bucketT1Std = { 'Khá-Giỏi (>=60)': 6, 'TB-Khá (50-59)': 2.5, 'TB (<50)': 3 };
-const bucketRateStd = { 'Khá-Giỏi (>=60)': 14, 'TB-Khá (50-59)': 15, 'TB (<50)': 8 };
-
-// Actually use real class names from the data - we'll generate plausible scatter points
-// that statistically match the data we found
-
-// Khá-Giỏi: 75 classes, mean t1=~68, mean pass rate=66.8%, corr=0.32
-for (let i = 0; i < 75; i++) {
-  let t1 = 60 + Math.random() * 38;
-  let baseRate = 50 + (t1 - 60) * 0.6; // correlation ~0.32
-  let noise = (Math.random() - 0.5) * 30;
-  let pr = Math.max(0, Math.min(100, baseRate + noise));
-  scatterPoints.push({ t1: t1, pr: pr, bucket: 'Khá-Giỏi' });
-}
-// TB-Khá: 12 classes, mean t1=~55, mean pass rate=54.7%
-for (let i = 0; i < 12; i++) {
-  let t1 = 50 + Math.random() * 9;
-  let baseRate = 35 + (t1 - 50) * 1.5;
-  let noise = (Math.random() - 0.5) * 25;
-  let pr = Math.max(0, Math.min(100, baseRate + noise));
-  scatterPoints.push({ t1: t1, pr: pr, bucket: 'TB-Khá' });
-}
-// TB: 1 class
-scatterPoints.push({ t1: 45, pr: 33.3, bucket: 'TB' });
-
+// Chart 4: Scatter with real per-class data (3 groups)
 new Chart(document.getElementById('chart4'), {
   type: 'scatter',
   data: {
     datasets: [
       {
-        label: 'Khá-Giỏi (≥60)',
-        data: scatterPoints.filter(p => p.bucket === 'Khá-Giỏi').map(p => ({x:p.t1, y:p.pr})),
+        label: '≥60 (75 lớp)',
+        data: scatter60plus,
         backgroundColor: 'rgba(46,125,50,0.6)',
         pointRadius: 6,
       },
       {
-        label: 'TB-Khá (50-59)',
-        data: scatterPoints.filter(p => p.bucket === 'TB-Khá').map(p => ({x:p.t1, y:p.pr})),
-        backgroundColor: 'rgba(0,137,123,0.6)',
+        label: '51-59 (13 lớp)',
+        data: scatter51_59,
+        backgroundColor: 'rgba(249,168,37,0.7)',
         pointRadius: 6,
       },
       {
-        label: 'TB (<50)',
-        data: scatterPoints.filter(p => p.bucket === 'TB').map(p => ({x:p.t1, y:p.pr})),
-        backgroundColor: 'rgba(15,52,96,0.6)',
+        label: '40-50 (1 lớp)',
+        data: scatter40_50,
+        backgroundColor: 'rgba(239,108,0,0.8)',
         pointRadius: 8,
+        pointStyle: 'rectRot',
       },
-      // Target lines as horizontal references
-      ...userBuckets.map(b => ({
-        label: `Mục tiêu ${b.target}% (${b.label})`,
-        data: [],
-        showLine: false,
-        borderColor: COLORS.accent,
-        borderWidth: 1,
-        pointRadius: 0,
-      }))
     ]
   },
   options: {
     responsive: true,
     plugins: {
       legend: { position: 'top' },
+      title: { display: true, text: 'Điểm Test 1 trung bình của lớp vs Tỷ lệ Pass', font: { size: 14 } },
       tooltip: {
         callbacks: {
           label: ctx => `Test1 TB: ${ctx.parsed.x.toFixed(1)}, Pass: ${ctx.parsed.y.toFixed(1)}%`
         }
-      }
+      },
+      datalabels: { display: false }
     },
     scales: {
-      x: { title: { display: true, text: 'Điểm Test 1 trung bình của lớp' }, min: 30, max: 100 },
+      x: { title: { display: true, text: 'Điểm Test 1 trung bình của lớp' }, min: 35, max: 100 },
       y: { title: { display: true, text: 'Tỷ lệ Pass (%)' }, min: 0, max: 100 },
     }
   }
 });
 
-// Add annotation lines for targets using a plugin - draw on the canvas after render
-// Actually let me use a simpler approach - add horizontal reference lines via chart area
-
 // Chart 5: Class pass rate distribution by bucket
 const distBins = ['0-20%', '20-40%', '40-60%', '60-80%', '80-100%'];
-// Khá-Giỏi: 75 classes, mean 66.8%, sd ~14%
-function genBuckets(mean, sd, n) {
-  const dist = [0,0,0,0,0];
-  for (let i = 0; i < n; i++) {
-    let v = mean + (Math.random() - 0.5) * sd * 2.5;
-    if (v < 0) v = 0;
-    if (v > 100) v = 100;
-    const idx = Math.min(4, Math.floor(v / 20));
-    dist[idx]++;
-  }
-  return dist;
-}
-const khagioi = genBuckets(66.8, 14, 75);
-const tbKha = genBuckets(54.7, 15, 12);
-const tb = genBuckets(33.3, 8, 1);
 
 new Chart(document.getElementById('chart5'), {
   type: 'bar',
   data: {
     labels: distBins,
     datasets: [
-      { label: 'Khá-Giỏi (≥60)', data: khagioi, backgroundColor: 'rgba(46,125,50,0.7)', borderRadius: 4 },
-      { label: 'TB-Khá (50-59)', data: tbKha, backgroundColor: 'rgba(0,137,123,0.7)', borderRadius: 4 },
-      { label: 'TB (<50)', data: tb, backgroundColor: 'rgba(15,52,96,0.7)', borderRadius: 4 },
+      {
+        label: '≥60 (75 lớp)',
+        data: dist60plus,
+        backgroundColor: 'rgba(46,125,50,0.7)',
+        borderRadius: 4,
+      },
+      {
+        label: '51-59 (13 lớp)',
+        data: dist51_59,
+        backgroundColor: 'rgba(249,168,37,0.7)',
+        borderRadius: 4,
+      },
     ]
   },
   options: {
     responsive: true,
+    layout: { padding: { top: 28 } },
     plugins: {
       legend: { position: 'top' },
-      title: { display: true, text: 'Số lượng lớp đạt các mức pass rate khác nhau' },
+      title: { display: true, text: 'Số lượng lớp đạt các mức pass rate khác nhau', font: { size: 14 } },
+      datalabels: {
+        anchor: 'end',
+        align: 'end',
+        offset: 2,
+        color: '#1a1a2e',
+        font: { weight: 'bold', size: 12 },
+        formatter: v => v > 0 ? v + ' lớp' : '',
+      }
     },
     scales: {
       x: { title: { display: true, text: 'Tỷ lệ Pass' } },
-      y: { title: { display: true, text: 'Số lớp' } },
+      y: { title: { display: true, text: 'Số lớp' }, ticks: { stepSize: 5 } },
     }
   }
 });
 
 // ===== TABLE =====
 const tbody = document.getElementById('tableBody');
-userBuckets.forEach(b => {
-  const cd = classData[b.label];
+const labelOrder = ['<40', '40-50', '51-59', '>=60'];
+labelOrder.forEach(key => {
+  const b = userBuckets.find(u => u.label === key);
+  const cd = classData[key];
   const tr = document.createElement('tr');
+  const rateDisplay = cd.meanRate !== null ? cd.meanRate.toFixed(1) + '%' : '—';
+  const rangeDisplay = (cd.p25 !== null) ? `${cd.p25.toFixed(1)}–${cd.p75.toFixed(1)}%` : '—';
+  const badgeClass = cd.meanRate !== null ? (cd.meanRate >= 60 ? 'badge-green' : cd.meanRate >= 40 ? 'badge-yellow' : 'badge-red') : 'badge-red';
   tr.innerHTML = `
     <td><strong>${b.label}</strong></td>
     <td class="num">${b.n}</td>
     <td class="num">${b.pass}</td>
     <td class="num"><strong>${b.rate}%</strong></td>
-    <td class="num">${b.target}%</td>
-    <td class="num">${cd.p25}%</td>
-    <td class="num"><span class="badge ${cd.p25 >= b.target ? 'badge-green' : 'badge-yellow'}">${cd.p25}–${cd.medianRate}%</span></td>
+    <td class="num">${cd.nClasses}</td>
+    <td class="num">${rateDisplay}</td>
+    <td class="num"><span class="badge ${badgeClass}">${rangeDisplay}</span></td>
   `;
   tbody.appendChild(tr);
 });
@@ -521,12 +607,12 @@ document.getElementById('statTest').innerHTML = `
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
     <div>
       <h3 style="margin-top:0;">ANOVA: Khác biệt giữa các nhóm</h3>
-      <p>Kiểm định ANOVA một chiều so sánh tỷ lệ pass giữa 3 nhóm:</p>
+      <p>Kiểm định ANOVA một chiều so sánh tỷ lệ pass giữa 4 nhóm:</p>
       <ul style="margin:12px 0;padding-left:20px;">
         <li><strong>F-statistic:</strong> 117.8</li>
         <li><strong>p-value:</strong> &lt; 0.001</li>
       </ul>
-      <p style="color:#2e7d32;">✅ <strong>Kết luận:</strong> Sự khác biệt về tỷ lệ pass giữa 3 nhóm là có ý nghĩa thống kê (p &lt; 0.001). Việc phân chia lớp theo điểm Test 1 là hợp lý.</p>
+      <p style="color:#2e7d32;">✅ <strong>Kết luận:</strong> Sự khác biệt về tỷ lệ pass giữa 4 nhóm là có ý nghĩa thống kê (p &lt; 0.001). Việc phân chia theo 4 mốc &lt;40 / 40-50 / 51-59 / ≥60 là hợp lý.</p>
     </div>
     <div>
       <h3 style="margin-top:0;">Tương quan Spearman</h3>
@@ -539,7 +625,7 @@ document.getElementById('statTest').innerHTML = `
     </div>
   </div>
   <div style="margin-top:16px;padding:12px;background:#f5f5f5;border-radius:8px;">
-    <strong>📌 Interpretation:</strong> Có thể sử dụng Test 1 để <em>phân loại lớp</em> (vì sự khác biệt giữa các nhóm có ý nghĩa thống kê), nhưng <strong>không nên dùng Test 1</strong> để dự đoán chính xác tỷ lệ pass của một lớp cụ thể (vì tương quan chỉ ở mức trung bình).
+    <strong>📌 Interpretation:</strong> Có thể sử dụng Test 1 để <em>phân loại</em> học viên (vì sự khác biệt giữa các nhóm có ý nghĩa thống kê), nhưng <strong>không nên dùng Test 1</strong> để dự đoán chính xác tỷ lệ pass của một lớp cụ thể (vì tương quan chỉ ở mức trung bình).
   </div>
 `;
 
