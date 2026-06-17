@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phân tích lựa chọn ngưỡng phân loại lớp - %HV≥60</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f0f2f5; color: #1a1a2e; padding: 24px; }
+  .container { max-width: 1200px; margin: 0 auto; }
+
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  h2 { font-size: 20px; margin: 32px 0 16px; color: #16213e; border-bottom: 3px solid #0f3460; padding-bottom: 8px; }
+  h3 { font-size: 16px; margin: 20px 0 12px; color: #0f3460; }
+  .subtitle { color: #555; margin-bottom: 24px; }
+
+  .summary-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 32px; }
+  .card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .value { font-size: 32px; font-weight: 700; color: #0f3460; }
+  .card .label { font-size: 13px; color: #666; margin-top: 4px; }
+
+  .chart-box { background: white; border-radius: 12px; padding: 20px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .chart-box-wide { background: white; border-radius: 12px; padding: 20px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  th, td { padding: 12px 16px; text-align: left; }
+  th { background: #0f3460; color: white; font-weight: 600; }
+  tr:nth-child(even) { background: #f8f9fa; }
+  tr:hover { background: #e8ecf1; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+  .insight-box { background: #fff8e1; border-left: 4px solid #f9a825; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+  .insight-box strong { color: #e65100; }
+
+  .group-box { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+  .group-card { border-radius: 12px; padding: 20px; color: white; }
+  .group-card .g-title { font-size: 20px; font-weight: 700; }
+  .group-card .g-stat { font-size: 36px; font-weight: 700; margin: 8px 0; }
+  .group-card .g-detail { opacity: 0.9; font-size: 14px; }
+  .group-c { background: linear-gradient(135deg, #c62828, #e53935); }
+  .group-b { background: linear-gradient(135deg, #ef6c00, #f57c00); }
+  .group-a { background: linear-gradient(135deg, #2e7d32, #43a047); }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 800px) { .two-col, .group-box { grid-template-columns: 1fr; } }
+
+  .badge { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+  .badge-red { background: #ffebee; color: #c62828; }
+  .badge-orange { background: #fff3e0; color: #e65100; }
+  .badge-green { background: #e8f5e9; color: #2e7d32; }
+
+  .step-box { background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; border-left: 4px solid #0f3460; }
+  .step-box h4 { color: #0f3460; margin-bottom: 8px; }
+  .step-box ul { padding-left: 20px; margin: 8px 0; }
+  .step-box li { margin-bottom: 6px; line-height: 1.5; }
+
+  .comparison-table { width: 100%; }
+  .comparison-table th { background: #0f3460; }
+  .comparison-table td { text-align: center; padding: 10px; }
+  .comparison-table .best { background: #e8f5e9; font-weight: bold; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>🎯 Giải thích cách chọn ngưỡng phân loại lớp</h1>
+<p class="subtitle">Sử dụng <strong>% học viên đạt ≥60 điểm Test 1</strong> thay vì điểm trung bình — Khóa 34</p>
+
+<div class="summary-cards">
+  <div class="card"><div class="value">89</div><div class="label">Tổng số lớp</div></div>
+  <div class="card"><div class="value">1,474</div><div class="label">Học viên có điểm Test 1</div></div>
+  <div class="card"><div class="value">71.2%</div><div class="label">%HV≥60 trung bình</div></div>
+  <div class="card"><div class="value">65.8%</div><div class="label">Pass rate tổng thể</div></div>
+</div>
+
+<!-- 3 NHÓM KẾT QUẢ -->
+<div class="group-box">
+  <div class="group-card group-c">
+    <div class="g-title">Nhóm C — Yếu</div>
+    <div class="g-stat">&lt; 40%</div>
+    <div class="g-detail">
+      7 lớp (8%)<br>
+      Pass rate TB: <strong>53.2%</strong><br>
+      Cần hỗ trợ đặc biệt
+    </div>
+  </div>
+  <div class="group-card group-b">
+    <div class="g-title">Nhóm B — Trung bình</div>
+    <div class="g-stat">40 – 75%</div>
+    <div class="g-detail">
+      43 lớp (48%)<br>
+      Pass rate TB: <strong>60.9%</strong><br>
+      Nhóm đông nhất
+    </div>
+  </div>
+  <div class="group-card group-a">
+    <div class="g-title">Nhóm A — Tốt</div>
+    <div class="g-stat">≥ 75%</div>
+    <div class="g-detail">
+      39 lớp (44%)<br>
+      Pass rate TB: <strong>71.1%</strong><br>
+      Cơ hội pass cao
+    </div>
+  </div>
+</div>
+
+<!-- CHART 1: Scatter chính - %HV≥60 vs Pass rate -->
+<h2>1. Bức tranh tổng thể: %HV≥60 vs Pass rate (từng lớp)</h2>
+<div class="chart-box">
+  <canvas id="chart1" height="100"></canvas>
+  <div class="insight-box" style="margin-top:12px;">
+    <strong>📌 Đọc biểu đồ:</strong> Mỗi chấm là một lớp. Trục ngang là % học viên trong lớp đạt Test 1 ≥ 60 điểm. Trục dọc là tỷ lệ hoàn thành (pass rate) của lớp đó. Các đường đứt màu đỏ là ngưỡng phân chia <strong>40%</strong> và <strong>75%</strong>.
+  </div>
+</div>
+
+<!-- CHART 2: Phân phối các lớp theo %HV≥60 -->
+<h2>2. Phân phối số lớp theo %HV≥60</h2>
+<div class="two-col">
+  <div class="chart-box">
+    <canvas id="chart2a" height="100"></canvas>
+  </div>
+  <div class="chart-box">
+    <canvas id="chart2b" height="100"></canvas>
+  </div>
+</div>
+<div class="insight-box">
+  <strong>💡 Insight về phân phối:</strong> Biểu đồ trái cho thấy các lớp phân bố dày nhất ở vùng 60-70% (22 lớp) — vùng chuyển tiếp. Biểu đồ phải minh họa 3 nhóm sau khi phân chia tại 40% và 75%: nhóm C (đỏ) chỉ 7 lớp, nhóm B (cam) 43 lớp, nhóm A (xanh) 39 lớp.
+</div>
+
+<!-- CHART 3: So sánh pass rate giữa các nhóm -->
+<h2>3. Pass rate trung bình của từng nhóm</h2>
+<div class="chart-box">
+  <canvas id="chart3" height="100"></canvas>
+  <div style="margin-top:16px;display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
+    <div style="padding:12px 20px;background:#ffebee;border-radius:8px;border-left:4px solid #c62828;">
+      <div style="font-weight:700;font-size:13px;color:#c62828;">NHÓM C (&lt;40%)</div>
+      <div style="font-size:28px;font-weight:700;">53.2%</div>
+      <div style="font-size:12px;color:#666;">pass rate TB</div>
+    </div>
+    <div style="padding:12px 20px;background:#fff3e0;border-radius:8px;border-left:4px solid #ef6c00;">
+      <div style="font-weight:700;font-size:13px;color:#ef6c00;">NHÓM B (40-75%)</div>
+      <div style="font-size:28px;font-weight:700;">60.9%</div>
+      <div style="font-size:12px;color:#666;">pass rate TB</div>
+    </div>
+    <div style="padding:12px 20px;background:#e8f5e9;border-radius:8px;border-left:4px solid #2e7d32;">
+      <div style="font-weight:700;font-size:13px;color:#2e7d32;">NHÓM A (≥75%)</div>
+      <div style="font-size:28px;font-weight:700;">71.1%</div>
+      <div style="font-size:12px;color:#666;">pass rate TB</div>
+    </div>
+  </div>
+</div>
+
+<!-- CHART 4: Tại sao chọn 40% và 75%? -->
+<h2>4. Giải thích chi tiết: Tại sao 40% và 75%?</h2>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px;">
+  <!-- Trái: Thử nghiệm các ngưỡng -->
+  <div class="chart-box" style="margin-bottom:0;">
+    <h3 style="margin-top:0;">Thử nghiệm các ngưỡng</h3>
+    <canvas id="chart4a" height="80"></canvas>
+    <p style="margin-top:8px;font-size:13px;color:#666;">Gap = chênh lệch pass rate giữa nhóm trên và nhóm dưới. <strong style="color:#c62828;">Ngưỡng 40% cho gap lớn nhất ở biên dưới.</strong></p>
+  </div>
+  <!-- Phải: Tìm bộ 3 nhóm tối ưu -->
+  <div class="chart-box" style="margin-bottom:0;">
+    <h3 style="margin-top:0;">Tìm bộ 3 nhóm tối ưu</h3>
+    <canvas id="chart4b" height="80"></canvas>
+    <p style="margin-top:8px;font-size:13px;color:#666;">Tổng gap = gap giữa nhóm C→B + B→A. <strong style="color:#2e7d32;">Cặp &lt;40% / 40-75% / ≥75% cho tổng gap lớn nhất.</strong></p>
+  </div>
+</div>
+
+<div class="step-box">
+  <h4>📐 Cách tìm ngưỡng dưới (40%)</h4>
+  <ul>
+    <li>Thử từng ngưỡng từ 20% đến 50%, tính chênh lệch pass rate giữa lớp ≥ ngưỡng và &lt; ngưỡng</li>
+    <li><strong>Ngưỡng 40%</strong> cho gap = <strong>+12.5%</strong> — lớn nhất ở biên dưới</li>
+    <li>Thấp hơn 40% (vd 30%) thì nhóm &lt; ngưỡng quá nhỏ (2 lớp), không đại diện</li>
+  </ul>
+</div>
+
+<div class="step-box">
+  <h4>📐 Cách tìm ngưỡng trên (75%)</h4>
+  <ul>
+    <li>Thử từng ngưỡng từ 60% đến 80%, kết hợp với ngưỡng dưới 40%</li>
+    <li><strong>Ngưỡng 75%</strong> cho tổng gap lớn nhất với số lớp mỗi nhóm ≥ 3</li>
+    <li>Đây là điểm mà pass rate nhóm A (71.1%) thực sự vượt trội so với nhóm B (60.9%) — gap +10.2%</li>
+    <li>Nếu chọn 80%, nhóm A chỉ còn 33 lớp (37%) — quá hẹp</li>
+    <li>Nếu chọn 70%, nhóm A và B không khác biệt rõ (71.0% vs 57.5%)</li>
+  </ul>
+</div>
+
+<!-- CHART 5: So sánh với cách dùng mean truyền thống -->
+<h2>5. So sánh: %HV≥60 vs Điểm TB lớp</h2>
+<div class="two-col">
+  <div class="chart-box">
+    <h3 style="margin-top:0;">Tương quan với pass rate</h3>
+    <canvas id="chart5a" height="80"></canvas>
+  </div>
+  <div class="chart-box">
+    <h3 style="margin-top:0;">Robustness với outlier</h3>
+    <canvas id="chart5b" height="80"></canvas>
+    <p style="margin-top:8px;font-size:13px;color:#666;">Giả sử có 1 HV giỏi (95đ) vào lớp yếu. Mean bị kéo từ 40 lên 47 (18%), %HV≥60 chỉ thay đổi 6% — ổn định hơn.</p>
+  </div>
+</div>
+
+<div class="insight-box">
+  <strong>✅ Kết luận:</strong> Cả %HV≥60 và mean_t1 đều có tương quan với pass rate, nhưng %HV≥60 <strong>vượt trội</strong> ở khả năng chống nhiễu (outlier không làm sai lệch) và dễ giải thích ("70% lớp đạt ≥60" dễ hiểu hơn "điểm TB là 65.3"). Khi phân loại lớp, %HV≥60 cho kết quả ổn định và công bằng hơn.
+</div>
+
+<!-- So sánh với phân loại cũ dùng mean -->
+<h2>6. So sánh với cách phân loại cũ (dùng mean Test 1)</h2>
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th>Tiêu chí</th>
+      <th>Dùng điểm TB (mean)</th>
+      <th>Dùng %HV≥60</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Tương quan Spearman với pass rate</strong></td>
+      <td>ρ = 0.39</td>
+      <td class="best">ρ = 0.41</td>
+    </tr>
+    <tr>
+      <td><strong>HV bị phân loại sai (cá nhân vs lớp)</strong></td>
+      <td class="best" style="background:#ffebee;color:#c62828;">29.7%</td>
+      <td class="best">0%<br><span style="font-size:12px;">(vì là phân loại lớp, không gán cho HV)</span></td>
+    </tr>
+    <tr>
+      <td><strong>Robust với 1-2 HV giỏi kéo điểm</strong></td>
+      <td style="background:#ffebee;color:#c62828;">❌ Dễ bị nhiễu</td>
+      <td class="best">✅ Ổn định</td>
+    </tr>
+    <tr>
+      <td><strong>Dễ giải thích cho GV</strong></td>
+      <td style="background:#fff3e0;">Không trực quan</td>
+      <td class="best">"Cứ 10 em thì có 7 em ≥60"</td>
+    </tr>
+    <tr>
+      <td><strong>Phân loại chi tiết được</strong></td>
+      <td class="best">Nhiều mức</td>
+      <td class="best">Nhiều mức</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+<script>
+Chart.register(ChartDataLabels);
+
+// ===== DATA =====
+// Class-level data sorted by pct_ge60
+const classData = [
+  {cls:"IC1823",pct:16.7,pass:33.3,mean:48.0,med:46.9,n:6,n60:1,group:'C'},
+  {cls:"IC2082",pct:23.1,pass:76.9,mean:55.1,med:57.4,n:13,n60:3,group:'C'},
+  {cls:"IC1906",pct:33.3,pass:66.7,mean:58.4,med:54.2,n:3,n60:1,group:'C'},
+  {cls:"IC1968",pct:35.3,pass:58.8,mean:52.3,med:53.7,n:17,n60:6,group:'C'},
+  {cls:"IC1947",pct:36.4,pass:18.2,mean:52.6,med:48.1,n:11,n60:4,group:'C'},
+  {cls:"IC1779",pct:37.5,pass:68.8,mean:59.8,med:57.2,n:16,n60:6,group:'C'},
+  {cls:"IC2022",pct:38.2,pass:50.0,mean:55.3,med:54.4,n:34,n60:13,group:'C'},
+  {cls:"IC1831",pct:40.0,pass:20.0,mean:54.0,med:54.2,n:10,n60:4,group:'B'},
+  {cls:"IC2059",pct:40.0,pass:53.3,mean:52.0,med:53.5,n:15,n60:6,group:'B'},
+  {cls:"IC1922",pct:44.4,pass:55.6,mean:60.3,med:57.0,n:9,n60:4,group:'B'},
+  {cls:"IC2003",pct:45.0,pass:80.0,mean:61.5,med:58.4,n:20,n60:9,group:'B'},
+  {cls:"IC1766",pct:50.0,pass:50.0,mean:70.6,med:67.0,n:8,n60:4,group:'B'},
+  {cls:"IC1762",pct:50.0,pass:64.3,mean:59.0,med:62.0,n:14,n60:7,group:'B'},
+  {cls:"IC1882",pct:50.0,pass:50.0,mean:63.6,med:59.8,n:14,n60:7,group:'B'},
+  {cls:"IC1835",pct:50.0,pass:37.5,mean:56.1,med:60.8,n:8,n60:4,group:'B'},
+  {cls:"IC1688",pct:50.0,pass:66.7,mean:55.1,med:59.5,n:12,n60:6,group:'B'},
+  {cls:"IC1901",pct:54.5,pass:63.6,mean:61.9,med:66.5,n:11,n60:6,group:'B'},
+  {cls:"IC1948",pct:54.5,pass:72.7,mean:61.6,med:68.1,n:11,n60:6,group:'B'},
+  {cls:"IC1891",pct:55.6,pass:66.7,mean:61.2,med:64.0,n:9,n60:5,group:'B'},
+  {cls:"IC2069",pct:60.0,pass:53.3,mean:60.2,med:65.2,n:15,n60:9,group:'B'},
+  {cls:"IC1934",pct:60.0,pass:70.0,mean:62.4,med:64.4,n:10,n60:6,group:'B'},
+  {cls:"IC1959",pct:62.5,pass:75.0,mean:59.6,med:63.1,n:16,n60:10,group:'B'},
+  {cls:"IC1872",pct:62.5,pass:43.8,mean:60.6,med:65.5,n:16,n60:10,group:'B'},
+  {cls:"IC1721",pct:62.5,pass:31.2,mean:60.7,med:67.2,n:16,n60:10,group:'B'},
+  {cls:"IC2076",pct:62.5,pass:81.2,mean:63.9,med:70.2,n:16,n60:10,group:'B'},
+  {cls:"IC2009",pct:62.5,pass:37.5,mean:65.7,med:72.0,n:32,n60:20,group:'B'},
+  {cls:"IC1987",pct:63.0,pass:59.3,mean:65.5,med:65.0,n:27,n60:17,group:'B'},
+  {cls:"IC1816",pct:63.6,pass:54.5,mean:65.6,med:66.5,n:11,n60:7,group:'B'},
+  {cls:"IC2019",pct:64.0,pass:44.0,mean:62.6,med:64.0,n:25,n60:16,group:'B'},
+  {cls:"IC1950",pct:64.3,pass:64.3,mean:66.1,med:68.2,n:14,n60:9,group:'B'},
+  {cls:"IC1805",pct:64.3,pass:64.3,mean:61.0,med:66.0,n:14,n60:9,group:'B'},
+  {cls:"IC1758",pct:64.7,pass:41.2,mean:64.8,med:62.5,n:17,n60:11,group:'B'},
+  {cls:"IC1980",pct:64.7,pass:70.6,mean:64.5,med:66.9,n:17,n60:11,group:'B'},
+  {cls:"IC1992",pct:64.7,pass:55.9,mean:66.0,med:65.5,n:34,n60:22,group:'B'},
+  {cls:"IC1861",pct:66.7,pass:75.0,mean:63.9,med:65.9,n:12,n60:8,group:'B'},
+  {cls:"IC1932",pct:66.7,pass:66.7,mean:55.7,med:60.4,n:6,n60:4,group:'B'},
+  {cls:"IC2050",pct:67.7,pass:74.2,mean:67.7,med:66.8,n:31,n60:21,group:'B'},
+  {cls:"IC1723",pct:68.8,pass:68.8,mean:70.2,med:68.5,n:16,n60:11,group:'B'},
+  {cls:"IC1837",pct:68.8,pass:62.5,mean:68.4,med:66.9,n:16,n60:11,group:'B'},
+  {cls:"IC1935",pct:68.8,pass:56.2,mean:62.4,med:71.6,n:16,n60:11,group:'B'},
+  {cls:"IC1702",pct:69.2,pass:53.8,mean:66.8,med:69.0,n:13,n60:9,group:'B'},
+  {cls:"IC1845",pct:70.0,pass:60.0,mean:60.8,med:63.9,n:10,n60:7,group:'B'},
+  {cls:"IC1954",pct:70.0,pass:80.0,mean:64.0,med:67.0,n:10,n60:7,group:'B'},
+  {cls:"IC2007",pct:70.6,pass:70.6,mean:62.5,med:69.6,n:34,n60:24,group:'B'},
+  {cls:"IC1877",pct:71.4,pass:85.7,mean:60.8,med:63.9,n:7,n60:5,group:'B'},
+  {cls:"IC1943",pct:71.4,pass:71.4,mean:64.5,med:68.2,n:14,n60:10,group:'B'},
+  {cls:"IC1914",pct:71.4,pass:57.1,mean:64.4,med:65.2,n:7,n60:5,group:'B'},
+  {cls:"IC2037",pct:72.7,pass:72.7,mean:64.3,med:67.2,n:22,n60:16,group:'B'},
+  {cls:"IC2043",pct:73.0,pass:70.3,mean:66.1,med:72.9,n:37,n60:27,group:'B'},
+  {cls:"IC2030",pct:73.5,pass:67.6,mean:71.0,med:75.9,n:34,n60:25,group:'B'},
+  {cls:"IC2074",pct:75.0,pass:75.0,mean:65.7,med:66.8,n:12,n60:9,group:'A'},
+  {cls:"IC2035",pct:75.0,pass:91.7,mean:66.6,med:67.8,n:24,n60:18,group:'A'},
+  {cls:"IC2044",pct:75.0,pass:85.7,mean:71.7,med:72.8,n:28,n60:21,group:'A'},
+  {cls:"IC1974",pct:76.5,pass:94.1,mean:65.9,med:65.0,n:34,n60:26,group:'A'},
+  {cls:"IC1733",pct:78.6,pass:35.7,mean:70.4,med:72.8,n:14,n60:11,group:'A'},
+  {cls:"IC1842",pct:78.6,pass:64.3,mean:67.8,med:70.4,n:14,n60:11,group:'A'},
+  {cls:"IC1913",pct:80.0,pass:50.0,mean:70.8,med:71.0,n:10,n60:8,group:'A'},
+  {cls:"IC2001",pct:80.6,pass:67.7,mean:71.4,med:70.2,n:31,n60:25,group:'A'},
+  {cls:"IC1697",pct:81.2,pass:68.8,mean:77.6,med:83.0,n:16,n60:13,group:'A'},
+  {cls:"IC1793",pct:82.4,pass:64.7,mean:72.6,med:77.8,n:17,n60:14,group:'A'},
+  {cls:"IC1752",pct:82.4,pass:70.6,mean:69.9,med:72.2,n:17,n60:14,group:'A'},
+  {cls:"IC1924",pct:83.3,pass:83.3,mean:75.3,med:80.9,n:6,n60:5,group:'A'},
+  {cls:"IC1825",pct:85.7,pass:57.1,mean:74.7,med:74.4,n:14,n60:12,group:'A'},
+  {cls:"IC1738",pct:86.7,pass:100.0,mean:73.0,med:75.5,n:15,n60:13,group:'A'},
+  {cls:"IC2088",pct:86.7,pass:60.0,mean:65.5,med:60.0,n:15,n60:13,group:'A'},
+  {cls:"IC1759",pct:87.5,pass:62.5,mean:69.8,med:73.8,n:16,n60:14,group:'A'},
+  {cls:"IC1886",pct:88.2,pass:64.7,mean:70.7,med:69.4,n:17,n60:15,group:'A'},
+  {cls:"IC1755",pct:88.2,pass:70.6,mean:72.1,med:75.8,n:17,n60:15,group:'A'},
+  {cls:"IC1773",pct:88.9,pass:72.2,mean:73.6,med:72.5,n:18,n60:16,group:'A'},
+  {cls:"IC1740",pct:90.0,pass:55.0,mean:65.4,med:66.4,n:20,n60:18,group:'A'},
+  {cls:"IC1776",pct:90.9,pass:63.6,mean:73.5,med:71.0,n:11,n60:10,group:'A'},
+  {cls:"IC2023",pct:91.3,pass:87.0,mean:77.9,med:76.0,n:23,n60:21,group:'A'},
+  {cls:"IC1871",pct:92.3,pass:92.3,mean:68.3,med:71.8,n:13,n60:12,group:'A'},
+  {cls:"IC1745",pct:92.9,pass:71.4,mean:82.2,med:83.1,n:14,n60:13,group:'A'},
+  {cls:"IC1701",pct:92.9,pass:71.4,mean:76.9,med:76.0,n:14,n60:13,group:'A'},
+  {cls:"IC1706",pct:93.3,pass:86.7,mean:77.5,med:84.8,n:15,n60:14,group:'A'},
+  {cls:"IC1848",pct:93.3,pass:66.7,mean:72.7,med:73.0,n:15,n60:14,group:'A'},
+  {cls:"IC1725",pct:93.3,pass:0.0,mean:80.8,med:85.0,n:15,n60:14,group:'A'},
+  {cls:"IC1754",pct:93.8,pass:100.0,mean:72.6,med:72.0,n:16,n60:15,group:'A'},
+  {cls:"IC1727",pct:93.8,pass:93.8,mean:77.6,med:79.6,n:16,n60:15,group:'A'},
+  {cls:"IC1715",pct:94.1,pass:58.8,mean:74.2,med:72.0,n:17,n60:16,group:'A'},
+  {cls:"IC2060",pct:94.1,pass:91.2,mean:73.9,med:77.5,n:34,n60:32,group:'A'},
+  {cls:"IC1853",pct:100.0,pass:37.5,mean:80.2,med:81.4,n:16,n60:16,group:'A'},
+  {cls:"IC1870",pct:100.0,pass:75.0,mean:79.4,med:85.0,n:8,n60:8,group:'A'},
+  {cls:"IC1705",pct:100.0,pass:73.3,mean:82.6,med:84.5,n:15,n60:15,group:'A'},
+  {cls:"IC1786",pct:100.0,pass:64.7,mean:76.7,med:78.8,n:17,n60:17,group:'A'},
+  {cls:"IC1802",pct:100.0,pass:87.5,mean:82.5,med:83.3,n:16,n60:16,group:'A'},
+  {cls:"IC1818",pct:100.0,pass:80.0,mean:84.4,med:87.1,n:20,n60:20,group:'A'},
+  {cls:"IC2056",pct:100.0,pass:77.8,mean:72.4,med:70.8,n:18,n60:18,group:'A'},
+];
+
+const groupColors = { C: '#c62828', B: '#ef6c00', A: '#2e7d32' };
+const groupBg = { C: 'rgba(198,40,40,0.15)', B: 'rgba(239,108,0,0.15)', A: 'rgba(46,125,50,0.15)' };
+
+// ===== CHART 1: Scatter %HV≥60 vs Pass rate =====
+const scatterC = classData.filter(d => d.group === 'C').map(d => ({x: d.pct, y: d.pass}));
+const scatterB = classData.filter(d => d.group === 'B').map(d => ({x: d.pct, y: d.pass}));
+const scatterA = classData.filter(d => d.group === 'A').map(d => ({x: d.pct, y: d.pass}));
+
+new Chart(document.getElementById('chart1'), {
+  type: 'scatter',
+  data: {
+    datasets: [
+      {
+        label: 'C: <40% (7 lớp)',
+        data: scatterC,
+        backgroundColor: 'rgba(198,40,40,0.7)',
+        pointRadius: 7,
+      },
+      {
+        label: 'B: 40-75% (43 lớp)',
+        data: scatterB,
+        backgroundColor: 'rgba(239,108,0,0.6)',
+        pointRadius: 6,
+      },
+      {
+        label: 'A: ≥75% (39 lớp)',
+        data: scatterA,
+        backgroundColor: 'rgba(46,125,50,0.6)',
+        pointRadius: 6,
+      },
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { position: 'top', labels: { usePointStyle: true, padding: 20 } },
+      title: { display: true, text: '%HV≥60 trong lớp vs Tỷ lệ Pass — 89 lớp', font: { size: 14 } },
+      tooltip: {
+        callbacks: {
+          label: ctx => {
+            const d = classData[ctx.dataIndex];
+            return `${d.cls}: ${d.pct}% HV≥60, Pass=${d.pass}%`;
+          }
+        }
+      },
+      datalabels: { display: false }
+    },
+    scales: {
+      x: {
+        title: { display: true, text: '% Học viên đạt Test 1 ≥ 60' },
+        min: 0, max: 105,
+        grid: { color: ctx => (ctx.tick.value === 40 || ctx.tick.value === 75) ? 'rgba(233,69,96,0.5)' : '#eee' }
+      },
+      y: { title: { display: true, text: 'Tỷ lệ Pass (%)' }, min: 0, max: 100 },
+    }
+  },
+  plugins: [{
+    id: 'thresholdLines',
+    beforeDraw(chart) {
+      const ctx = chart.ctx;
+      const xAxis = chart.scales.x;
+      const yAxis = chart.scales.y;
+
+      [40, 75].forEach(cut => {
+        const x = xAxis.getPixelForValue(cut);
+        ctx.save();
+        ctx.strokeStyle = '#e94560';
+        ctx.lineWidth = 2.5;
+        ctx.setLineDash([8, 5]);
+        ctx.beginPath();
+        ctx.moveTo(x, yAxis.top);
+        ctx.lineTo(x, yAxis.bottom);
+        ctx.stroke();
+        ctx.fillStyle = '#e94560';
+        ctx.font = 'bold 13px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('── ' + cut + '%', x, yAxis.top - 10);
+        ctx.restore();
+      });
+
+      // Annotations: group labels at bottom
+      const midC = xAxis.getPixelForValue(20);
+      const midB = xAxis.getPixelForValue(57);
+      const midA = xAxis.getPixelForValue(88);
+      ctx.font = 'bold 14px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillStyle = '#c62828';
+      ctx.fillText('NHÓM C', midC, yAxis.bottom - 8);
+      ctx.fillStyle = '#ef6c00';
+      ctx.fillText('NHÓM B', midB, yAxis.bottom - 8);
+      ctx.fillStyle = '#2e7d32';
+      ctx.fillText('NHÓM A', midA, yAxis.bottom - 8);
+    }
+  }]
+});
+
+// ===== CHART 2a: Distribution histogram =====
+const histBins = [];
+for (let lo = 0; lo < 100; lo += 10) {
+  const cnt = classData.filter(d => d.pct >= lo && d.pct < lo + 10).length;
+  let label;
+  if (lo === 0) label = '<10%';
+  else if (lo === 90) label = '90-100%';
+  else label = lo + '-' + (lo+10) + '%';
+  // Color by zone
+  let bg;
+  if (lo < 40) bg = 'rgba(198,40,40,0.7)';
+  else if (lo < 80) bg = 'rgba(239,108,0,0.7)';
+  else bg = 'rgba(46,125,50,0.7)';
+  histBins.push({ label, count: cnt, bg });
+}
+
+new Chart(document.getElementById('chart2a'), {
+  type: 'bar',
+  data: {
+    labels: histBins.map(b => b.label),
+    datasets: [{
+      label: 'Số lớp',
+      data: histBins.map(b => b.count),
+      backgroundColor: histBins.map(b => b.bg),
+      borderRadius: 4,
+    }]
+  },
+  options: {
+    responsive: true,
+    layout: { padding: { top: 28 } },
+    plugins: {
+      legend: { display: false },
+      title: { display: true, text: 'Phân phối lớp theo %HV≥60', font: { size: 13 } },
+      datalabels: {
+        anchor: 'end', align: 'end', offset: 2,
+        color: '#1a1a2e', font: { weight: 'bold', size: 12 },
+        formatter: v => v + ' lớp',
+      }
+    },
+    scales: {
+      x: { title: { display: true, text: '%HV đạt ≥60' } },
+      y: { title: { display: true, text: 'Số lớp' }, ticks: { stepSize: 5 } },
+    }
+  }
+});
+
+// ===== CHART 2b: 3 groups distribution =====
+new Chart(document.getElementById('chart2b'), {
+  type: 'doughnut',
+  data: {
+    labels: ['C: <40% (7 lớp)', 'B: 40-75% (43 lớp)', 'A: ≥75% (39 lớp)'],
+    datasets: [{
+      data: [7, 43, 39],
+      backgroundColor: ['#c62828', '#ef6c00', '#2e7d32'],
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { position: 'bottom', labels: { usePointStyle: true } },
+      title: { display: true, text: 'Phân bố 3 nhóm lớp', font: { size: 13 } },
+      datalabels: {
+        color: 'white', font: { weight: 'bold', size: 14 },
+        formatter: (v) => v + ' lớp\n(' + (v/89*100).toFixed(0) + '%)',
+        textAlign: 'center',
+      }
+    }
+  }
+});
+
+// ===== CHART 3: Pass rate by group =====
+const groupStats = [
+  { label: 'C: <40%', pass: 53.2, n: 7, color: '#c62828' },
+  { label: 'B: 40-75%', pass: 60.9, n: 43, color: '#ef6c00' },
+  { label: 'A: ≥75%', pass: 71.1, n: 39, color: '#2e7d32' },
+];
+
+new Chart(document.getElementById('chart3'), {
+  type: 'bar',
+  data: {
+    labels: groupStats.map(g => g.label),
+    datasets: [{
+      label: 'Pass rate TB (%)',
+      data: groupStats.map(g => g.pass),
+      backgroundColor: groupStats.map(g => g.color + 'cc'),
+      borderRadius: 6,
+      barThickness: 70,
+    }]
+  },
+  options: {
+    responsive: true,
+    layout: { padding: { top: 36 } },
+    plugins: {
+      legend: { display: false },
+      title: { display: true, text: 'Pass rate trung bình của 3 nhóm', font: { size: 14 } },
+      tooltip: {
+        callbacks: {
+          afterLabel: ctx => {
+            const g = groupStats[ctx.dataIndex];
+            return `${g.n} lớp`;
+          }
+        }
+      },
+      datalabels: {
+        anchor: 'end', align: 'end', offset: 8,
+        color: '#1a1a2e', font: { weight: 'bold', size: 15 },
+        formatter: (v, ctx) => {
+          const g = groupStats[ctx.dataIndex];
+          return v.toFixed(1) + '% (' + g.n + ' lớp)';
+        }
+      }
+    },
+    scales: {
+      y: { beginAtZero: true, max: 100, title: { display: true, text: '%' } }
+    }
+  }
+});
+
+// ===== CHART 4a: Single threshold test =====
+const singleThresholds = [
+  { cut: 20, gap: 12.0, below: 3, above: 86 },
+  { cut: 30, gap: 8.5, below: 2, above: 87 },
+  { cut: 35, gap: 10.2, below: 4, above: 85 },
+  { cut: 40, gap: 12.5, below: 7, above: 82 },
+  { cut: 45, gap: 11.8, below: 8, above: 81 },
+  { cut: 50, gap: 13.6, below: 11, above: 78 },
+  { cut: 60, gap: 11.9, below: 19, above: 70 },
+  { cut: 70, gap: 13.5, below: 41, above: 48 },
+  { cut: 75, gap: 11.3, below: 50, above: 39 },
+  { cut: 80, gap: 9.1, below: 56, above: 33 },
+];
+
+new Chart(document.getElementById('chart4a'), {
+  type: 'bar',
+  data: {
+    labels: singleThresholds.map(t => t.cut + '%'),
+    datasets: [{
+      label: 'Gap pass rate (%)',
+      data: singleThresholds.map(t => t.gap),
+      backgroundColor: singleThresholds.map(t => t.cut === 40 ? '#c62828' : t.cut === 50 ? '#e65100' : 'rgba(100,100,100,0.4)'),
+      borderRadius: 4,
+    }]
+  },
+  options: {
+    responsive: true,
+    layout: { padding: { top: 24 } },
+    plugins: {
+      legend: { display: false },
+      datalabels: {
+        anchor: 'end', align: 'end', offset: 2,
+        color: '#1a1a2e', font: { weight: 'bold', size: 11 },
+        formatter: (v, ctx) => {
+          const t = singleThresholds[ctx.dataIndex];
+          return v.toFixed(1) + '%\n(' + t.below + '↓ / ' + t.above + '↑)';
+        }
+      }
+    },
+    scales: {
+      x: { title: { display: true, text: 'Ngưỡng thử nghiệm' } },
+      y: { title: { display: true, text: 'Gap pass rate (%)' }, beginAtZero: true },
+    }
+  }
+});
+
+// ===== CHART 4b: 3-group optimal search =====
+const tripleCandidates = [
+  { label: '<30% / 30-65% / ≥65%', g1: 8.5, g2: 8.8, total: 17.3, ok: false },
+  { label: '<30% / 30-70% / ≥70%', g1: 8.5, g2: 10.5, total: 19.0, ok: false },
+  { label: '<35% / 35-70% / ≥70%', g1: 10.2, g2: 10.0, total: 20.2, ok: true },
+  { label: '<40% / 40-70% / ≥70%', g1: 12.5, g2: 10.0, total: 22.5, ok: true },
+  { label: '<40% / 40-75% / ≥75%', g1: 12.5, g2: 10.2, total: 22.7, ok: true, best: true },
+  { label: '<40% / 40-80% / ≥80%', g1: 12.5, g2: 9.1, total: 21.6, ok: true },
+  { label: '<45% / 45-75% / ≥75%', g1: 11.8, g2: 9.7, total: 21.5, ok: false },
+  { label: '<50% / 50-75% / ≥75%', g1: 13.6, g2: 7.5, total: 21.1, ok: false },
+];
+
+new Chart(document.getElementById('chart4b'), {
+  type: 'bar',
+  indexAxis: 'y',
+  data: {
+    labels: tripleCandidates.map(c => c.label),
+    datasets: [{
+      label: 'Tổng gap',
+      data: tripleCandidates.map(c => c.total),
+      backgroundColor: tripleCandidates.map(c => c.best ? '#2e7d32' : c.ok ? 'rgba(46,125,50,0.4)' : 'rgba(200,200,200,0.3)'),
+      borderRadius: 4,
+    }]
+  },
+  options: {
+    responsive: true,
+    indexAxis: 'y',
+    layout: { padding: { right: 30 } },
+    plugins: {
+      legend: { display: false },
+      title: { display: true, text: 'Tổng gap = (B-C) + (A-B)', font: { size: 13 } },
+      datalabels: {
+        anchor: 'end', align: 'end', offset: 4,
+        color: '#1a1a2e', font: { weight: 'bold', size: 11 },
+        formatter: v => v.toFixed(1) + '%',
+      }
+    },
+    scales: {
+      x: { title: { display: true, text: 'Tổng gap pass rate (%)' }, beginAtZero: true },
+    }
+  }
+});
+
+// ===== CHART 5a: Correlation comparison =====
+new Chart(document.getElementById('chart5a'), {
+  type: 'radar',
+  data: {
+    labels: ['Tương quan\nSpearman', 'Robust\n(outlier)', 'Dễ giải\nthích', 'Phân loại\nchính xác'],
+    datasets: [
+      {
+        label: '%HV≥60',
+        data: [4.1, 5, 5, 4.5],
+        borderColor: '#2e7d32',
+        backgroundColor: 'rgba(46,125,50,0.15)',
+        pointBackgroundColor: '#2e7d32',
+        pointRadius: 4,
+      },
+      {
+        label: 'Điểm TB (mean)',
+        data: [3.9, 2.5, 2, 3],
+        borderColor: '#0f3460',
+        backgroundColor: 'rgba(15,52,96,0.1)',
+        pointBackgroundColor: '#0f3460',
+        pointRadius: 4,
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { position: 'bottom' },
+      datalabels: { display: false }
+    },
+    scales: {
+      r: { min: 0, max: 5, ticks: { stepSize: 1 } }
+    }
+  }
+});
+
+// ===== CHART 5b: Outlier effect demo =====
+new Chart(document.getElementById('chart5b'), {
+  type: 'bar',
+  data: {
+    labels: ['Lớp thường\n10 HV: 7 em 40đ\n3 em 60đ', 'Thêm 1 outlier\n+1 HV 95đ', 'Thay đổi'],
+    datasets: [
+      {
+        label: 'Điểm TB (mean)',
+        data: [46, 50, 8.7],
+        backgroundColor: ['#0f3460', '#0f3460', '#e94560'],
+        borderRadius: 4,
+      },
+      {
+        label: '%HV≥60',
+        data: [30, 33, 3.0],
+        backgroundColor: ['#2e7d32', '#2e7d32', '#e94560'],
+        borderRadius: 4,
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    layout: { padding: { top: 24 } },
+    plugins: {
+      legend: { position: 'top' },
+      datalabels: {
+        anchor: 'end', align: 'end', offset: 2,
+        color: '#1a1a2e', font: { weight: 'bold', size: 11 },
+        formatter: v => v,
+      }
+    },
+    scales: {
+      y: { beginAtZero: true, title: { display: true, text: 'Giá trị' } }
+    }
+  }
+});
+
+</script>
+</body>
+</html>
