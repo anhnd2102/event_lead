@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phân tích tính khả thi của Goal Pass Rate - Khóa 34</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f0f2f5; color: #1a1a2e; padding: 24px; }
+  .container { max-width: 1300px; margin: 0 auto; }
+
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  h2 { font-size: 21px; margin: 40px 0 16px; color: #16213e; border-bottom: 3px solid #0f3460; padding-bottom: 8px; }
+  h3 { font-size: 17px; margin: 20px 0 12px; color: #0f3460; }
+  .subtitle { color: #555; margin-bottom: 24px; font-size: 15px; }
+
+  .summary-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 28px; }
+  .card { background: white; border-radius: 12px; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .value { font-size: 28px; font-weight: 700; color: #0f3460; }
+  .card .label { font-size: 12px; color: #666; margin-top: 4px; }
+
+  .chart-box { background: white; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .chart-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .chart-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+  @media (max-width: 1000px) { .chart-row, .chart-row-3 { grid-template-columns: 1fr; } }
+
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); font-size: 13px; }
+  th, td { padding: 9px 12px; text-align: left; }
+  th { background: #0f3460; color: white; font-weight: 600; font-size: 12px; }
+  tr:nth-child(even) { background: #f8f9fa; }
+  tr:hover { background: #e8ecf1; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .center { text-align: center; }
+
+  .highlight-green { background: #e8f5e9 !important; }
+  .highlight-orange { background: #fff3e0 !important; }
+  .highlight-red { background: #ffebee !important; }
+
+  .insight-box { background: #fff8e1; border-left: 4px solid #f9a825; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 16px 0; font-size: 14px; line-height: 1.6; }
+  .insight-green { background: #e8f5e9; border-left-color: #2e7d32; }
+  .insight-red { background: #ffebee; border-left-color: #c62828; }
+  .insight-blue { background: #e3f2fd; border-left-color: #1565c0; }
+
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+  .badge-green { background: #c8e6c9; color: #2e7d32; }
+  .badge-orange { background: #ffe0b2; color: #e65100; }
+  .badge-red { background: #ffcdd2; color: #c62828; }
+  .badge-blue { background: #bbdefb; color: #1565c0; }
+
+  .verdict-card { background: white; border-radius: 16px; padding: 24px; margin: 20px 0; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+  .verdict-card.recommend { border: 2px solid #2e7d32; }
+  .verdict-card.caution { border: 2px solid #ef6c00; }
+  .verdict-card.warning { border: 2px solid #c62828; }
+
+  .big-num { font-size: 48px; font-weight: 800; line-height: 1; }
+  .big-num.good { color: #2e7d32; }
+  .big-num.warn { color: #e65100; }
+  .big-num.bad { color: #c62828; }
+
+  .gauge-container { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .gauge-label { min-width: 80px; font-weight: 700; font-size: 18px; }
+  .gauge-bar-bg { flex: 1; height: 28px; background: #e0e0e0; border-radius: 14px; overflow: hidden; position: relative; min-width: 200px; }
+  .gauge-bar-fill { height: 100%; border-radius: 14px; transition: width 1s; }
+  .gauge-goal-marker { position: absolute; top: -4px; bottom: -4px; width: 3px; background: #c62828; z-index: 2; }
+  .gauge-value { font-weight: 700; font-size: 16px; min-width: 80px; text-align: right; }
+
+  .step-box { background: white; border-radius: 12px; padding: 16px 20px; margin: 8px 0; border-left: 4px solid #0f3460; font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>🎯 Đánh giá tính khả thi của Goal Pass Rate</h1>
+<p class="subtitle">
+  Dữ liệu gốc: <strong>Khóa 34</strong> — 89 lớp, 1,474 học viên có điểm Test 1 |
+  Phân loại dựa trên <strong>%HV đạt Test 1 ≥ 60</strong>
+</p>
+
+<!-- GOAL SUMMARY TABLE -->
+<h2>1. Goal hiện tại vs thực tế</h2>
+
+<table style="font-size:15px;">
+  <thead>
+    <tr><th>Nhóm</th><th>%HV≥60</th><th class="num">Số lớp</th><th class="num">Pass rate<br>hiện tại</th><th class="num">Goal<br>đề xuất</th><th class="num">Gap</th><th class="num">% lớp<br>đã đạt</th><th>Đánh giá</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="badge badge-red">C</span></td>
+      <td>&lt; 40%</td>
+      <td class="num">7</td>
+      <td class="num"><strong>53.2%</strong></td>
+      <td class="num" style="font-size:16px;font-weight:800;color:#2e7d32;">60%</td>
+      <td class="num" style="color:#e65100;">+6.8%</td>
+      <td class="num">43%</td>
+      <td><span class="badge badge-green">Khả thi</span></td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-orange">B</span></td>
+      <td>40 – 75%</td>
+      <td class="num">43</td>
+      <td class="num"><strong>60.9%</strong></td>
+      <td class="num" style="font-size:16px;font-weight:800;color:#2e7d32;">70%</td>
+      <td class="num" style="color:#c62828;">+9.1%</td>
+      <td class="num">33%</td>
+      <td><span class="badge badge-orange">Thách thức</span></td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-green">A</span></td>
+      <td>≥ 75%</td>
+      <td class="num">39</td>
+      <td class="num"><strong>71.1%</strong></td>
+      <td class="num" style="font-size:16px;font-weight:800;color:#2e7d32;">80%</td>
+      <td class="num" style="color:#c62828;">+8.9%</td>
+      <td class="num">33%</td>
+      <td><span class="badge badge-orange">Thách thức</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- GAUGE CHARTS PER GROUP -->
+<h2>2. Trực quan: Mỗi Goal cách pass rate hiện tại bao xa?</h2>
+
+<div class="chart-row-3">
+  <div class="chart-box" style="text-align:center;">
+    <h3 style="margin-top:0;color:#c62828;">Nhóm C — Goal 60%</h3>
+    <canvas id="chartGaugeC" height="100"></canvas>
+    <div style="font-size:13px;color:#888;margin-top:8px;">3/7 lớp đã đạt • 2 lớp rất xa</div>
+  </div>
+  <div class="chart-box" style="text-align:center;">
+    <h3 style="margin-top:0;color:#ef6c00;">Nhóm B — Goal 70%</h3>
+    <canvas id="chartGaugeB" height="100"></canvas>
+    <div style="font-size:13px;color:#888;margin-top:8px;">14/43 lớp đã đạt • 18 lớp còn xa</div>
+  </div>
+  <div class="chart-box" style="text-align:center;">
+    <h3 style="margin-top:0;color:#2e7d32;">Nhóm A — Goal 80%</h3>
+    <canvas id="chartGaugeA" height="100"></canvas>
+    <div style="font-size:13px;color:#888;margin-top:8px;">13/39 lớp đã đạt • 17 lớp còn xa</div>
+  </div>
+</div>
+
+<!-- DISTRIBUTION ANALYSIS -->
+<h2>3. Phân phối pass rate trong từng nhóm — Goal có nằm trong tầm với?</h2>
+
+<div class="chart-row-3">
+  <div class="chart-box">
+    <h3 style="margin-top:0;text-align:center;color:#c62828;">Nhóm C (7 lớp)</h3>
+    <canvas id="chartDistC" height="100"></canvas>
+    <table style="font-size:12px;margin-top:8px;">
+      <tr><td>Goal 60%</td><td class="num"><strong>3 lớp đạt (43%)</strong></td></tr>
+      <tr><td>Trung vị</td><td class="num">58.8% — cách goal chỉ 1.2%</td></tr>
+      <tr><td>Percentile 75</td><td class="num">67.7% — đã vượt goal</td></tr>
+      <tr><td>Min</td><td class="num" style="color:#c62828;">18.2% — IC1947</td></tr>
+    </table>
+  </div>
+  <div class="chart-box">
+    <h3 style="margin-top:0;text-align:center;color:#ef6c00;">Nhóm B (43 lớp)</h3>
+    <canvas id="chartDistB" height="100"></canvas>
+    <table style="font-size:12px;margin-top:8px;">
+      <tr><td>Goal 70%</td><td class="num"><strong>14 lớp đạt (33%)</strong></td></tr>
+      <tr><td>Trung vị</td><td class="num">64.3% — cách goal 5.7%</td></tr>
+      <tr><td>Percentile 75</td><td class="num">70.6% — vừa chạm goal</td></tr>
+      <tr><td>Min</td><td class="num" style="color:#c62828;">20.0% — IC1831</td></tr>
+    </table>
+  </div>
+  <div class="chart-box">
+    <h3 style="margin-top:0;text-align:center;color:#2e7d32;">Nhóm A (39 lớp)</h3>
+    <canvas id="chartDistA" height="100"></canvas>
+    <table style="font-size:12px;margin-top:8px;">
+      <tr><td>Goal 80%</td><td class="num"><strong>13 lớp đạt (33%)</strong></td></tr>
+      <tr><td>Trung vị</td><td class="num">71.4% — cách goal 8.6%</td></tr>
+      <tr><td>Percentile 75</td><td class="num">86.2% — đã vượt goal</td></tr>
+      <tr><td>Min</td><td class="num" style="color:#c62828;">0.0% — IC1725</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- FEASIBILITY CURVE -->
+<h2>4. Nếu chọn goal khác thì sao? — Tỷ lệ lớp đạt goal ở mỗi mức</h2>
+
+<div class="chart-row">
+  <div class="chart-box">
+    <canvas id="chartFeasibility" height="100"></canvas>
+    <p style="margin-top:8px;font-size:12px;color:#888;">Đường càng cao = goal càng dễ đạt. Goal hiện tại được đánh dấu bằng chấm tròn.</p>
+  </div>
+  <div class="chart-box">
+    <h3 style="margin-top:0;">Tỷ lệ lớp đạt ở các mức goal khác nhau</h3>
+    <table style="font-size:12px;">
+      <thead><tr><th>Goal</th><th class="num">Nhóm C<br>(7 lớp)</th><th class="num">Nhóm B<br>(43 lớp)</th><th class="num">Nhóm A<br>(39 lớp)</th></tr></thead>
+      <tbody id="feasTable"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- CLASS WATERFALL -->
+<h2>5. Chi tiết từng lớp — Ai đã đạt, ai còn xa?</h2>
+
+<div class="chart-row-3">
+  <div class="chart-box">
+    <h3 style="margin-top:0;color:#c62828;">Nhóm C — Goal 60%</h3>
+    <div style="max-height:420px;overflow-y:auto;">
+    <table style="font-size:12px;">
+      <thead><tr><th>Lớp</th><th class="num">%HV≥60</th><th class="num">Pass</th><th class="num">HS</th><th>Trạng thái</th></tr></thead>
+      <tbody id="classTableC"></tbody>
+    </table>
+    </div>
+  </div>
+  <div class="chart-box">
+    <h3 style="margin-top:0;color:#ef6c00;">Nhóm B — Goal 70%</h3>
+    <div style="max-height:420px;overflow-y:auto;">
+    <table style="font-size:12px;">
+      <thead><tr><th>Lớp</th><th class="num">%HV≥60</th><th class="num">Pass</th><th class="num">HS</th><th>Trạng thái</th></tr></thead>
+      <tbody id="classTableB"></tbody>
+    </table>
+    </div>
+  </div>
+  <div class="chart-box">
+    <h3 style="margin-top:0;color:#2e7d32;">Nhóm A — Goal 80%</h3>
+    <div style="max-height:420px;overflow-y:auto;">
+    <table style="font-size:12px;">
+      <thead><tr><th>Lớp</th><th class="num">%HV≥60</th><th class="num">Pass</th><th class="num">HS</th><th>Trạng thái</th></tr></thead>
+      <tbody id="classTableA"></tbody>
+    </table>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL VERDICT -->
+<h2>6. Kết luận: Goal 80% / 70% / 60% có thực tế không?</h2>
+
+<div class="chart-row">
+  <div class="verdict-card recommend">
+    <h3 style="margin-top:0;">✅ Nhóm C — Goal 60%: <span style="color:#2e7d32;">KHẢ THI</span></h3>
+    <ul style="line-height:1.8;padding-left:20px;">
+      <li><strong>Trung vị đã ở 58.8%</strong> — chỉ còn cách goal 1.2 điểm %</li>
+      <li>3/7 lớp (43%) <strong>đã đạt</strong> goal ngay từ đầu</li>
+      <li>2/7 lớp rất thấp (18%, 33%) nhưng đây là nhóm nhỏ, GV có thể tập trung hỗ trợ</li>
+      <li><strong>Nếu 2 lớp thấp nhất cải thiện lên 50%</strong>, trung bình nhóm C đạt ~63% — vượt goal</li>
+      <li>⚠️ Lưu ý: chỉ 7 lớp nên 1-2 lớp cải thiện là đủ kéo mean lên</li>
+    </ul>
+    <p style="margin-top:8px;font-size:13px;color:#555;">💡 <strong>Khuyến nghị:</strong> Giữ goal 60%. Đây là mục tiêu hợp lý, không quá dễ cũng không quá khó.</p>
+  </div>
+
+  <div class="verdict-card caution">
+    <h3 style="margin-top:0;">⚠️ Nhóm B — Goal 70%: <span style="color:#e65100;">THÁCH THỨC nhưng KHẢ THI</span></h3>
+    <ul style="line-height:1.8;padding-left:20px;">
+      <li>14/43 lớp (33%) <strong>đã đạt</strong> goal — đây là bằng chứng goal khả thi</li>
+      <li>5 lớp nữa đang ở 65-69.9% — <strong>chỉ cần cải thiện nhẹ</strong> là chạm goal</li>
+      <li>Percentile 75 = 70.6% — <strong>¼ số lớp đã vượt goal</strong></li>
+      <li>⚠️ Nhưng: 18/43 lớp (42%) đang dưới 60% — cần nhiều nỗ lực</li>
+      <li><strong>Khoảng cách trung vị→goal là 5.7%</strong> — cần cải thiện đáng kể</li>
+      <li>Nếu 19 lớp gần nhất (≥65%) đều lên được 70%, trung bình nhóm B ~68%</li>
+    </ul>
+    <p style="margin-top:8px;font-size:13px;color:#555;">💡 <strong>Khuyến nghị:</strong> Có thể cân nhắc <strong>goal 65%</strong> cho năm đầu, sau đó nâng lên 70%. Hoặc giữ 70% nhưng chấp nhận đây là "stretch goal" — không phải lớp nào cũng đạt ngay.</p>
+  </div>
+</div>
+
+<div class="chart-row">
+  <div class="verdict-card caution" style="margin-top:0;">
+    <h3 style="margin-top:0;">⚠️ Nhóm A — Goal 80%: <span style="color:#e65100;">STRETCH GOAL</span></h3>
+    <ul style="line-height:1.8;padding-left:20px;">
+      <li>13/39 lớp (33%) <strong>đã đạt</strong> goal — minh chứng khả thi</li>
+      <li>3 lớp nữa đang ở 75-78% — <strong>rất gần</strong></li>
+      <li>Percentile 75 = <strong>86.2%</strong> — top 25% đã vượt xa goal</li>
+      <li>⚠️ Tuy nhiên: 17/39 lớp (44%) dưới 70% — <strong>khoảng cách lớn</strong></li>
+      <li>⚠️ Đặc biệt: một số lớp có %HV≥60 rất cao nhưng pass rate thấp bất thường:
+        <span style="font-size:12px;color:#888;">IC1725 (93%→0%), IC1853 (100%→38%), IC1733 (79%→36%)</span>
+      </li>
+      <li>Điều này gợi ý <strong>yếu tố phi học thuật</strong> (nghỉ học, lý do cá nhân) ảnh hưởng pass rate</li>
+    </ul>
+    <p style="margin-top:8px;font-size:13px;color:#555;">💡 <strong>Khuyến nghị:</strong> Giữ 80% làm tầm nhìn dài hạn. Nếu cần goal ngắn hạn, <strong>75%</strong> khả thi hơn (41% lớp đã đạt, percentile 50 sắp chạm).</p>
+  </div>
+
+  <div class="verdict-card" style="margin-top:0;background:#f8f9fa;">
+    <h3 style="margin-top:0;">📊 Tổng kết 3 mức goal</h3>
+    <table style="font-size:13px;">
+      <thead><tr><th>Nhóm</th><th>Goal</th><th class="num">Pass TB</th><th class="num">Gap</th><th class="num">% đã đạt</th><th class="num">% gần (±5%)</th><th>Độ khó</th><th>Đề xuất</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="badge badge-red">C</span></td>
+          <td class="num"><strong>60%</strong></td>
+          <td class="num">53.2%</td>
+          <td class="num" style="color:#e65100;">+6.8%</td>
+          <td class="num">43%</td>
+          <td class="num">14%</td>
+          <td>⭐⭐</td>
+          <td><span class="badge badge-green">Giữ 60%</span></td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-orange">B</span></td>
+          <td class="num"><strong>70%</strong></td>
+          <td class="num">60.9%</td>
+          <td class="num" style="color:#c62828;">+9.1%</td>
+          <td class="num">33%</td>
+          <td class="num">12%</td>
+          <td>⭐⭐⭐</td>
+          <td><span class="badge badge-orange">65%→70%</span></td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-green">A</span></td>
+          <td class="num"><strong>80%</strong></td>
+          <td class="num">71.1%</td>
+          <td class="num" style="color:#c62828;">+8.9%</td>
+          <td class="num">33%</td>
+          <td class="num">8%</td>
+          <td>⭐⭐⭐⭐</td>
+          <td><span class="badge badge-orange">75%→80%</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="insight-box insight-blue" style="margin-top:12px;font-size:13px;">
+      <strong>💡 Nguyên tắc đặt goal:</strong> Goal tốt nên có ~30-50% lớp đã đạt (không quá dễ, không bất khả thi). Cả 3 goal đều có <strong>33-43% lớp đã đạt</strong> — nằm trong vùng hợp lý. Điểm cần lưu ý là <strong>khoảng cách gap 9%</strong> ở nhóm B và A là đáng kể, đòi hỏi nỗ lực hệ thống chứ không chỉ vài lớp cải thiện.
+    </div>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<script>
+Chart.register(ChartDataLabels);
+
+// ===== EMBEDDED DATA =====
+const groupData = {
+  C: {goal:60,mean:53.2,median:58.8,std:21.0,min:18.2,max:76.9,p25:41.7,p50:58.8,p75:67.7,p90:72.0,n:7,n_meet:3,pct_meet:42.9},
+  B: {goal:70,mean:60.9,median:64.3,std:14.2,min:20.0,max:85.7,p25:53.6,p50:64.3,p75:70.6,p90:75.0,n:43,n_meet:14,pct_meet:32.6},
+  A: {goal:80,mean:71.1,median:71.4,std:19.3,min:0.0,max:100.0,p25:64.0,p50:71.4,p75:86.2,p90:92.6,n:39,n_meet:13,pct_meet:33.3}
+};
+
+const classLists = {
+  C: [
+    {cls:"IC2082",pass:76.9,pct:23.1,n:13},{cls:"IC1779",pass:68.8,pct:37.5,n:16},{cls:"IC1906",pass:66.7,pct:33.3,n:3},
+    {cls:"IC1968",pass:58.8,pct:35.3,n:17},{cls:"IC2022",pass:50.0,pct:38.2,n:34},{cls:"IC1823",pass:33.3,pct:16.7,n:6},{cls:"IC1947",pass:18.2,pct:36.4,n:11}
+  ],
+  B: [
+    {cls:"IC1877",pass:85.7,pct:71.4,n:7},{cls:"IC2076",pass:81.2,pct:62.5,n:16},{cls:"IC1954",pass:80.0,pct:70.0,n:10},
+    {cls:"IC2003",pass:80.0,pct:45.0,n:20},{cls:"IC1959",pass:75.0,pct:62.5,n:16},{cls:"IC1861",pass:75.0,pct:66.7,n:12},
+    {cls:"IC2050",pass:74.2,pct:67.7,n:31},{cls:"IC1948",pass:72.7,pct:54.5,n:11},{cls:"IC2037",pass:72.7,pct:72.7,n:22},
+    {cls:"IC1943",pass:71.4,pct:71.4,n:14},{cls:"IC1980",pass:70.6,pct:64.7,n:17},{cls:"IC2007",pass:70.6,pct:70.6,n:34},
+    {cls:"IC2043",pass:70.3,pct:73.0,n:37},{cls:"IC1934",pass:70.0,pct:60.0,n:10},{cls:"IC1723",pass:68.8,pct:68.8,n:16},
+    {cls:"IC2030",pass:67.6,pct:73.5,n:34},{cls:"IC1688",pass:66.7,pct:50.0,n:12},{cls:"IC1891",pass:66.7,pct:55.6,n:9},
+    {cls:"IC1932",pass:66.7,pct:66.7,n:6},{cls:"IC1762",pass:64.3,pct:50.0,n:14},{cls:"IC1950",pass:64.3,pct:64.3,n:14},
+    {cls:"IC1805",pass:64.3,pct:64.3,n:14},{cls:"IC1901",pass:63.6,pct:54.5,n:11},{cls:"IC1837",pass:62.5,pct:68.8,n:16},
+    {cls:"IC1845",pass:60.0,pct:70.0,n:10},{cls:"IC1987",pass:59.3,pct:63.0,n:27},{cls:"IC1914",pass:57.1,pct:71.4,n:7},
+    {cls:"IC1935",pass:56.2,pct:68.8,n:16},{cls:"IC1992",pass:55.9,pct:64.7,n:34},{cls:"IC1922",pass:55.6,pct:44.4,n:9},
+    {cls:"IC1816",pass:54.5,pct:63.6,n:11},{cls:"IC1702",pass:53.8,pct:69.2,n:13},{cls:"IC2069",pass:53.3,pct:60.0,n:15},
+    {cls:"IC2059",pass:53.3,pct:40.0,n:15},{cls:"IC1766",pass:50.0,pct:50.0,n:8},{cls:"IC1882",pass:50.0,pct:50.0,n:14},
+    {cls:"IC2019",pass:44.0,pct:64.0,n:25},{cls:"IC1872",pass:43.8,pct:62.5,n:16},{cls:"IC1758",pass:41.2,pct:64.7,n:17},
+    {cls:"IC1835",pass:37.5,pct:50.0,n:8},{cls:"IC2009",pass:37.5,pct:62.5,n:32},{cls:"IC1721",pass:31.2,pct:62.5,n:16},
+    {cls:"IC1831",pass:20.0,pct:40.0,n:10}
+  ],
+  A: [
+    {cls:"IC1738",pass:100.0,pct:86.7,n:15},{cls:"IC1754",pass:100.0,pct:93.8,n:16},{cls:"IC1974",pass:94.1,pct:76.5,n:34},
+    {cls:"IC1727",pass:93.8,pct:93.8,n:16},{cls:"IC1871",pass:92.3,pct:92.3,n:13},{cls:"IC2035",pass:91.7,pct:75.0,n:24},
+    {cls:"IC2060",pass:91.2,pct:94.1,n:34},{cls:"IC1802",pass:87.5,pct:100.0,n:16},{cls:"IC2023",pass:87.0,pct:91.3,n:23},
+    {cls:"IC1706",pass:86.7,pct:93.3,n:15},{cls:"IC2044",pass:85.7,pct:75.0,n:28},{cls:"IC1924",pass:83.3,pct:83.3,n:6},
+    {cls:"IC1818",pass:80.0,pct:100.0,n:20},{cls:"IC2056",pass:77.8,pct:100.0,n:18},{cls:"IC2074",pass:75.0,pct:75.0,n:12},
+    {cls:"IC1870",pass:75.0,pct:100.0,n:8},{cls:"IC1705",pass:73.3,pct:100.0,n:15},{cls:"IC1773",pass:72.2,pct:88.9,n:18},
+    {cls:"IC1701",pass:71.4,pct:92.9,n:14},{cls:"IC1745",pass:71.4,pct:92.9,n:14},{cls:"IC1752",pass:70.6,pct:82.4,n:17},
+    {cls:"IC1755",pass:70.6,pct:88.2,n:17},{cls:"IC1697",pass:68.8,pct:81.2,n:16},{cls:"IC2001",pass:67.7,pct:80.6,n:31},
+    {cls:"IC1848",pass:66.7,pct:93.3,n:15},{cls:"IC1886",pass:64.7,pct:88.2,n:17},{cls:"IC1793",pass:64.7,pct:82.4,n:17},
+    {cls:"IC1786",pass:64.7,pct:100.0,n:17},{cls:"IC1842",pass:64.3,pct:78.6,n:14},{cls:"IC1776",pass:63.6,pct:90.9,n:11},
+    {cls:"IC1759",pass:62.5,pct:87.5,n:16},{cls:"IC2088",pass:60.0,pct:86.7,n:15},{cls:"IC1715",pass:58.8,pct:94.1,n:17},
+    {cls:"IC1825",pass:57.1,pct:85.7,n:14},{cls:"IC1740",pass:55.0,pct:90.0,n:20},{cls:"IC1913",pass:50.0,pct:80.0,n:10},
+    {cls:"IC1853",pass:37.5,pct:100.0,n:16},{cls:"IC1733",pass:35.7,pct:78.6,n:14},{cls:"IC1725",pass:0.0,pct:93.3,n:15}
+  ]
+};
+
+const feasibilityData = {
+  C: [{t:50,p:71.4},{t:55,p:57.1},{t:60,p:42.9},{t:65,p:42.9},{t:70,p:14.3},{t:75,p:14.3},{t:80,p:0},{t:85,p:0},{t:90,p:0},{t:95,p:0},{t:100,p:0}],
+  B: [{t:50,p:83.7},{t:55,p:69.8},{t:60,p:58.1},{t:65,p:44.2},{t:70,p:32.6},{t:75,p:14.0},{t:80,p:9.3},{t:85,p:2.3},{t:90,p:0},{t:95,p:0},{t:100,p:0}],
+  A: [{t:50,p:92.3},{t:55,p:89.7},{t:60,p:82.1},{t:65,p:64.1},{t:70,p:56.4},{t:75,p:41.0},{t:80,p:33.3},{t:85,p:28.2},{t:90,p:17.9},{t:95,p:5.1},{t:100,p:5.1}]
+};
+
+// ===== GAUGE CHARTS (horizontal bar: current vs goal) =====
+function makeGauge(canvasId, group, color) {
+  const d = groupData[group];
+  const goal = d.goal;
+  const mean = d.mean;
+  const maxVal = Math.max(goal + 15, 100);
+
+  new Chart(document.getElementById(canvasId), {
+    type: 'bar',
+    data: {
+      labels: ['Pass rate'],
+      datasets: [
+        {
+          label: 'Hiện tại (TB)',
+          data: [mean],
+          backgroundColor: color + 'cc',
+          borderRadius: 6,
+          barThickness: 30,
+        },
+        {
+          label: 'Khoảng cách đến Goal',
+          data: [goal - mean],
+          backgroundColor: color + '44',
+          borderRadius: 0,
+          barThickness: 30,
+          borderColor: color + '88',
+          borderWidth: 1,
+          borderDash: [6, 3],
+        }
+      ]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      layout: { padding: { right: 55 } },
+      plugins: {
+        legend: { display: true, position: 'bottom', labels: { boxWidth: 12, font: { size: 10 } } },
+        tooltip: { enabled: false },
+        datalabels: {
+          display: true,
+          color: '#1a1a2e', font: { weight: 'bold', size: 13 },
+          formatter: (v, ctx) => {
+            if (ctx.datasetIndex === 0) return mean.toFixed(1) + '%';
+            return '';
+          },
+          anchor: 'end', align: 'end', offset: 4,
+        }
+      },
+      scales: {
+        x: { stacked: true, min: 0, max: maxVal, title: { display: true, text: '%' },
+          ticks: { callback: v => v + '%' } },
+        y: { stacked: true }
+      }
+    },
+    plugins: [{
+      id: 'goalLine',
+      afterDraw(chart) {
+        const ctx = chart.ctx;
+        const meta = chart.getDatasetMeta(0);
+        if (!meta.data[0]) return;
+        const bar = meta.data[0];
+        const xScale = chart.scales.x;
+        const goalX = xScale.getPixelForValue(goal);
+        const yTop = bar.y - 18;
+        const yBot = bar.y + bar.height + 10;
+
+        ctx.save();
+        // Goal line
+        ctx.strokeStyle = '#c62828';
+        ctx.lineWidth = 2.5;
+        ctx.setLineDash([4, 3]);
+        ctx.beginPath();
+        ctx.moveTo(goalX, yTop);
+        ctx.lineTo(goalX, yBot);
+        ctx.stroke();
+        // Goal label
+        ctx.setLineDash([]);
+        ctx.fillStyle = '#c62828';
+        ctx.font = 'bold 13px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('Goal ' + goal + '%', goalX, yTop - 8);
+        // Gap label
+        const gap = goal - mean;
+        const gapX = xScale.getPixelForValue(mean + gap/2);
+        ctx.fillStyle = '#555';
+        ctx.font = '12px sans-serif';
+        ctx.fillText('+' + gap.toFixed(1) + '%', gapX, bar.y + bar.height/2 + 4);
+        ctx.restore();
+      }
+    }]
+  });
+}
+
+makeGauge('chartGaugeC', 'C', '#c62828');
+makeGauge('chartGaugeB', 'B', '#ef6c00');
+makeGauge('chartGaugeA', 'A', '#2e7d32');
+
+// ===== DISTRIBUTION CHARTS (vertical scatter/dot plot per group) =====
+function makeDistChart(canvasId, group, color) {
+  const classes = classLists[group];
+  const goal = groupData[group].goal;
+  const mean = groupData[group].mean;
+
+  // Bin pass rates
+  const bins = [];
+  for (let lo = 0; lo < 100; lo += 10) {
+    bins.push({ label: lo + '-' + (lo+10) + '%', count: 0 });
+  }
+  classes.forEach(c => {
+    const idx = Math.min(Math.floor(c.pass / 10), 9);
+    bins[idx].count++;
+  });
+
+  new Chart(document.getElementById(canvasId), {
+    type: 'bar',
+    data: {
+      labels: bins.map(b => b.label),
+      datasets: [{
+        label: 'Số lớp',
+        data: bins.map(b => b.count),
+        backgroundColor: bins.map((b, i) => {
+          const binMid = i * 10 + 5;
+          if (binMid >= goal) return color + 'cc';
+          if (binMid >= goal - 10) return color + '88';
+          return color + '33';
+        }),
+        borderRadius: 4,
+      }]
+    },
+    options: {
+      responsive: true,
+      layout: { padding: { top: 30 } },
+      plugins: {
+        legend: { display: false },
+        datalabels: {
+          display: true,
+          anchor: 'end', align: 'end', offset: 2,
+          color: '#1a1a2e', font: { weight: 'bold', size: 11 },
+          formatter: v => v > 0 ? v + ' lớp' : '',
+        }
+      },
+      scales: {
+        x: { title: { display: true, text: 'Pass rate', font: { size: 10 } } },
+        y: { title: { display: true, text: 'Số lớp', font: { size: 10 } }, ticks: { stepSize: 2 } }
+      }
+    },
+    plugins: [{
+      id: 'goalMarker',
+      afterDraw(chart) {
+        const ctx = chart.ctx;
+        const xScale = chart.scales.x;
+        const goalX = xScale.getPixelForValue(5.5 + goal/10); // approximate
+        ctx.save();
+        ctx.strokeStyle = '#c62828';
+        ctx.lineWidth = 2;
+        ctx.setLineDash([4, 3]);
+        ctx.beginPath();
+        ctx.moveTo(goalX, chart.scales.y.top);
+        ctx.lineTo(goalX, chart.scales.y.bottom);
+        ctx.stroke();
+        ctx.setLineDash([]);
+        ctx.fillStyle = '#c62828';
+        ctx.font = 'bold 11px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('Goal', goalX, chart.scales.y.top - 8);
+        ctx.restore();
+      }
+    }]
+  });
+}
+
+makeDistChart('chartDistC', 'C', '#c62828');
+makeDistChart('chartDistB', 'B', '#ef6c00');
+makeDistChart('chartDistA', 'A', '#2e7d32');
+
+// ===== FEASIBILITY CURVE =====
+new Chart(document.getElementById('chartFeasibility'), {
+  type: 'line',
+  data: {
+    labels: [50,55,60,65,70,75,80,85,90,95,100],
+    datasets: [
+      {
+        label: 'Nhóm C',
+        data: feasibilityData.C.map(d => d.p),
+        borderColor: '#c62828',
+        backgroundColor: 'rgba(198,40,40,0.1)',
+        tension: 0.3, fill: false, pointRadius: 5,
+        pointBackgroundColor: feasibilityData.C.map(d => d.t === 60 ? '#c62828' : 'transparent'),
+        pointBorderColor: feasibilityData.C.map(d => d.t === 60 ? '#c62828' : 'transparent'),
+      },
+      {
+        label: 'Nhóm B',
+        data: feasibilityData.B.map(d => d.p),
+        borderColor: '#ef6c00',
+        backgroundColor: 'rgba(239,108,0,0.1)',
+        tension: 0.3, fill: false, pointRadius: 5,
+        pointBackgroundColor: feasibilityData.B.map(d => d.t === 70 ? '#ef6c00' : 'transparent'),
+        pointBorderColor: feasibilityData.B.map(d => d.t === 70 ? '#ef6c00' : 'transparent'),
+      },
+      {
+        label: 'Nhóm A',
+        data: feasibilityData.A.map(d => d.p),
+        borderColor: '#2e7d32',
+        backgroundColor: 'rgba(46,125,50,0.1)',
+        tension: 0.3, fill: false, pointRadius: 5,
+        pointBackgroundColor: feasibilityData.A.map(d => d.t === 80 ? '#2e7d32' : 'transparent'),
+        pointBorderColor: feasibilityData.A.map(d => d.t === 80 ? '#2e7d32' : 'transparent'),
+      },
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { position: 'top' },
+      title: { display: true, text: '% lớp đạt goal ở mỗi mức pass rate', font: { size: 13 } },
+      datalabels: false,
+      tooltip: {
+        callbacks: {
+          label: ctx => ctx.dataset.label + ': ' + ctx.parsed.y.toFixed(1) + '% lớp đạt'
+        }
+      }
+    },
+    scales: {
+      x: { title: { display: true, text: 'Mức goal pass rate (%)' } },
+      y: { title: { display: true, text: '% lớp đạt goal' }, min: 0, max: 100 }
+    }
+  }
+});
+
+// ===== FEASIBILITY TABLE =====
+const allTargets = [50,55,60,65,70,75,80,85,90,95,100];
+document.getElementById('feasTable').innerHTML = allTargets.map(t => {
+  const c = feasibilityData.C.find(d => d.t === t);
+  const b = feasibilityData.B.find(d => d.t === t);
+  const a = feasibilityData.A.find(d => d.t === t);
+  const isGoalC = t === 60, isGoalB = t === 70, isGoalA = t === 80;
+  return `<tr>
+    <td class="num"><strong>${t}%</strong></td>
+    <td class="num${isGoalC ? ' highlight-green' : ''}">${c.p}%${isGoalC ? ' ⬅' : ''}</td>
+    <td class="num${isGoalB ? ' highlight-green' : ''}">${b.p}%${isGoalB ? ' ⬅' : ''}</td>
+    <td class="num${isGoalA ? ' highlight-green' : ''}">${a.p}%${isGoalA ? ' ⬅' : ''}</td>
+  </tr>`;
+}).join('');
+
+// ===== CLASS TABLES =====
+function makeClassTable(tbodyId, group) {
+  const classes = classLists[group];
+  const goal = groupData[group].goal;
+  document.getElementById(tbodyId).innerHTML = classes.map(c => {
+    let status;
+    if (c.pass >= goal) status = '<span class="badge badge-green">Đã đạt ✓</span>';
+    else if (c.pass >= goal - 5) status = '<span class="badge badge-orange">Gần</span>';
+    else if (c.pass >= goal - 10) status = '<span class="badge badge-blue">Cần cố</span>';
+    else status = '<span class="badge badge-red">Xa</span>';
+    const rowClass = c.pass >= goal ? 'highlight-green' : c.pass >= goal - 5 ? 'highlight-orange' : '';
+    return `<tr class="${rowClass}">
+      <td><strong>${c.cls}</strong></td>
+      <td class="num">${c.pct}%</td>
+      <td class="num" style="font-weight:600;">${c.pass}%</td>
+      <td class="num">${c.n}</td>
+      <td>${status}</td>
+    </tr>`;
+  }).join('');
+}
+
+makeClassTable('classTableC', 'C');
+makeClassTable('classTableB', 'B');
+makeClassTable('classTableA', 'A');
+
+</script>
+</body>
+</html>

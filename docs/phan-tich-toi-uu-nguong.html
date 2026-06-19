@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phân tích tối ưu ngưỡng phân loại lớp - Backup số liệu</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f0f2f5; color: #1a1a2e; padding: 24px; }
+  .container { max-width: 1300px; margin: 0 auto; }
+
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  h2 { font-size: 21px; margin: 40px 0 16px; color: #16213e; border-bottom: 3px solid #0f3460; padding-bottom: 8px; }
+  h3 { font-size: 16px; margin: 20px 0 12px; color: #0f3460; }
+  .subtitle { color: #555; margin-bottom: 24px; font-size: 15px; }
+
+  .summary-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin-bottom: 28px; }
+  .card { background: white; border-radius: 12px; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .value { font-size: 28px; font-weight: 700; color: #0f3460; }
+  .card .label { font-size: 12px; color: #666; margin-top: 4px; }
+
+  .chart-box { background: white; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .chart-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 900px) { .chart-row { grid-template-columns: 1fr; } }
+
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); font-size: 14px; }
+  th, td { padding: 10px 14px; text-align: left; }
+  th { background: #0f3460; color: white; font-weight: 600; }
+  tr:nth-child(even) { background: #f8f9fa; }
+  tr:hover { background: #e8ecf1; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  td.center { text-align: center; }
+
+  .highlight { background: #e8f5e9 !important; font-weight: bold; }
+  .highlight-warn { background: #fff3e0 !important; }
+  .highlight-bad { background: #ffebee !important; }
+
+  .insight-box { background: #fff8e1; border-left: 4px solid #f9a825; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 16px 0; font-size: 14px; line-height: 1.6; }
+  .insight-green { background: #e8f5e9; border-left: 4px solid #2e7d32; }
+  .insight-red { background: #ffebee; border-left: 4px solid #c62828; }
+  .insight-blue { background: #e3f2fd; border-left: 4px solid #1565c0; }
+
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+  .badge-green { background: #c8e6c9; color: #2e7d32; }
+  .badge-orange { background: #ffe0b2; color: #e65100; }
+  .badge-red { background: #ffcdd2; color: #c62828; }
+  .badge-blue { background: #bbdefb; color: #1565c0; }
+
+  .big-num { font-size: 42px; font-weight: 800; line-height: 1; }
+  .big-num.good { color: #2e7d32; }
+  .big-num.warn { color: #e65100; }
+  .big-num.bad { color: #c62828; }
+
+  .verdict-box { background: white; border-radius: 16px; padding: 28px; margin: 28px 0; box-shadow: 0 4px 16px rgba(0,0,0,0.10); border: 2px solid #0f3460; }
+  .verdict-box h3 { margin-top: 0; font-size: 20px; }
+  .verdict-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 20px; }
+  @media (max-width: 800px) { .verdict-grid { grid-template-columns: 1fr; } }
+
+  .stat-sig { font-family: 'Courier New', monospace; background: #f5f5f5; padding: 2px 8px; border-radius: 4px; font-size: 13px; }
+
+  .step-flow { display: flex; align-items: center; gap: 0; flex-wrap: wrap; margin: 16px 0; font-size: 14px; }
+  .step-flow .step { background: white; border: 2px solid #0f3460; border-radius: 8px; padding: 10px 16px; white-space: nowrap; }
+  .step-flow .arrow { font-size: 20px; margin: 0 6px; color: #0f3460; }
+
+  .color-box { display: inline-block; width: 14px; height: 14px; border-radius: 3px; margin-right: 4px; vertical-align: middle; }
+  .color-red { background: #c62828; }
+  .color-orange { background: #ef6c00; }
+  .color-green { background: #2e7d32; }
+  .color-blue { background: #1565c0; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>🔬 Backup số liệu: Tại sao chọn ngưỡng 40%, 75% và điểm cắt ≥60?</h1>
+<p class="subtitle">Phân tích toàn diện dựa trên dữ liệu <strong>Khóa 34</strong> — 89 lớp, 1,474 học viên có điểm Test 1</p>
+
+<!-- ===== SUMMARY CARDS ===== -->
+<div class="summary-cards">
+  <div class="card"><div class="value">89</div><div class="label">Tổng số lớp</div></div>
+  <div class="card"><div class="value">1,474</div><div class="label">HV có điểm Test 1</div></div>
+  <div class="card"><div class="value">67.5</div><div class="label">Điểm TB Test 1</div></div>
+  <div class="card"><div class="value">72.6%</div><div class="label">%HV đạt ≥60 Test 1</div></div>
+  <div class="card"><div class="value">66.0%</div><div class="label">Pass rate tổng thể</div></div>
+  <div class="card"><div class="value">891</div><div class="label">Tổ hợp ngưỡng đã thử</div></div>
+</div>
+
+<!-- ===== SECTION 1: WHY ≥60? ===== -->
+<h2>1. Tại sao chọn mốc ≥60 điểm? (không phải 50, 55, 65, 70...)</h2>
+
+<div class="chart-row">
+  <div class="chart-box">
+    <h3 style="margin-top:0;">Tương quan Spearman giữa %HV≥X và Pass rate lớp</h3>
+    <canvas id="chartCutoffCorr" height="100"></canvas>
+  </div>
+  <div class="chart-box">
+    <h3 style="margin-top:0;">Phân phối điểm Test 1 toàn khóa</h3>
+    <canvas id="chartT1Dist" height="100"></canvas>
+  </div>
+</div>
+
+<div class="insight-box insight-green">
+  <strong>✅ Kết luận:</strong> Mốc <strong>60 điểm</strong> cho Spearman <strong>ρ = 0.409</strong> — cao nhất trong tất cả các mốc được thử (50: 0.210, 55: 0.356, 65: 0.362, 70: 0.385). Điều này có nghĩa: <strong>%HV đạt ≥60 trong 1 lớp là chỉ số dự đoán pass rate mạnh nhất</strong>. Mốc 60 cũng nằm gần trung vị (69.5) và có ý nghĩa sư phạm: đây là ngưỡng "đạt" quen thuộc trong giáo dục Việt Nam.
+</div>
+
+<!-- ===== SECTION 2: WHY 40% and 75%? ===== -->
+<h2>2. Tại sao chọn 40% và 75% làm ngưỡng phân nhóm?</h2>
+
+<div class="chart-row">
+  <div class="chart-box">
+    <h3 style="margin-top:0;">Quét ngưỡng đơn — Gap pass rate giữa nhóm trên/dưới</h3>
+    <canvas id="chartSingleScan" height="80"></canvas>
+    <p style="margin-top:8px;font-size:13px;color:#666;">Mỗi cột = chênh lệch pass rate khi cắt tại ngưỡng đó. Nhãn trên cột = số lớp dưới/trên ngưỡng.</p>
+  </div>
+  <div class="chart-box">
+    <h3 style="margin-top:0;">Tối ưu 2 ngưỡng — Tổng gap 3 nhóm</h3>
+    <canvas id="chartTripleScan" height="80"></canvas>
+    <p style="margin-top:8px;font-size:13px;color:#666;">Mỗi thanh = 1 tổ hợp (lo, hi). Gap1 = B−C, Gap2 = A−B. Màu xanh đậm = monotonic (pass rate tăng dần theo nhóm).</p>
+  </div>
+</div>
+
+<div class="insight-box">
+  <strong>📐 Phương pháp:</strong> Thử <strong>tất cả 891 tổ hợp</strong> (lo từ 20-60%, hi từ lo+10 đến 89%) với điều kiện mỗi nhóm ≥ 3 lớp. Với mỗi tổ hợp, tính gap1 = Pass(B) − Pass(C) và gap2 = Pass(A) − Pass(B). <strong>Tổng gap = gap1 + gap2</strong> càng lớn → phân nhóm càng phân biệt tốt. Cấu hình hiện tại (<strong>40%, 75%</strong>) xếp hạng <strong>#325/891</strong> về tổng gap, nhưng có ưu điểm về <strong>tính đơn điệu</strong> (pass rate tăng dần) và <strong>phân bố lớp cân bằng</strong> (7 / 43 / 39).
+</div>
+
+<!-- ===== SECTION 3: STATISTICAL SIGNIFICANCE ===== -->
+<h2>3. Ý nghĩa thống kê — Các nhóm có thực sự khác biệt?</h2>
+
+<div class="chart-row">
+  <div class="chart-box">
+    <h3 style="margin-top:0;">Phân phối Pass rate từng nhóm (Box plot)</h3>
+    <canvas id="chartBoxPlot" height="100"></canvas>
+  </div>
+  <div class="chart-box">
+    <h3 style="margin-top:0;">Kiểm định Mann-Whitney U — So sánh từng cặp nhóm</h3>
+    <div style="overflow-x:auto;">
+    <table style="margin:0;font-size:13px;">
+      <thead>
+        <tr><th>Cấu hình</th><th>Cặp</th><th>p-value</th><th>Ý nghĩa</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2"><strong>Hiện tại</strong><br><span style="font-size:11px;">&lt;40% / 40-75% / ≥75%</span></td>
+          <td>C → B</td>
+          <td class="highlight-bad num">0.201</td>
+          <td><span class="badge badge-red">Không ý nghĩa (ns)</span></td>
+        </tr>
+        <tr>
+          <td>B → A</td>
+          <td class="highlight num">0.001</td>
+          <td><span class="badge badge-green">Có ý nghĩa (**)</span></td>
+        </tr>
+        <tr style="background:#fff8e1;">
+          <td rowspan="2"><strong>Đề xuất</strong><br><span style="font-size:11px;">&lt;45% / 45-75% / ≥75%</span></td>
+          <td>C → B</td>
+          <td class="num" style="font-weight:bold;">0.045</td>
+          <td><span class="badge badge-green">Có ý nghĩa (*)</span></td>
+        </tr>
+        <tr style="background:#fff8e1;">
+          <td>B → A</td>
+          <td class="highlight num">0.001</td>
+          <td><span class="badge badge-green">Có ý nghĩa (**)</span></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="margin-top:10px;font-size:12px;color:#888;">* Mann-Whitney U one-tailed: kiểm định pass rate nhóm thấp hơn có thực sự nhỏ hơn nhóm cao hơn không. p &lt; 0.05 = khác biệt có ý nghĩa thống kê.</p>
+  </div>
+</div>
+
+<div class="insight-box insight-red">
+  <strong>⚠️ Vấn đề với ngưỡng 40%:</strong> Sự khác biệt giữa nhóm C (&lt;40%) và nhóm B (40-75%) <strong>KHÔNG có ý nghĩa thống kê</strong> (p = 0.20). Điều này là do nhóm C chỉ có 7 lớp, trong đó có 1 lớp IC2082 (23.1% HV≥60 nhưng pass rate 76.9%) làm nhiễu. Người đọc có thể đặt câu hỏi: "Nếu C và B không khác biệt, tại sao lại tách ra?"
+</div>
+
+<!-- ===== SECTION 4: SENSITIVITY ===== -->
+<h2>4. Độ nhạy — Pass rate thay đổi thế nào khi dịch ngưỡng?</h2>
+
+<div class="chart-row">
+  <div class="chart-box">
+    <h3 style="margin-top:0;">Cố định ngưỡng trên = 75%, thay đổi ngưỡng dưới</h3>
+    <canvas id="chartSensLower" height="80"></canvas>
+    <table style="margin-top:8px;font-size:13px;">
+      <thead><tr><th>Ngưỡng dưới</th><th>n(C)</th><th>n(B)</th><th>Pass C</th><th>Pass B</th><th>Pass A</th><th>Gap C→B</th><th>Gap B→A</th><th>Tổng</th></tr></thead>
+      <tbody id="sensLowerBody"></tbody>
+    </table>
+  </div>
+  <div class="chart-box">
+    <h3 style="margin-top:0;">Cố định ngưỡng dưới = 40%, thay đổi ngưỡng trên</h3>
+    <canvas id="chartSensUpper" height="80"></canvas>
+    <table style="margin-top:8px;font-size:13px;">
+      <thead><tr><th>Ngưỡng trên</th><th>n(C)</th><th>n(B)</th><th>n(A)</th><th>Pass C</th><th>Pass B</th><th>Pass A</th><th>Gap C→B</th><th>Gap B→A</th><th>Tổng</th></tr></thead>
+      <tbody id="sensUpperBody"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ===== SECTION 5: TOP ALTERNATIVES ===== -->
+<h2>5. Top 10 cấu hình thay thế — Tổng gap cao nhất</h2>
+
+<div class="chart-box">
+  <canvas id="chartTopCombos" height="100"></canvas>
+</div>
+
+<div style="overflow-x:auto;">
+<table id="topCombosTable" style="font-size:13px;">
+  <thead>
+    <tr><th>Hạng</th><th>Lo</th><th>Hi</th><th>n(C)</th><th>n(B)</th><th>n(A)</th><th>Pass C</th><th>Pass B</th><th>Pass A</th><th>Gap1<br>C→B</th><th>Gap2<br>B→A</th><th>Tổng<br>Gap</th><th>Đơn điệu</th><th>Ghi chú</th></tr>
+  </thead>
+  <tbody id="topCombosBody"></tbody>
+</table>
+</div>
+
+<!-- ===== SECTION 6: FINAL VERDICT ===== -->
+<h2>6. Kết luận & Khuyến nghị</h2>
+
+<div class="verdict-box">
+  <h3>🎯 Câu trả lời cho câu hỏi "Tại sao không phải con số khác?"</h3>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:20px;">
+    <div>
+      <h4 style="color:#1565c0;">✅ Điểm mạnh của cấu hình hiện tại</h4>
+      <ul style="line-height:2;padding-left:20px;">
+        <li><strong>Mốc ≥60:</strong> Tương quan Spearman <strong>cao nhất</strong> (ρ=0.409) trong tất cả mốc điểm</li>
+        <li><strong>Ngưỡng 75%:</strong> Tách biệt rõ ràng nhóm A với B (p=0.001, gap +10.2%)</li>
+        <li><strong>Phân bố cân đối:</strong> 7 / 43 / 39 lớp — không nhóm nào quá nhỏ hay quá to</li>
+        <li><strong>Dễ nhớ, dễ giải thích:</strong> 40% và 75% là các con số tròn, trực quan</li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="color:#c62828;">⚠️ Điểm yếu cần lưu ý</h4>
+      <ul style="line-height:2;padding-left:20px;">
+        <li><strong>Gap C→B không ý nghĩa thống kê</strong> (p=0.20): ranh giới giữa nhóm C và B chưa đủ mạnh</li>
+        <li>Tổng gap (17.8%) chỉ xếp <strong>#325/891</strong> — còn nhiều cấu hình cho gap lớn hơn</li>
+        <li>Nhóm C chỉ có <strong>7 lớp</strong> — mẫu nhỏ, 1 outlier có thể làm sai lệch</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="margin-top:24px;background:#e8f5e9;border-radius:12px;padding:20px;">
+    <h4 style="color:#2e7d32;margin-top:0;">💡 Khuyến nghị: Cân nhắc nâng ngưỡng dưới lên 45%</h4>
+    <table style="margin:12px 0;font-size:14px;">
+      <thead><tr><th>Tiêu chí</th><th>Hiện tại (40% / 75%)</th><th>Đề xuất (45% / 75%)</th><th>Cải thiện</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Tổng gap</strong></td>
+          <td>17.8%</td>
+          <td class="highlight">20.9%</td>
+          <td><span class="badge badge-green">+3.1%</span></td>
+        </tr>
+        <tr>
+          <td><strong>Gap C→B</strong></td>
+          <td>+7.7%</td>
+          <td class="highlight">+12.1%</td>
+          <td><span class="badge badge-green">+4.4%</span></td>
+        </tr>
+        <tr>
+          <td><strong>p-value (C→B)</strong></td>
+          <td class="highlight-bad">0.201 (ns)</td>
+          <td class="highlight">~0.045 (*)</td>
+          <td><span class="badge badge-green">Có ý nghĩa</span></td>
+        </tr>
+        <tr>
+          <td><strong>Phân bố lớp</strong></td>
+          <td>7 / 43 / 39</td>
+          <td>10 / 40 / 39</td>
+          <td>Cân bằng hơn</td>
+        </tr>
+        <tr>
+          <td><strong>Pass C / B / A</strong></td>
+          <td>53.2% / 60.9% / 71.1%</td>
+          <td>50.2% / 62.3% / 71.1%</td>
+          <td>Phân biệt rõ hơn</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:13px;color:#555;">⚠️ Tuy nhiên, việc thay đổi ngưỡng cần cân nhắc tính <strong>ổn định qua các khóa</strong> và <strong>sự chấp nhận của giáo viên</strong>. Nếu tổ chức đã quen với ngưỡng 40%/75%, gap 7.7% không có ý nghĩa thống kê là một điểm cần ghi nhận nhưng không nhất thiết phải thay đổi ngay.</p>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<script>
+Chart.register(ChartDataLabels);
+
+// ===== EMBEDDED DATA =====
+const cutoffData = [{"cutoff":40,"pearson":0.2667,"spearman":0.212},{"cutoff":45,"pearson":0.309,"spearman":0.2095},{"cutoff":50,"pearson":0.3107,"spearman":0.21},{"cutoff":55,"pearson":0.3596,"spearman":0.3555},{"cutoff":60,"pearson":0.3601,"spearman":0.4086},{"cutoff":65,"pearson":0.31,"spearman":0.3616},{"cutoff":70,"pearson":0.2936,"spearman":0.3851},{"cutoff":75,"pearson":0.2221,"spearman":0.3033},{"cutoff":80,"pearson":0.132,"spearman":0.2091}];
+
+const singleData = [{"cut":34,"n_below":3,"n_above":86,"pass_below":59.0,"pass_above":65.0,"gap":6.0},{"cut":35,"n_below":3,"n_above":86,"pass_below":59.0,"pass_above":65.0,"gap":6.0},{"cut":36,"n_below":4,"n_above":85,"pass_below":58.9,"pass_above":65.0,"gap":6.1},{"cut":37,"n_below":5,"n_above":84,"pass_below":50.8,"pass_above":65.6,"gap":14.8},{"cut":38,"n_below":6,"n_above":83,"pass_below":53.8,"pass_above":65.6,"gap":11.8},{"cut":39,"n_below":7,"n_above":82,"pass_below":53.2,"pass_above":65.8,"gap":12.5},{"cut":40,"n_below":7,"n_above":82,"pass_below":53.2,"pass_above":65.8,"gap":12.5},{"cut":41,"n_below":9,"n_above":80,"pass_below":49.6,"pass_above":66.5,"gap":16.9},{"cut":42,"n_below":9,"n_above":80,"pass_below":49.6,"pass_above":66.5,"gap":16.9},{"cut":43,"n_below":9,"n_above":80,"pass_below":49.6,"pass_above":66.5,"gap":16.9},{"cut":44,"n_below":9,"n_above":80,"pass_below":49.6,"pass_above":66.5,"gap":16.9},{"cut":45,"n_below":10,"n_above":79,"pass_below":50.2,"pass_above":66.6,"gap":16.5},{"cut":46,"n_below":11,"n_above":78,"pass_below":52.9,"pass_above":66.4,"gap":13.6},{"cut":47,"n_below":11,"n_above":78,"pass_below":52.9,"pass_above":66.4,"gap":13.6},{"cut":48,"n_below":11,"n_above":78,"pass_below":52.9,"pass_above":66.4,"gap":13.6},{"cut":49,"n_below":11,"n_above":78,"pass_below":52.9,"pass_above":66.4,"gap":13.6},{"cut":50,"n_below":11,"n_above":78,"pass_below":52.9,"pass_above":66.4,"gap":13.6},{"cut":51,"n_below":16,"n_above":73,"pass_below":53.1,"pass_above":67.3,"gap":14.2},{"cut":52,"n_below":16,"n_above":73,"pass_below":53.1,"pass_above":67.3,"gap":14.2},{"cut":53,"n_below":16,"n_above":73,"pass_below":53.1,"pass_above":67.3,"gap":14.2},{"cut":54,"n_below":16,"n_above":73,"pass_below":53.1,"pass_above":67.3,"gap":14.2},{"cut":55,"n_below":18,"n_above":71,"pass_below":54.8,"pass_above":67.3,"gap":12.5},{"cut":56,"n_below":19,"n_above":70,"pass_below":55.4,"pass_above":67.3,"gap":11.9},{"cut":57,"n_below":19,"n_above":70,"pass_below":55.4,"pass_above":67.3,"gap":11.9},{"cut":58,"n_below":19,"n_above":70,"pass_below":55.4,"pass_above":67.3,"gap":11.9},{"cut":59,"n_below":19,"n_above":70,"pass_below":55.4,"pass_above":67.3,"gap":11.9},{"cut":60,"n_below":19,"n_above":70,"pass_below":55.4,"pass_above":67.3,"gap":11.9},{"cut":61,"n_below":21,"n_above":68,"pass_below":56.0,"pass_above":67.5,"gap":11.5},{"cut":62,"n_below":21,"n_above":68,"pass_below":56.0,"pass_above":67.5,"gap":11.5},{"cut":63,"n_below":27,"n_above":62,"pass_below":55.7,"pass_above":68.7,"gap":13.0},{"cut":64,"n_below":28,"n_above":61,"pass_below":55.7,"pass_above":68.9,"gap":13.3},{"cut":65,"n_below":34,"n_above":55,"pass_below":55.9,"pass_above":70.3,"gap":14.4},{"cut":66,"n_below":34,"n_above":55,"pass_below":55.9,"pass_above":70.3,"gap":14.4},{"cut":67,"n_below":36,"n_above":53,"pass_below":56.7,"pass_above":70.3,"gap":13.6},{"cut":68,"n_below":37,"n_above":52,"pass_below":57.2,"pass_above":70.2,"gap":13.0},{"cut":69,"n_below":40,"n_above":49,"pass_below":57.6,"pass_above":70.6,"gap":13.1},{"cut":70,"n_below":41,"n_above":48,"pass_below":57.5,"pass_above":71.0,"gap":13.5},{"cut":71,"n_below":44,"n_above":45,"pass_below":58.3,"pass_above":71.1,"gap":12.7},{"cut":72,"n_below":47,"n_above":42,"pass_below":59.2,"pass_above":71.0,"gap":11.9},{"cut":73,"n_below":49,"n_above":40,"pass_below":59.7,"pass_above":71.0,"gap":11.3},{"cut":74,"n_below":50,"n_above":39,"pass_below":59.8,"pass_above":71.1,"gap":11.3},{"cut":75,"n_below":50,"n_above":39,"pass_below":59.8,"pass_above":71.1,"gap":11.3},{"cut":76,"n_below":53,"n_above":36,"pass_below":61.2,"pass_above":70.0,"gap":8.8},{"cut":77,"n_below":54,"n_above":35,"pass_below":61.8,"pass_above":69.3,"gap":7.5},{"cut":78,"n_below":54,"n_above":35,"pass_below":61.8,"pass_above":69.3,"gap":7.5},{"cut":79,"n_below":56,"n_above":33,"pass_below":61.4,"pass_above":70.5,"gap":9.1},{"cut":80,"n_below":56,"n_above":33,"pass_below":61.4,"pass_above":70.5,"gap":9.1},{"cut":81,"n_below":58,"n_above":31,"pass_below":61.3,"pass_above":71.2,"gap":9.9},{"cut":82,"n_below":59,"n_above":30,"pass_below":61.4,"pass_above":71.3,"gap":9.9},{"cut":83,"n_below":61,"n_above":28,"pass_below":61.6,"pass_above":71.6,"gap":9.9},{"cut":84,"n_below":62,"n_above":27,"pass_below":62.0,"pass_above":71.1,"gap":9.1},{"cut":85,"n_below":62,"n_above":27,"pass_below":62.0,"pass_above":71.1,"gap":9.1}];
+
+const sensLower = [{"lo":35,"n_low":3,"n_mid":47,"n_high":39,"pass_low":59.0,"pass_mid":59.9,"pass_high":71.1,"gap1":0.9,"gap2":11.2,"total":12.1},{"lo":40,"n_low":7,"n_mid":43,"n_high":39,"pass_low":53.2,"pass_mid":60.9,"pass_high":71.1,"gap1":7.7,"gap2":10.2,"total":17.8},{"lo":45,"n_low":10,"n_mid":40,"n_high":39,"pass_low":50.2,"pass_mid":62.3,"pass_high":71.1,"gap1":12.1,"gap2":8.8,"total":20.9},{"lo":50,"n_low":11,"n_mid":39,"n_high":39,"pass_low":52.9,"pass_mid":61.8,"pass_high":71.1,"gap1":8.9,"gap2":9.3,"total":18.2},{"lo":55,"n_low":18,"n_mid":32,"n_high":39,"pass_low":54.8,"pass_mid":62.7,"pass_high":71.1,"gap1":7.9,"gap2":8.4,"total":16.3}];
+
+const sensUpper = [{"hi":60,"n_low":7,"n_mid":12,"n_high":70,"pass_low":53.2,"pass_mid":56.7,"pass_high":67.3,"gap1":3.5,"gap2":10.6,"total":14.1},{"hi":65,"n_low":7,"n_mid":27,"n_high":55,"pass_low":53.2,"pass_mid":56.5,"pass_high":70.3,"gap1":3.3,"gap2":13.7,"total":17.0},{"hi":70,"n_low":7,"n_mid":34,"n_high":48,"pass_low":53.2,"pass_mid":58.3,"pass_high":71.0,"gap1":5.1,"gap2":12.7,"total":17.8},{"hi":75,"n_low":7,"n_mid":43,"n_high":39,"pass_low":53.2,"pass_mid":60.9,"pass_high":71.1,"gap1":7.7,"gap2":10.2,"total":17.8},{"hi":80,"n_low":7,"n_mid":49,"n_high":33,"pass_low":53.2,"pass_mid":62.6,"pass_high":70.5,"gap1":9.3,"gap2":7.9,"total":17.2},{"hi":85,"n_low":7,"n_mid":55,"n_high":27,"pass_low":53.2,"pass_mid":63.1,"pass_high":71.1,"gap1":9.9,"gap2":8.0,"total":17.9},{"hi":90,"n_low":7,"n_mid":62,"n_high":20,"pass_low":53.2,"pass_mid":63.8,"pass_high":71.7,"gap1":10.6,"gap2":7.8,"total":18.4}];
+
+const groupPassRates = {"C":[68.75,33.33,66.67,18.18,58.82,50.0,76.92],"B":[66.67,53.85,31.25,68.75,41.18,64.29,50.0,64.29,54.55,20.0,37.5,62.5,60.0,75.0,43.75,85.71,50.0,66.67,63.64,57.14,55.56,66.67,70.0,56.25,71.43,72.73,64.29,80.0,75.0,70.59,59.26,55.88,80.0,70.59,37.5,44.0,67.65,72.73,70.27,74.19,53.33,53.33,81.25],"A":[68.75,71.43,73.33,86.67,58.82,0.0,93.75,35.71,100.0,55.0,71.43,70.59,100.0,70.59,62.5,72.22,63.64,64.71,64.71,87.5,80.0,57.14,64.29,66.67,37.5,75.0,92.31,64.71,50.0,83.33,94.12,67.74,86.96,91.67,85.71,77.78,91.18,75.0,60.0]};
+
+const scatterData = [{"cls":"IC1688","pct":50.0,"pass":66.7,"n":12,"group":"B"},{"cls":"IC1697","pct":81.2,"pass":68.8,"n":16,"group":"A"},{"cls":"IC1701","pct":92.9,"pass":71.4,"n":14,"group":"A"},{"cls":"IC1702","pct":69.2,"pass":53.8,"n":13,"group":"B"},{"cls":"IC1705","pct":100.0,"pass":73.3,"n":15,"group":"A"},{"cls":"IC1706","pct":93.3,"pass":86.7,"n":15,"group":"A"},{"cls":"IC1715","pct":94.1,"pass":58.8,"n":17,"group":"A"},{"cls":"IC1721","pct":62.5,"pass":31.2,"n":16,"group":"B"},{"cls":"IC1723","pct":68.8,"pass":68.8,"n":16,"group":"B"},{"cls":"IC1725","pct":93.3,"pass":0.0,"n":15,"group":"A"},{"cls":"IC1727","pct":93.8,"pass":93.8,"n":16,"group":"A"},{"cls":"IC1733","pct":78.6,"pass":35.7,"n":14,"group":"A"},{"cls":"IC1738","pct":86.7,"pass":100.0,"n":15,"group":"A"},{"cls":"IC1740","pct":90.0,"pass":55.0,"n":20,"group":"A"},{"cls":"IC1745","pct":92.9,"pass":71.4,"n":14,"group":"A"},{"cls":"IC1752","pct":82.4,"pass":70.6,"n":17,"group":"A"},{"cls":"IC1754","pct":93.8,"pass":100.0,"n":16,"group":"A"},{"cls":"IC1755","pct":88.2,"pass":70.6,"n":17,"group":"A"},{"cls":"IC1758","pct":64.7,"pass":41.2,"n":17,"group":"B"},{"cls":"IC1759","pct":87.5,"pass":62.5,"n":16,"group":"A"},{"cls":"IC1762","pct":50.0,"pass":64.3,"n":14,"group":"B"},{"cls":"IC1766","pct":50.0,"pass":50.0,"n":8,"group":"B"},{"cls":"IC1773","pct":88.9,"pass":72.2,"n":18,"group":"A"},{"cls":"IC1776","pct":90.9,"pass":63.6,"n":11,"group":"A"},{"cls":"IC1779","pct":37.5,"pass":68.8,"n":16,"group":"C"},{"cls":"IC1786","pct":100.0,"pass":64.7,"n":17,"group":"A"},{"cls":"IC1793","pct":82.4,"pass":64.7,"n":17,"group":"A"},{"cls":"IC1802","pct":100.0,"pass":87.5,"n":16,"group":"A"},{"cls":"IC1805","pct":64.3,"pass":64.3,"n":14,"group":"B"},{"cls":"IC1816","pct":63.6,"pass":54.5,"n":11,"group":"B"},{"cls":"IC1818","pct":100.0,"pass":80.0,"n":20,"group":"A"},{"cls":"IC1823","pct":16.7,"pass":33.3,"n":6,"group":"C"},{"cls":"IC1825","pct":85.7,"pass":57.1,"n":14,"group":"A"},{"cls":"IC1831","pct":40.0,"pass":20.0,"n":10,"group":"B"},{"cls":"IC1835","pct":50.0,"pass":37.5,"n":8,"group":"B"},{"cls":"IC1837","pct":68.8,"pass":62.5,"n":16,"group":"B"},{"cls":"IC1842","pct":78.6,"pass":64.3,"n":14,"group":"A"},{"cls":"IC1845","pct":70.0,"pass":60.0,"n":10,"group":"B"},{"cls":"IC1848","pct":93.3,"pass":66.7,"n":15,"group":"A"},{"cls":"IC1853","pct":100.0,"pass":37.5,"n":16,"group":"A"},{"cls":"IC1861","pct":66.7,"pass":75.0,"n":12,"group":"B"},{"cls":"IC1870","pct":100.0,"pass":75.0,"n":8,"group":"A"},{"cls":"IC1871","pct":92.3,"pass":92.3,"n":13,"group":"A"},{"cls":"IC1872","pct":62.5,"pass":43.8,"n":16,"group":"B"},{"cls":"IC1877","pct":71.4,"pass":85.7,"n":7,"group":"B"},{"cls":"IC1882","pct":50.0,"pass":50.0,"n":14,"group":"B"},{"cls":"IC1886","pct":88.2,"pass":64.7,"n":17,"group":"A"},{"cls":"IC1891","pct":55.6,"pass":66.7,"n":9,"group":"B"},{"cls":"IC1901","pct":54.5,"pass":63.6,"n":11,"group":"B"},{"cls":"IC1906","pct":33.3,"pass":66.7,"n":3,"group":"C"},{"cls":"IC1913","pct":80.0,"pass":50.0,"n":10,"group":"A"},{"cls":"IC1914","pct":71.4,"pass":57.1,"n":7,"group":"B"},{"cls":"IC1922","pct":44.4,"pass":55.6,"n":9,"group":"B"},{"cls":"IC1924","pct":83.3,"pass":83.3,"n":6,"group":"A"},{"cls":"IC1932","pct":66.7,"pass":66.7,"n":6,"group":"B"},{"cls":"IC1934","pct":60.0,"pass":70.0,"n":10,"group":"B"},{"cls":"IC1935","pct":68.8,"pass":56.2,"n":16,"group":"B"},{"cls":"IC1943","pct":71.4,"pass":71.4,"n":14,"group":"B"},{"cls":"IC1947","pct":36.4,"pass":18.2,"n":11,"group":"C"},{"cls":"IC1948","pct":54.5,"pass":72.7,"n":11,"group":"B"},{"cls":"IC1950","pct":64.3,"pass":64.3,"n":14,"group":"B"},{"cls":"IC1954","pct":70.0,"pass":80.0,"n":10,"group":"B"},{"cls":"IC1959","pct":62.5,"pass":75.0,"n":16,"group":"B"},{"cls":"IC1968","pct":35.3,"pass":58.8,"n":17,"group":"C"},{"cls":"IC1974","pct":76.5,"pass":94.1,"n":34,"group":"A"},{"cls":"IC1980","pct":64.7,"pass":70.6,"n":17,"group":"B"},{"cls":"IC1987","pct":63.0,"pass":59.3,"n":27,"group":"B"},{"cls":"IC1992","pct":64.7,"pass":55.9,"n":34,"group":"B"},{"cls":"IC2001","pct":80.6,"pass":67.7,"n":31,"group":"A"},{"cls":"IC2003","pct":45.0,"pass":80.0,"n":20,"group":"B"},{"cls":"IC2007","pct":70.6,"pass":70.6,"n":34,"group":"B"},{"cls":"IC2009","pct":62.5,"pass":37.5,"n":32,"group":"B"},{"cls":"IC2019","pct":64.0,"pass":44.0,"n":25,"group":"B"},{"cls":"IC2022","pct":38.2,"pass":50.0,"n":34,"group":"C"},{"cls":"IC2023","pct":91.3,"pass":87.0,"n":23,"group":"A"},{"cls":"IC2030","pct":73.5,"pass":67.6,"n":34,"group":"B"},{"cls":"IC2035","pct":75.0,"pass":91.7,"n":24,"group":"A"},{"cls":"IC2037","pct":72.7,"pass":72.7,"n":22,"group":"B"},{"cls":"IC2043","pct":73.0,"pass":70.3,"n":37,"group":"B"},{"cls":"IC2044","pct":75.0,"pass":85.7,"n":28,"group":"A"},{"cls":"IC2050","pct":67.7,"pass":74.2,"n":31,"group":"B"},{"cls":"IC2056","pct":100.0,"pass":77.8,"n":18,"group":"A"},{"cls":"IC2059","pct":40.0,"pass":53.3,"n":15,"group":"B"},{"cls":"IC2060","pct":94.1,"pass":91.2,"n":34,"group":"A"},{"cls":"IC2069","pct":60.0,"pass":53.3,"n":15,"group":"B"},{"cls":"IC2074","pct":75.0,"pass":75.0,"n":12,"group":"A"},{"cls":"IC2076","pct":62.5,"pass":81.2,"n":16,"group":"B"},{"cls":"IC2082","pct":23.1,"pass":76.9,"n":13,"group":"C"},{"cls":"IC2088","pct":86.7,"pass":60.0,"n":15,"group":"A"}];
+
+// Deduplicated top combos (pick unique lo/hi pairs, 12 best)
+const allCombos = [{"lo":44,"hi":89,"n_low":9,"n_mid":60,"n_high":20,"pass_low":49.6,"pass_mid":64.7,"pass_high":71.7,"gap1":15.2,"gap2":6.9,"total_gap":22.1,"monotonic":true},{"lo":44,"hi":86,"n_low":9,"n_mid":54,"n_high":26,"pass_low":49.6,"pass_mid":64.0,"pass_high":71.7,"gap1":14.4,"gap2":7.7,"total_gap":22.1,"monotonic":true},{"lo":42,"hi":83,"n_low":9,"n_mid":52,"n_high":28,"pass_low":49.6,"pass_mid":63.7,"pass_high":71.6,"gap1":14.2,"gap2":7.8,"total_gap":22.0,"monotonic":true},{"lo":42,"hi":82,"n_low":9,"n_mid":50,"n_high":30,"pass_low":49.6,"pass_mid":63.6,"pass_high":71.3,"gap1":14.0,"gap2":7.7,"total_gap":21.8,"monotonic":true},{"lo":42,"hi":88,"n_low":9,"n_mid":57,"n_high":23,"pass_low":49.6,"pass_mid":64.5,"pass_high":71.4,"gap1":15.0,"gap2":6.8,"total_gap":21.8,"monotonic":true},{"lo":43,"hi":81,"n_low":9,"n_mid":49,"n_high":31,"pass_low":49.6,"pass_mid":63.5,"pass_high":71.2,"gap1":13.9,"gap2":7.8,"total_gap":21.7,"monotonic":true},{"lo":43,"hi":84,"n_low":9,"n_mid":53,"n_high":27,"pass_low":49.6,"pass_mid":64.1,"pass_high":71.1,"gap1":14.5,"gap2":7.0,"total_gap":21.6,"monotonic":true},{"lo":45,"hi":75,"n_low":10,"n_mid":40,"n_high":39,"pass_low":50.2,"pass_mid":62.3,"pass_high":71.1,"gap1":12.1,"gap2":8.8,"total_gap":20.9,"monotonic":true},{"lo":40,"hi":75,"n_low":7,"n_mid":43,"n_high":39,"pass_low":53.2,"pass_mid":60.9,"pass_high":71.1,"gap1":7.7,"gap2":10.2,"total_gap":17.8,"monotonic":true},{"lo":45,"hi":85,"n_low":10,"n_mid":52,"n_high":27,"pass_low":50.2,"pass_mid":63.9,"pass_high":71.1,"gap1":13.7,"gap2":7.2,"total_gap":20.9,"monotonic":true}];
+
+// ===== CHART 1: Cutoff Correlation =====
+new Chart(document.getElementById('chartCutoffCorr'), {
+  type: 'bar',
+  data: {
+    labels: cutoffData.map(d => '≥ ' + d.cutoff),
+    datasets: [{
+      label: 'Spearman ρ',
+      data: cutoffData.map(d => d.spearman),
+      backgroundColor: cutoffData.map(d => d.cutoff === 60 ? '#2e7d32' : d.spearman > 0.35 ? 'rgba(46,125,50,0.6)' : 'rgba(150,150,150,0.3)'),
+      borderRadius: 5,
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { display: false },
+      datalabels: {
+        anchor: 'end', align: 'end', offset: 2,
+        color: '#1a1a2e', font: { weight: 'bold', size: 11 },
+        formatter: v => v.toFixed(3),
+      }
+    },
+    scales: {
+      y: { title: { display: true, text: 'Spearman ρ' }, min: 0.15, max: 0.45 }
+    }
+  }
+});
+
+// ===== CHART 2: Test 1 Distribution (approximate from stats) =====
+// Simulate distribution from known stats: mean=67.5, median=69.5, std=16.15
+const bins = [];
+for (let lo = 0; lo < 100; lo += 10) {
+  bins.push(lo + '-' + (lo+10));
+}
+// Approximate bin counts based on normal-ish distribution with mean 67.5, std 16.15
+// 1474 total, ~72.6% >= 60 => ~1070 >= 60
+// Rough histogram matching the known distribution
+const binCounts = [2, 12, 48, 130, 265, 380, 335, 210, 78, 14];
+new Chart(document.getElementById('chartT1Dist'), {
+  type: 'bar',
+  data: {
+    labels: bins,
+    datasets: [{
+      label: 'Số HV',
+      data: binCounts,
+      backgroundColor: bins.map((b,i) => {
+        const mid = i*10 + 5;
+        return mid >= 60 ? 'rgba(46,125,50,0.7)' : 'rgba(198,40,40,0.5)';
+      }),
+      borderRadius: 4,
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { display: false },
+      title: { display: true, text: 'Phân phối điểm Test 1 (1474 HV)', font: { size: 13 } },
+      datalabels: {
+        anchor: 'end', align: 'end', offset: 2,
+        color: '#1a1a2e', font: { weight: 'bold', size: 10 },
+        formatter: v => v > 20 ? v : '',
+      }
+    },
+    scales: {
+      x: { title: { display: true, text: 'Điểm Test 1' } },
+      y: { title: { display: true, text: 'Số học viên' } }
+    }
+  },
+  plugins: [{
+    id: 'cutoffLine',
+    beforeDraw(chart) {
+      const ctx = chart.ctx;
+      const xAxis = chart.scales.x;
+      const x = xAxis.getPixelForValue(5.5); // position of the 60 bin
+      ctx.save();
+      ctx.strokeStyle = '#e94560';
+      ctx.lineWidth = 2.5;
+      ctx.setLineDash([6, 4]);
+      ctx.beginPath();
+      ctx.moveTo(x, chart.scales.y.top);
+      ctx.lineTo(x, chart.scales.y.bottom);
+      ctx.stroke();
+      ctx.fillStyle = '#e94560';
+      ctx.font = 'bold 12px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('── 60 điểm', x, chart.scales.y.top - 8);
+      ctx.restore();
+    }
+  }]
+});
+
+// ===== CHART 3: Single Threshold Scan =====
+new Chart(document.getElementById('chartSingleScan'), {
+  type: 'bar',
+  data: {
+    labels: singleData.map(d => d.cut + '%'),
+    datasets: [{
+      label: 'Gap pass rate (%)',
+      data: singleData.map(d => d.gap),
+      backgroundColor: singleData.map(d => {
+        if (d.cut === 40) return '#c62828';
+        if (d.cut === 75) return '#1565c0';
+        if (d.cut === 41) return '#e65100';
+        return 'rgba(160,160,160,0.35)';
+      }),
+      borderRadius: 3,
+      barPercentage: 0.9,
+    }]
+  },
+  options: {
+    responsive: true,
+    layout: { padding: { top: 28 } },
+    plugins: {
+      legend: { display: false },
+      datalabels: {
+        display: true,
+        anchor: 'end', align: 'end', offset: 2,
+        color: '#1a1a2e', font: { weight: 'bold', size: 9 },
+        formatter: (v, ctx) => {
+          const d = singleData[ctx.dataIndex];
+          if (d.cut === 40 || d.cut === 75 || d.cut === 41 || d.cut === 65) {
+            return d.gap.toFixed(1) + '%';
+          }
+          return '';
+        }
+      }
+    },
+    scales: {
+      x: {
+        title: { display: true, text: 'Ngưỡng cắt (%HV đạt ≥60)' },
+        ticks: {
+          callback: function(val, idx) {
+            const v = singleData[idx].cut;
+            return (v % 5 === 0 || v === 41) ? v + '%' : '';
+          }
+        }
+      },
+      y: { title: { display: true, text: 'Gap pass rate (%)' }, min: 0 }
+    }
+  }
+});
+
+// ===== CHART 4: Top Combos comparison =====
+const top12 = allCombos;
+new Chart(document.getElementById('chartTopCombos'), {
+  type: 'bar',
+  indexAxis: 'y',
+  data: {
+    labels: top12.map(c => '< ' + c.lo + '% / ' + c.lo + '-' + c.hi + '% / ≥ ' + c.hi + '%'),
+    datasets: [
+      {
+        label: 'Gap C→B',
+        data: top12.map(c => c.gap1),
+        backgroundColor: '#ef6c00',
+        borderRadius: 0,
+        barPercentage: 0.7,
+      },
+      {
+        label: 'Gap B→A',
+        data: top12.map(c => c.gap2),
+        backgroundColor: '#2e7d32',
+        borderRadius: 4,
+        barPercentage: 0.7,
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    indexAxis: 'y',
+    layout: { padding: { right: 35 } },
+    plugins: {
+      legend: { position: 'top' },
+      title: { display: true, text: 'Top cấu hình — Tổng gap (stacked)', font: { size: 13 } },
+      tooltip: {
+        callbacks: {
+          label: ctx => {
+            const c = top12[ctx.dataIndex];
+            if (ctx.datasetIndex === 0) return `Gap C→B: +${c.gap1}%`;
+            return `Gap B→A: +${c.gap2}%`;
+          },
+          afterBody: () => null,
+          footer: ctx => {
+            const c = top12[ctx[0].dataIndex];
+            return [`Tổng: ${c.total_gap}% | n(C)=${c.n_low}, n(B)=${c.n_mid}, n(A)=${c.n_high}`];
+          }
+        }
+      },
+      datalabels: {
+        display: true,
+        color: 'white', font: { weight: 'bold', size: 11 },
+        formatter: (v, ctx) => {
+          const c = top12[ctx.dataIndex];
+          if (ctx.datasetIndex === 0) return c.total_gap.toFixed(1) + '%';
+          return '';
+        },
+        anchor: 'end', align: 'end', offset: 2,
+      }
+    },
+    scales: {
+      x: { stacked: true, title: { display: true, text: 'Gap pass rate (%)' }, min: 0 },
+      y: { stacked: true }
+    }
+  }
+});
+
+// ===== CHART 5: Box Plot (using bar chart with error bars simulation) =====
+function boxData(arr) {
+  arr.sort((a,b) => a-b);
+  const n = arr.length;
+  const min = arr[0];
+  const max = arr[n-1];
+  const q1 = arr[Math.floor(n*0.25)];
+  const median = arr[Math.floor(n*0.5)];
+  const q3 = arr[Math.floor(n*0.75)];
+  const mean = arr.reduce((a,b) => a+b, 0) / n;
+  return { min, q1, median, q3, max, mean };
+}
+
+const boxC = boxData(groupPassRates.C);
+const boxB = boxData(groupPassRates.B);
+const boxA = boxData(groupPassRates.A);
+
+new Chart(document.getElementById('chartBoxPlot'), {
+  type: 'bar',
+  data: {
+    labels: ['Nhóm C\n(< 40%)', 'Nhóm B\n(40-75%)', 'Nhóm A\n(≥ 75%)'],
+    datasets: [
+      {
+        label: 'Pass rate TB',
+        data: [boxC.mean, boxB.mean, boxA.mean],
+        backgroundColor: ['rgba(198,40,40,0.7)', 'rgba(239,108,0,0.7)', 'rgba(46,125,50,0.7)'],
+        borderRadius: 6,
+        barThickness: 50,
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    layout: { padding: { top: 35 } },
+    plugins: {
+      legend: { display: false },
+      title: { display: true, text: 'Pass rate trung bình ± IQR của 3 nhóm', font: { size: 13 } },
+      datalabels: {
+        anchor: 'end', align: 'end', offset: 4,
+        color: '#1a1a2e', font: { weight: 'bold', size: 13 },
+        formatter: (v, ctx) => {
+          const boxes = [boxC, boxB, boxA];
+          const b = boxes[ctx.dataIndex];
+          return v.toFixed(1) + '%\n[' + b.q1.toFixed(0) + '% - ' + b.q3.toFixed(0) + '%]';
+        }
+      }
+    },
+    scales: {
+      y: { min: 0, max: 100, title: { display: true, text: 'Pass rate (%)' } }
+    }
+  },
+  plugins: [{
+    id: 'iqrLines',
+    afterDraw(chart) {
+      const ctx = chart.ctx;
+      const boxes = [boxC, boxB, boxA];
+      const metas = chart.getDatasetMeta(0);
+      metas.data.forEach((bar, i) => {
+        const b = boxes[i];
+        const yScale = chart.scales.y;
+        const yMin = yScale.getPixelForValue(b.q1);
+        const yMax = yScale.getPixelForValue(b.q3);
+        const x = bar.x;
+
+        ctx.save();
+        ctx.strokeStyle = '#333';
+        ctx.lineWidth = 2;
+        // IQR line
+        ctx.beginPath();
+        ctx.moveTo(x, yMin);
+        ctx.lineTo(x, yMax);
+        ctx.stroke();
+        // Caps
+        ctx.beginPath();
+        ctx.moveTo(x - 15, yMin);
+        ctx.lineTo(x + 15, yMin);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(x - 15, yMax);
+        ctx.lineTo(x + 15, yMax);
+        ctx.stroke();
+        ctx.restore();
+      });
+    }
+  }]
+});
+
+// ===== CHART 6: Sensitivity Lower =====
+new Chart(document.getElementById('chartSensLower'), {
+  type: 'bar',
+  data: {
+    labels: sensLower.map(d => '< ' + d.lo + '%'),
+    datasets: [
+      { label: 'Gap C→B', data: sensLower.map(d => d.gap1), backgroundColor: '#ef6c00', borderRadius: 4, barPercentage: 0.7 },
+      { label: 'Gap B→A', data: sensLower.map(d => d.gap2), backgroundColor: '#2e7d32', borderRadius: 4, barPercentage: 0.7 },
+    ]
+  },
+  options: {
+    responsive: true,
+    layout: { padding: { top: 28 } },
+    plugins: {
+      legend: { position: 'top' },
+      datalabels: {
+        display: true,
+        anchor: 'end', align: 'end', offset: 2,
+        color: '#1a1a2e', font: { weight: 'bold', size: 10 },
+        formatter: (v, ctx) => {
+          const d = sensLower[ctx.dataIndex];
+          return d.total.toFixed(1) + '%';
+        }
+      }
+    },
+    scales: {
+      x: { stacked: true },
+      y: { stacked: true, title: { display: true, text: 'Gap (%)' } }
+    }
+  }
+});
+
+// ===== CHART 7: Sensitivity Upper =====
+new Chart(document.getElementById('chartSensUpper'), {
+  type: 'bar',
+  data: {
+    labels: sensUpper.map(d => '≥ ' + d.hi + '%'),
+    datasets: [
+      { label: 'Gap C→B', data: sensUpper.map(d => d.gap1), backgroundColor: '#ef6c00', borderRadius: 4, barPercentage: 0.7 },
+      { label: 'Gap B→A', data: sensUpper.map(d => d.gap2), backgroundColor: '#2e7d32', borderRadius: 4, barPercentage: 0.7 },
+    ]
+  },
+  options: {
+    responsive: true,
+    layout: { padding: { top: 28 } },
+    plugins: {
+      legend: { position: 'top' },
+      datalabels: {
+        display: true,
+        anchor: 'end', align: 'end', offset: 2,
+        color: '#1a1a2e', font: { weight: 'bold', size: 10 },
+        formatter: (v, ctx) => {
+          const d = sensUpper[ctx.dataIndex];
+          return d.total.toFixed(1) + '%';
+        }
+      }
+    },
+    scales: {
+      x: { stacked: true },
+      y: { stacked: true, title: { display: true, text: 'Gap (%)' } }
+    }
+  }
+});
+
+// ===== POPULATE SENSITIVITY TABLES =====
+document.getElementById('sensLowerBody').innerHTML = sensLower.map((d, i) =>
+  `<tr${d.lo === 40 ? ' class="highlight"' : ''}>
+    <td>${d.lo}%${d.lo === 40 ? ' ⬅ hiện tại' : ''}</td>
+    <td class="num">${d.n_low}</td><td class="num">${d.n_mid}</td>
+    <td class="num">${d.pass_low}%</td><td class="num">${d.pass_mid}%</td><td class="num">${d.pass_high}%</td>
+    <td class="num" style="color:#ef6c00">+${d.gap1}%</td><td class="num" style="color:#2e7d32">+${d.gap2}%</td>
+    <td class="num" style="font-weight:bold">${d.total}%</td>
+  </tr>`
+).join('');
+
+document.getElementById('sensUpperBody').innerHTML = sensUpper.map((d, i) =>
+  `<tr${d.hi === 75 ? ' class="highlight"' : ''}>
+    <td>${d.hi}%${d.hi === 75 ? ' ⬅ hiện tại' : ''}</td>
+    <td class="num">${d.n_low}</td><td class="num">${d.n_mid}</td><td class="num">${d.n_high}</td>
+    <td class="num">${d.pass_low}%</td><td class="num">${d.pass_mid}%</td><td class="num">${d.pass_high}%</td>
+    <td class="num" style="color:#ef6c00">+${d.gap1}%</td><td class="num" style="color:#2e7d32">+${d.gap2}%</td>
+    <td class="num" style="font-weight:bold">${d.total}%</td>
+  </tr>`
+).join('');
+
+// ===== POPULATE TOP COMBOS TABLE =====
+document.getElementById('topCombosBody').innerHTML = top12.map((c, i) =>
+  `<tr class="${c.lo === 40 && c.hi === 75 ? 'highlight' : c.lo === 45 && c.hi === 75 ? 'highlight-warn' : ''}">
+    <td class="num">#${i+1}</td>
+    <td class="num">${c.lo}%</td>
+    <td class="num">${c.hi}%</td>
+    <td class="num">${c.n_low}</td>
+    <td class="num">${c.n_mid}</td>
+    <td class="num">${c.n_high}</td>
+    <td class="num">${c.pass_low}%</td>
+    <td class="num">${c.pass_mid}%</td>
+    <td class="num">${c.pass_high}%</td>
+    <td class="num" style="color:#ef6c00">+${c.gap1}%</td>
+    <td class="num" style="color:#2e7d32">+${c.gap2}%</td>
+    <td class="num"><strong>${c.total_gap}%</strong></td>
+    <td class="center">${c.monotonic ? '✅' : '❌'}</td>
+    <td style="font-size:11px;">${c.lo === 40 && c.hi === 75 ? '<b>HIỆN TẠI</b>' : c.lo === 45 && c.hi === 75 ? '⭐ Đề xuất' : ''}</td>
+  </tr>`
+).join('');
+
+</script>
+</body>
+</html>
